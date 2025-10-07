@@ -2,8 +2,6 @@
 
 ### 🧠 Intelligent Web UI & Performance Testing Framework
 
-_Created by Dawid Cierbikowski_
-
 AutoUI Tester is a modular Playwright-based framework for **automatic exploration, performance auditing, accessibility scanning, and reporting** of any web application.
 
 This tool can crawl entire websites, collect key metrics, capture screenshots, and generate a clean **HTML report** — all without writing extra test scripts.
