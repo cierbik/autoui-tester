@@ -1,91 +1,152 @@
-# 🤖 AutoUI Tester
+<h1 align="center">🤖 AutoUI Tester</h1>
 
-### 🧠 Intelligent Web UI & Performance Testing Framework  
-*Created by Dawid Cierbikowski*
+<p align="center">
+  🧠 <b>Intelligent Web UI & Performance Testing Framework</b><br>
+  <i>Created by Dawid Cierbikowski</i>
+</p>
 
-AutoUI Tester is a modular Playwright-based framework designed for **automatic exploration, performance auditing, accessibility scanning, and reporting** of any web application.
+<p align="center">
+  <img src="https://img.shields.io/badge/Playwright-Automation-green?logo=playwright&logoColor=white">
+  <img src="https://img.shields.io/badge/TypeScript-Framework-blue?logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/Accessibility-Checker-purple?logo=accessibility&logoColor=white">
+  <img src="https://img.shields.io/badge/Reports-HTML%20%2F%20JSON-orange">
+</p>
 
-This tool can crawl entire websites, collect key performance and accessibility data, capture screenshots, and generate a clean **HTML report** — all without writing any extra test scripts.
+---
+
+### 🧩 Overview
+
+**AutoUI Tester** is a modular Playwright-based framework for  
+🌐 *automatic exploration*, ⚡ *performance auditing*, ♿ *accessibility scanning*, and 🧾 *report generation*  
+— all without writing a single test script.
+
+It can crawl entire websites, collect metrics, analyze accessibility, and generate a full **HTML report** with screenshots and logs.
 
 ---
 
 ## 🚀 Features
 
-### 🔍 Smart Explorer
-The `BasePage` automatically visits links and analyzes pages:
-- Discovers internal links up to a configurable depth
-- Collects **page titles**, **URLs**, and **HTTP statuses**
-- Captures **screenshots** for every visited page
-- Detects **console errors** and **failed requests**
-
-### ⚡ Performance Analysis
-Powered by `PerformanceService`, it gathers detailed metrics:
-- **Load Time** – total time until full page load  
-- **DOMContentLoaded** – time to DOM readiness  
-- **TTFB** – Time To First Byte  
-- Each metric includes an emoji-based **speed rating** (🟢 Fast / 🟡 Medium / 🔴 Slow)
-
-### ♿ Accessibility Auditing
-The `AccessibilityService` uses [axe-core/playwright](https://github.com/dequelabs/axe-core-npm) to:
-- Check **WCAG 2.1 compliance**
-- Detect **missing alt attributes**, **contrast issues**, **ARIA violations**, and more
-- Return structured accessibility issues per page
-
-### 🧠 AI-like Smart Exploration (Experimental)
-An optional `SmartExplorerService` uses heuristic patterns to:
-- Identify **key pages** like “Login”, “Contact”, “Products”
-- Simulate user paths
-- Avoid repetitive or external links intelligently
-
-### 🧾 Reporting
-The `Reporter` class generates:
-- **Readable HTML reports** (`reports/report.html`)
-- **JSON logs** (`reports/logs.json`)
-- Includes screenshots, console output, performance data, and accessibility findings
+### 🔍 **Smart Explorer**
+`BasePage` automatically navigates and analyzes pages:
+- 🌐 Discovers internal links up to configurable depth  
+- 🏷️ Collects titles, URLs, and HTTP statuses  
+- 📸 Captures screenshots for every page  
+- ❗ Detects console errors and failed requests  
 
 ---
 
+### ⚡ **Performance Analysis**
+Powered by `PerformanceService`, it measures:
+| Metric | Description | Rating |
+|:--|:--|:--|
+| ⏱️ **Load Time** | Total time until full page load | 🟢 Fast / 🟡 Medium / 🔴 Slow |
+| 🧩 **DOMContentLoaded** | Time to DOM readiness | 🟢 / 🟡 / 🔴 |
+| ⚙️ **TTFB** | Time To First Byte | 🟢 / 🟡 / 🔴 |
+
+Each metric includes emoji-based **speed indicators** for quick review.
+
+---
+
+### ♿ **Accessibility Auditing**
+`AccessibilityService` integrates with [axe-core/playwright](https://github.com/dequelabs/axe-core-npm):
+- ✅ Validates **WCAG 2.1 compliance**
+- ⚠️ Detects **missing alt tags**, **contrast issues**, **ARIA violations**
+- 📊 Returns structured accessibility issue data per page  
+
+---
+
+### 🧠 **AI-like Smart Exploration (Experimental)**
+The `SmartExplorerService` uses heuristic patterns to:
+- 🔑 Identify “Login”, “Contact”, or “Product” pages  
+- 🧭 Simulate user navigation paths  
+- 🚫 Avoid redundant or external links intelligently  
+
+---
+
+### 🧾 **Reports**
+`Reporter` generates clean, visual summaries:
+- 📑 **HTML report** → `reports/report.html`  
+- 🧱 **JSON logs** → `reports/logs.json`  
+- Includes screenshots, performance data, console logs & accessibility results  
 
 ---
 
 ## 🧩 How It Works
 
-1. **BasePage** → orchestrates exploration and calls all services
-2. **MonitoringService** → collects console + network events
-3. **PerformanceService** → uses `performance.timing` to get metrics
-4. **AccessibilityService** → runs axe-core a11y audit
-5. **Reporter** → generates HTML and JSON reports
-6. **ReportHelper** → clears and saves reports
-7. *(Optional)* **SmartExplorerService** → heuristic-based exploration
+> The framework is fully modular — each service handles a distinct responsibility.
 
-
-## 🧱 Extend the Framework
-
-You can easily add:
-
-* **Visual Regression Testing** → compare screenshots across runs
-* **SEO Audits** → extract meta tags, headings, and link stats
-* **Security Checks** → look for mixed content or HTTP-only cookies
-* **CI/CD integration** → export results to Slack, GitHub, or Jenkins
+| Component | Description |
+|:--|:--|
+| 🧭 **BasePage** | Orchestrates crawling and service integration |
+| 🔎 **MonitoringService** | Captures console errors & failed requests |
+| ⚡ **PerformanceService** | Measures load, DOM, and TTFB metrics |
+| ♿ **AccessibilityService** | Runs axe-core audits for accessibility |
+| 🧠 **SmartExplorerService** | Adds heuristic AI-based navigation |
+| 🧾 **Reporter** | Generates HTML and JSON reports |
+| 🧹 **ReportHelper** | Manages cleaning and saving reports |
 
 ---
 
-## 🧠 Future Ideas
+## 🧱 Extend the Framework
 
-* AI-based auto form filling
-* Multi-device and responsive mode testing
-* Trend analytics with performance history
-* Lighthouse integration
-* Smart navigation learning
+You can easily extend AutoUI Tester with:
+
+- 🧩 **Visual Regression Testing** – compare screenshots across runs  
+- 🔍 **SEO Audits** – extract meta tags, headings & link stats  
+- 🔒 **Security Checks** – look for mixed content or unsafe cookies  
+- 🔔 **CI/CD Integration** – export results to Slack, GitHub, or Jenkins  
+
+---
+
+## 🧠 Future Roadmap
+
+- 🤖 AI-driven form filling and input simulation  
+- 📱 Responsive & multi-device mode testing  
+- 📈 Trend analytics with historical comparison  
+- 💡 Lighthouse performance integration  
+- 🧭 Smart navigation learning and prioritization  
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/yourusername/autoui-tester.git
+cd autoui-tester
+npm install
+npx playwright install
+````
+
+---
+
+## ▶️ Run the Tool
+
+Run the automated test:
+
+```bash
+npm run start
+```
+
+or via `ts-node`:
+
+```bash
+npx ts-node tests/main.ts
+```
+
+The tool will:
+
+1. Clear previous reports
+2. Launch Playwright
+3. Crawl your target site
+4. Collect metrics and accessibility data
+5. Generate `report.html` and `logs.json`
+
+---
+
+
 
 ---
 
 ## 📄 License
 
-MIT © 2025 — Created by **Dawid Cierbikowski**
-
----
-
-> 💬 “AutoUI Tester crawls, measures, and reports — so you can focus on improving your product, not debugging the browser.”
-
-```
+**MIT © 2025** — Created by [Dawid Cierbikowski](https://github.com/yourusername
