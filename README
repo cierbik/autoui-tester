@@ -1,0 +1,93 @@
+
+```markdown
+# 🤖 AutoUI Tester
+
+### 🧠 Intelligent Web UI & Performance Testing Framework  
+*Created by Dawid Cierbikowski*
+
+AutoUI Tester is a modular Playwright-based framework designed for **automatic exploration, performance auditing, accessibility scanning, and reporting** of any web application.
+
+This tool can crawl entire websites, collect key performance and accessibility data, capture screenshots, and generate a clean **HTML report** — all without writing any extra test scripts.
+
+---
+
+## 🚀 Features
+
+### 🔍 Smart Explorer
+The `BasePage` automatically visits links and analyzes pages:
+- Discovers internal links up to a configurable depth
+- Collects **page titles**, **URLs**, and **HTTP statuses**
+- Captures **screenshots** for every visited page
+- Detects **console errors** and **failed requests**
+
+### ⚡ Performance Analysis
+Powered by `PerformanceService`, it gathers detailed metrics:
+- **Load Time** – total time until full page load  
+- **DOMContentLoaded** – time to DOM readiness  
+- **TTFB** – Time To First Byte  
+- Each metric includes an emoji-based **speed rating** (🟢 Fast / 🟡 Medium / 🔴 Slow)
+
+### ♿ Accessibility Auditing
+The `AccessibilityService` uses [axe-core/playwright](https://github.com/dequelabs/axe-core-npm) to:
+- Check **WCAG 2.1 compliance**
+- Detect **missing alt attributes**, **contrast issues**, **ARIA violations**, and more
+- Return structured accessibility issues per page
+
+### 🧠 AI-like Smart Exploration (Experimental)
+An optional `SmartExplorerService` uses heuristic patterns to:
+- Identify **key pages** like “Login”, “Contact”, “Products”
+- Simulate user paths
+- Avoid repetitive or external links intelligently
+
+### 🧾 Reporting
+The `Reporter` class generates:
+- **Readable HTML reports** (`reports/report.html`)
+- **JSON logs** (`reports/logs.json`)
+- Includes screenshots, console output, performance data, and accessibility findings
+
+---
+
+
+---
+
+## 🧩 How It Works
+
+1. **BasePage** → orchestrates exploration and calls all services
+2. **MonitoringService** → collects console + network events
+3. **PerformanceService** → uses `performance.timing` to get metrics
+4. **AccessibilityService** → runs axe-core a11y audit
+5. **Reporter** → generates HTML and JSON reports
+6. **ReportHelper** → clears and saves reports
+7. *(Optional)* **SmartExplorerService** → heuristic-based exploration
+
+
+## 🧱 Extend the Framework
+
+You can easily add:
+
+* **Visual Regression Testing** → compare screenshots across runs
+* **SEO Audits** → extract meta tags, headings, and link stats
+* **Security Checks** → look for mixed content or HTTP-only cookies
+* **CI/CD integration** → export results to Slack, GitHub, or Jenkins
+
+---
+
+## 🧠 Future Ideas
+
+* AI-based auto form filling
+* Multi-device and responsive mode testing
+* Trend analytics with performance history
+* Lighthouse integration
+* Smart navigation learning
+
+---
+
+## 📄 License
+
+MIT © 2025 — Created by **Dawid Cierbikowski**
+
+---
+
+> 💬 “AutoUI Tester crawls, measures, and reports — so you can focus on improving your product, not debugging the browser.”
+
+```

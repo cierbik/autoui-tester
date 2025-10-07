@@ -1,0 +1,144 @@
+[
+  {
+    "url": "https://twinklecandle.com",
+    "title": "Świece sojowe | sklep internetowy Twinkle Candle",
+    "consoleMessages": [
+      {
+        "type": "log",
+        "text": "ups..."
+      }
+    ],
+    "requests": [
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a61v9185095923za200zd9185095923&_p=1759872187281&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=1701837790.1759872188&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480709~115616986~115834636~115834638&sid=1759872187&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1105",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a61v9105750540z871730417za200zb71730417zd71730417&_p=1759872187260&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=1701837790.1759872188&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527907~104528501~104684208~104684211~104948813~115480710~115616985~115834636~115834638&sid=1759872187&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1160",
+        "status": 204
+      },
+      {
+        "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=1701837790.1759872188&gtm=45je5a61v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480710~115616986~115834636~115834638",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a61v9136467202za200&_p=1759872187151&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=1701837790.1759872188&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480710~115616986~115834636~115834638&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1759872188&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1333",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a61v9136467202za200&_p=1759872187151&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=1701837790.1759872188&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480710~115616986~115834636~115834638&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1759872188&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=34&tfd=6374",
+        "status": 204
+      }
+    ],
+    "failedRequests": [
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a61v9185095923za200zd9185095923&_p=1759872187281&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=1701837790.1759872188&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480709~115616986~115834636~115834638&sid=1759872187&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1105",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a61v9105750540z871730417za200zb71730417zd71730417&_p=1759872187260&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=1701837790.1759872188&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527907~104528501~104684208~104684211~104948813~115480710~115616985~115834636~115834638&sid=1759872187&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1160",
+        "status": 204
+      },
+      {
+        "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=1701837790.1759872188&gtm=45je5a61v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480710~115616986~115834636~115834638",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a61v9136467202za200&_p=1759872187151&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=1701837790.1759872188&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480710~115616986~115834636~115834638&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1759872188&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1333",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a61v9136467202za200&_p=1759872187151&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=1701837790.1759872188&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480710~115616986~115834636~115834638&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1759872188&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=34&tfd=6374",
+        "status": 204
+      }
+    ],
+    "screenshotPath": "reports/screenshots/1759872187552.png",
+    "loadTime": -1759872186.698,
+    "domContentLoaded": 0.71,
+    "ttfb": 0.158,
+    "speedRating": {
+      "loadTime": "🟢 Fast",
+      "domContentLoaded": "🟢 Fast",
+      "ttfb": "🟢 Fast"
+    },
+    "accessibility": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
+        "nodes": 3
+      },
+      {
+        "id": "empty-heading",
+        "impact": "minor",
+        "description": "Ensure headings have discernible text",
+        "help": "Headings should not be empty",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/empty-heading?application=playwright",
+        "nodes": 1
+      },
+      {
+        "id": "landmark-one-main",
+        "impact": "moderate",
+        "description": "Ensure the document has a main landmark",
+        "help": "Document should have one main landmark",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=playwright",
+        "nodes": 1
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "description": "Ensure links have discernible text",
+        "help": "Links must have discernible text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=playwright",
+        "nodes": 6
+      },
+      {
+        "id": "meta-viewport",
+        "impact": "critical",
+        "description": "Ensure <meta name=\"viewport\"> does not disable text scaling and zooming",
+        "help": "Zooming and scaling must not be disabled",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/meta-viewport?application=playwright",
+        "nodes": 1
+      },
+      {
+        "id": "page-has-heading-one",
+        "impact": "moderate",
+        "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+        "help": "Page should contain a level-one heading",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=playwright",
+        "nodes": 1
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "description": "Ensure all page content is contained by landmarks",
+        "help": "All page content should be contained by landmarks",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/region?application=playwright",
+        "nodes": 22
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "description": "Ensure select element has an accessible name",
+        "help": "Select element must have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/select-name?application=playwright",
+        "nodes": 2
+      }
+    ],
+    "smartActions": [
+      "🤖 Exploring: https://twinklecandle.com",
+      "🖱️ Scrolled halfway down",
+      "🧾 Detected 2 form(s)",
+      "✍️ Filled input (search): \"Sample input text\"",
+      "⚠️ Could not fill input (hidden)",
+      "✍️ Filled input (text): \"Sample input text\"",
+      "⚠️ Failed to click nav link: \"Zarejestruj się\"",
+      "⚠️ Failed to click nav link: \"Zaloguj się\"",
+      "⚠️ Failed to click nav link: \"TWINKLE CANDLE\"",
+      "📜 Scrolled to bottom"
+    ],
+    "formsDetected": 2
+  }
+]
