@@ -50,6 +50,7 @@ Powered by `PerformanceService`, it measures:
 - 📄 **HTML reports** → `reports/report.html`
 - 📦 **JSON logs** → `reports/logs.json`
 - Includes screenshots, console logs, performance, and accessibility data
+<img width="1899" height="963" alt="image" src="https://github.com/user-attachments/assets/6fee0219-6972-4e29-9d4b-9e9078c49c9e" />
 
 ---
 
