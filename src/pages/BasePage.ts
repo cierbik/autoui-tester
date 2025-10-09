@@ -6,6 +6,7 @@ import { MonitoringService } from "../services/MonitoringService";
 import { ScreenshotService } from "../services/ScreenshotService";
 import { AccessibilityService } from "../services/AccessibilityService";
 import { SmartExplorer } from "../services/SmartExplorer";
+import { SecurityAuditor } from "../services/SecurityAuditor";
 
 export class BasePage {
   protected page: Page;
@@ -18,6 +19,8 @@ export class BasePage {
   private screenshotService: ScreenshotService;
   private accessibilityService: AccessibilityService;
   private smartExplorer: SmartExplorer;
+  private securityAuditor: SecurityAuditor;
+
   constructor(page: Page) {
     this.page = page;
     this.navigationService = new PageNavigationService(page);
@@ -26,6 +29,8 @@ export class BasePage {
     this.screenshotService = new ScreenshotService(page);
     this.accessibilityService = new AccessibilityService(page);
     this.smartExplorer = new SmartExplorer(page);
+    // 👇 POPRAWKA 1: Przekaż 'page' do konstruktora SecurityAuditor
+    this.securityAuditor = new SecurityAuditor();
   }
 
   async explore(url: string, depth = 0): Promise<void> {
@@ -34,8 +39,10 @@ export class BasePage {
 
     console.log(`🔍 Visiting: ${url}`);
 
-    // Navigate and get basic info
-    const { status, title } = await this.navigationService.navigateToUrl(url);
+    const { status, title, response } =
+      await this.navigationService.navigateToUrl(url);
+
+    const securityAudit = await this.securityAuditor.audit(this.page, response);
 
     // Collect performance metrics
     const perf = await this.performanceService.collectMetrics();
@@ -45,23 +52,26 @@ export class BasePage {
 
     // Accessibility scan
     const accessibility = await this.accessibilityService.scan();
+
     // Smart exploration
     const smartData = await this.smartExplorer.explorePage(url);
+
     // Store results
     this.results.push({
       url,
       title,
-      consoleMessages: this.monitoringService.getConsoleMessages(), // musi być {type,text}[]
-      requests: this.monitoringService.getFailedRequests(), // {url,status}[]
-      failedRequests: this.monitoringService.getFailedRequests(), // {url,status}[]
+      consoleMessages: this.monitoringService.getConsoleMessages(),
+      requests: this.monitoringService.getFailedRequests(),
+      failedRequests: this.monitoringService.getFailedRequests(),
       screenshotPath,
       loadTime: perf.loadTime,
       domContentLoaded: perf.domContentLoaded,
       ttfb: perf.ttfb,
       speedRating: perf.rating,
       accessibility,
-      smartActions: smartData.actions, // 🔹 tu dodajemy
-      formsDetected: smartData.forms, // 🔹 i tu
+      smartActions: smartData.actions,
+      formsDetected: smartData.forms,
+      securityAudit: securityAudit,
     });
 
     // Get and process links
@@ -70,13 +80,13 @@ export class BasePage {
   }
 
   private async processLinks(links: string[], depth: number): Promise<void> {
-    for (const link of links.slice(0, 10)) {
+    for (const link of links.slice(0, 3)) {
       if (
         !this.visited.has(link) &&
         link.startsWith("http") &&
         !link.match(/\.(zip|pdf|png|jpg|jpeg|gif|svg|exe|mp4|mp3|avi|mov)$/i)
       ) {
-        await this.explore(link, depth + 5);
+        await this.explore(link, depth + 2);
       }
     }
   }

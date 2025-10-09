@@ -1,3 +1,21 @@
+export interface MixedContentResult {
+  url: string;
+  type: "active" | "passive";
+}
+
+export interface HeaderAuditResult {
+  name: string;
+  value: string | null;
+  present: boolean;
+  description: string;
+  compliant: boolean;
+}
+
+export interface SecurityAuditResult {
+  isHttps: boolean;
+  mixedContent: MixedContentResult[];
+  headers: HeaderAuditResult[];
+}
 export interface PageResult {
   url: string;
   title: string;
@@ -23,4 +41,5 @@ export interface PageResult {
   }[];
   smartActions?: string[]; // 🔹 np. kliknięcia AI
   formsDetected?: number;
+  securityAudit: SecurityAuditResult;
 }

@@ -1,8 +1,172 @@
 [
   {
-    "url": "https://twinklecandle.com",
-    "title": "Świece sojowe | sklep internetowy Twinkle Candle",
+    "url": "https://f1turniejstremerow.pl/",
+    "title": "F1 Turniej Streamerów - Walka o Pieniądze i Sławę",
     "consoleMessages": [
+      {
+        "type": "error",
+        "text": "The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element."
+      },
+      {
+        "type": "error",
+        "text": "Refused to connect to 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap' because it violates the following Content Security Policy directive: \"default-src 'self'\". Note that 'connect-src' was not explicitly set, so 'default-src' is used as a fallback.\n"
+      },
+      {
+        "type": "warning",
+        "text": "Couldn't load preload assets:  ProgressEvent"
+      },
+      {
+        "type": "warning",
+        "text": "⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition."
+      },
+      {
+        "type": "warning",
+        "text": "⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "23:38:25 - [VideoTransformer] WebGPU adapter unavailable"
+      },
+      {
+        "type": "warning",
+        "text": "23:38:25 - [VideoTransformer] WebGPU adapter unavailable"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 429 ()"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+      },
+      {
+        "type": "log",
+        "text": "Amazon IVS Player SDK 1.46.0-rc.3"
+      },
+      {
+        "type": "log",
+        "text": "Amazon IVS Player SDK 1.46.0-rc.3"
+      },
+      {
+        "type": "log",
+        "text": "MediaCapabilities found [Object, Object, Object, Object, Object]"
+      },
+      {
+        "type": "error",
+        "text": "Player stopping playback - error Player:2 (ErrorNotSupported code 0 - No playable format)"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0C0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0F0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A020BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A050BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0C0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0F0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A020DF01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "error",
+        "text": "[GraphQL] One or more GraphQL errors were detected on request 01K75EJ6GD9W0CABTYVW8258K2. PinnedChatSettings: unauthenticated [Object]"
+      },
+      {
+        "type": "error",
+        "text": "[GraphQL] One or more GraphQL errors were detected on request 01K75EJ7KY9NWCFKDMCYV66ZBG. PinnedChatSettings: unauthenticated [Object]"
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
       {
         "type": "log",
         "text": "ups..."
@@ -10,52 +174,156 @@
     ],
     "requests": [
       {
-        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a61v9185095923za200zd9185095923&_p=1759872187281&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=1701837790.1759872188&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480709~115616986~115834636~115834638&sid=1759872187&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1105",
+        "url": "https://f1turniejstremerow.pl/3.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/2.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/4.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/1.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts",
         "status": 204
       },
       {
-        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a61v9105750540z871730417za200zb71730417zd71730417&_p=1759872187260&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=1701837790.1759872188&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527907~104528501~104684208~104684211~104948813~115480710~115616985~115834636~115834638&sid=1759872187&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1160",
+        "url": "https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl",
         "status": 204
       },
       {
-        "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=1701837790.1759872188&gtm=45je5a61v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480710~115616986~115834636~115834638",
+        "url": "https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl",
         "status": 204
       },
       {
-        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a61v9136467202za200&_p=1759872187151&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=1701837790.1759872188&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480710~115616986~115834636~115834638&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1759872188&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1333",
+        "url": "https://www.twitch.tv/p/legal/cookie-policy/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
         "status": 204
       },
       {
-        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a61v9136467202za200&_p=1759872187151&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=1701837790.1759872188&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480710~115616986~115834636~115834638&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1759872188&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=34&tfd=6374",
+        "url": "https://www.twitch.tv/p/legal/privacy-notice/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002",
+        "status": 204
+      },
+      {
+        "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272",
         "status": 204
       }
     ],
     "failedRequests": [
       {
-        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a61v9185095923za200zd9185095923&_p=1759872187281&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=1701837790.1759872188&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480709~115616986~115834636~115834638&sid=1759872187&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1105",
+        "url": "https://f1turniejstremerow.pl/3.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/2.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/4.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/1.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts",
         "status": 204
       },
       {
-        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a61v9105750540z871730417za200zb71730417zd71730417&_p=1759872187260&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=1701837790.1759872188&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527907~104528501~104684208~104684211~104948813~115480710~115616985~115834636~115834638&sid=1759872187&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1160",
+        "url": "https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl",
         "status": 204
       },
       {
-        "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=1701837790.1759872188&gtm=45je5a61v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480710~115616986~115834636~115834638",
+        "url": "https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl",
         "status": 204
       },
       {
-        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a61v9136467202za200&_p=1759872187151&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=1701837790.1759872188&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480710~115616986~115834636~115834638&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1759872188&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1333",
+        "url": "https://www.twitch.tv/p/legal/cookie-policy/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
         "status": 204
       },
       {
-        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a61v9136467202za200&_p=1759872187151&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=1701837790.1759872188&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527907~104528500~104684208~104684211~104948813~115480710~115616986~115834636~115834638&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1759872188&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=34&tfd=6374",
+        "url": "https://www.twitch.tv/p/legal/privacy-notice/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002",
+        "status": 204
+      },
+      {
+        "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272",
         "status": 204
       }
     ],
-    "screenshotPath": "reports/screenshots/1759872187552.png",
-    "loadTime": -1759872186.698,
-    "domContentLoaded": 0.71,
-    "ttfb": 0.158,
+    "screenshotPath": "reports/screenshots/1760045901238.png",
+    "loadTime": 1.304,
+    "domContentLoaded": 0.541,
+    "ttfb": 0.246,
     "speedRating": {
       "loadTime": "🟢 Fast",
       "domContentLoaded": "🟢 Fast",
@@ -63,12 +331,1631 @@
     },
     "accessibility": [
       {
-        "id": "color-contrast",
+        "id": "region",
+        "impact": "moderate",
+        "description": "Ensure all page content is contained by landmarks",
+        "help": "All page content should be contained by landmarks",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/region?application=playwright",
+        "nodes": 8
+      }
+    ],
+    "smartActions": [
+      "🤖 Exploring: https://f1turniejstremerow.pl/",
+      "🖱️ Scrolled halfway down",
+      "⚠️ Failed to click nav link: \"F1 TURNIEJ STREAMERÓW\"",
+      "⚠️ Failed to click nav link: \"Przedsmak rywalizacji\"",
+      "⚠️ Failed to click nav link: \"Regulamin\"",
+      "📜 Scrolled to bottom"
+    ],
+    "formsDetected": 0,
+    "securityAudit": {
+      "isHttps": true,
+      "mixedContent": [],
+      "headers": [
+        {
+          "name": "Content-Security-Policy",
+          "value": null,
+          "present": false,
+          "description": "Helps prevent XSS attacks by defining allowed content sources.",
+          "compliant": false
+        },
+        {
+          "name": "Strict-Transport-Security",
+          "value": null,
+          "present": false,
+          "description": "Enforces secure (HTTPS) connections to the server.",
+          "compliant": false
+        },
+        {
+          "name": "X-Frame-Options",
+          "value": null,
+          "present": false,
+          "description": "Protects against Clickjacking attacks.",
+          "compliant": false
+        },
+        {
+          "name": "X-Content-Type-Options",
+          "value": null,
+          "present": false,
+          "description": "Prevents browsers from MIME-sniffing a response away from the declared content-type.",
+          "compliant": false
+        },
+        {
+          "name": "Referrer-Policy",
+          "value": null,
+          "present": false,
+          "description": "Controls how much referrer information is sent with requests.",
+          "compliant": false
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://www.twitch.tv/mrdzinold",
+    "title": "Twitch",
+    "consoleMessages": [
+      {
+        "type": "error",
+        "text": "The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element."
+      },
+      {
+        "type": "error",
+        "text": "Refused to connect to 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap' because it violates the following Content Security Policy directive: \"default-src 'self'\". Note that 'connect-src' was not explicitly set, so 'default-src' is used as a fallback.\n"
+      },
+      {
+        "type": "warning",
+        "text": "Couldn't load preload assets:  ProgressEvent"
+      },
+      {
+        "type": "warning",
+        "text": "⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition."
+      },
+      {
+        "type": "warning",
+        "text": "⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "23:38:25 - [VideoTransformer] WebGPU adapter unavailable"
+      },
+      {
+        "type": "warning",
+        "text": "23:38:25 - [VideoTransformer] WebGPU adapter unavailable"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 429 ()"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+      },
+      {
+        "type": "log",
+        "text": "Amazon IVS Player SDK 1.46.0-rc.3"
+      },
+      {
+        "type": "log",
+        "text": "Amazon IVS Player SDK 1.46.0-rc.3"
+      },
+      {
+        "type": "log",
+        "text": "MediaCapabilities found [Object, Object, Object, Object, Object]"
+      },
+      {
+        "type": "error",
+        "text": "Player stopping playback - error Player:2 (ErrorNotSupported code 0 - No playable format)"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0C0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0F0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A020BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A050BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0C0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0F0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A020DF01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "error",
+        "text": "[GraphQL] One or more GraphQL errors were detected on request 01K75EJ6GD9W0CABTYVW8258K2. PinnedChatSettings: unauthenticated [Object]"
+      },
+      {
+        "type": "error",
+        "text": "[GraphQL] One or more GraphQL errors were detected on request 01K75EJ7KY9NWCFKDMCYV66ZBG. PinnedChatSettings: unauthenticated [Object]"
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "log",
+        "text": "ups..."
+      }
+    ],
+    "requests": [
+      {
+        "url": "https://f1turniejstremerow.pl/3.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/2.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/4.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/1.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts",
+        "status": 204
+      },
+      {
+        "url": "https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/cookie-policy/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/privacy-notice/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002",
+        "status": 204
+      },
+      {
+        "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272",
+        "status": 204
+      }
+    ],
+    "failedRequests": [
+      {
+        "url": "https://f1turniejstremerow.pl/3.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/2.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/4.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/1.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts",
+        "status": 204
+      },
+      {
+        "url": "https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/cookie-policy/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/privacy-notice/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002",
+        "status": 204
+      },
+      {
+        "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272",
+        "status": 204
+      }
+    ],
+    "screenshotPath": "reports/screenshots/1760045905793.png",
+    "loadTime": 0.823,
+    "domContentLoaded": 0.668,
+    "ttfb": 0.139,
+    "speedRating": {
+      "loadTime": "🟢 Fast",
+      "domContentLoaded": "🟢 Fast",
+      "ttfb": "🟢 Fast"
+    },
+    "accessibility": [
+      {
+        "id": "aria-dialog-name",
         "impact": "serious",
-        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-        "help": "Elements must meet minimum color contrast ratio thresholds",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
-        "nodes": 3
+        "description": "Ensure every ARIA dialog and alertdialog node has an accessible name",
+        "help": "ARIA dialog and alertdialog nodes should have an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-dialog-name?application=playwright",
+        "nodes": 1
+      },
+      {
+        "id": "autocomplete-valid",
+        "impact": "serious",
+        "description": "Ensure the autocomplete attribute is correct and suitable for the form field",
+        "help": "autocomplete attribute must be used correctly",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/autocomplete-valid?application=playwright",
+        "nodes": 1
+      },
+      {
+        "id": "landmark-complementary-is-top-level",
+        "impact": "moderate",
+        "description": "Ensure the complementary landmark or aside is at top level",
+        "help": "Aside should not be contained in another landmark",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-complementary-is-top-level?application=playwright",
+        "nodes": 1
+      },
+      {
+        "id": "nested-interactive",
+        "impact": "serious",
+        "description": "Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies",
+        "help": "Interactive controls must not be nested",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/nested-interactive?application=playwright",
+        "nodes": 1
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "description": "Ensure all page content is contained by landmarks",
+        "help": "All page content should be contained by landmarks",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/region?application=playwright",
+        "nodes": 2
+      },
+      {
+        "id": "scrollable-region-focusable",
+        "impact": "serious",
+        "description": "Ensure elements that have scrollable content are accessible by keyboard",
+        "help": "Scrollable region must have keyboard access",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/scrollable-region-focusable?application=playwright",
+        "nodes": 1
+      }
+    ],
+    "smartActions": [
+      "🤖 Exploring: https://www.twitch.tv/mrdzinold",
+      "🖱️ Scrolled halfway down",
+      "✍️ Filled input (search): \"Sample input text\"",
+      "⚠️ Could not fill input (search)",
+      "🟢 Clicked button: \"Pokaż więcej\"",
+      "🟢 Clicked button: \"hubikoks69892Patriotaa96711xmerghani667hubikoks69892Patriotaa96711xmerghani667\"",
+      "🔴 Failed to click button: \"Pokaż\"",
+      "🧭 Navigated via menu link: \"PrzeglądajPrzeglądaj\"",
+      "📜 Scrolled to bottom"
+    ],
+    "formsDetected": 0,
+    "securityAudit": {
+      "isHttps": true,
+      "mixedContent": [],
+      "headers": [
+        {
+          "name": "Content-Security-Policy",
+          "value": null,
+          "present": false,
+          "description": "Helps prevent XSS attacks by defining allowed content sources.",
+          "compliant": false
+        },
+        {
+          "name": "Strict-Transport-Security",
+          "value": "max-age=31536000",
+          "present": true,
+          "description": "Enforces secure (HTTPS) connections to the server.",
+          "compliant": true
+        },
+        {
+          "name": "X-Frame-Options",
+          "value": "SAMEORIGIN",
+          "present": true,
+          "description": "Protects against Clickjacking attacks.",
+          "compliant": true
+        },
+        {
+          "name": "X-Content-Type-Options",
+          "value": "nosniff",
+          "present": true,
+          "description": "Prevents browsers from MIME-sniffing a response away from the declared content-type.",
+          "compliant": true
+        },
+        {
+          "name": "Referrer-Policy",
+          "value": null,
+          "present": false,
+          "description": "Controls how much referrer information is sent with requests.",
+          "compliant": false
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://www.twitch.tv/p/legal/cookie-policy/",
+    "title": "Welcome to Twitch Legal",
+    "consoleMessages": [
+      {
+        "type": "error",
+        "text": "The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element."
+      },
+      {
+        "type": "error",
+        "text": "Refused to connect to 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap' because it violates the following Content Security Policy directive: \"default-src 'self'\". Note that 'connect-src' was not explicitly set, so 'default-src' is used as a fallback.\n"
+      },
+      {
+        "type": "warning",
+        "text": "Couldn't load preload assets:  ProgressEvent"
+      },
+      {
+        "type": "warning",
+        "text": "⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition."
+      },
+      {
+        "type": "warning",
+        "text": "⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "23:38:25 - [VideoTransformer] WebGPU adapter unavailable"
+      },
+      {
+        "type": "warning",
+        "text": "23:38:25 - [VideoTransformer] WebGPU adapter unavailable"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 429 ()"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+      },
+      {
+        "type": "log",
+        "text": "Amazon IVS Player SDK 1.46.0-rc.3"
+      },
+      {
+        "type": "log",
+        "text": "Amazon IVS Player SDK 1.46.0-rc.3"
+      },
+      {
+        "type": "log",
+        "text": "MediaCapabilities found [Object, Object, Object, Object, Object]"
+      },
+      {
+        "type": "error",
+        "text": "Player stopping playback - error Player:2 (ErrorNotSupported code 0 - No playable format)"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0C0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0F0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A020BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A050BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0C0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0F0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A020DF01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "error",
+        "text": "[GraphQL] One or more GraphQL errors were detected on request 01K75EJ6GD9W0CABTYVW8258K2. PinnedChatSettings: unauthenticated [Object]"
+      },
+      {
+        "type": "error",
+        "text": "[GraphQL] One or more GraphQL errors were detected on request 01K75EJ7KY9NWCFKDMCYV66ZBG. PinnedChatSettings: unauthenticated [Object]"
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "log",
+        "text": "ups..."
+      }
+    ],
+    "requests": [
+      {
+        "url": "https://f1turniejstremerow.pl/3.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/2.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/4.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/1.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts",
+        "status": 204
+      },
+      {
+        "url": "https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/cookie-policy/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/privacy-notice/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002",
+        "status": 204
+      },
+      {
+        "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272",
+        "status": 204
+      }
+    ],
+    "failedRequests": [
+      {
+        "url": "https://f1turniejstremerow.pl/3.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/2.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/4.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/1.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts",
+        "status": 204
+      },
+      {
+        "url": "https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/cookie-policy/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/privacy-notice/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002",
+        "status": 204
+      },
+      {
+        "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272",
+        "status": 204
+      }
+    ],
+    "screenshotPath": "reports/screenshots/1760045945129.png",
+    "loadTime": 1.279,
+    "domContentLoaded": 1.198,
+    "ttfb": 0.612,
+    "speedRating": {
+      "loadTime": "🟢 Fast",
+      "domContentLoaded": "🟢 Fast",
+      "ttfb": "🔴 Slow"
+    },
+    "accessibility": [
+      {
+        "id": "heading-order",
+        "impact": "moderate",
+        "description": "Ensure the order of headings is semantically correct",
+        "help": "Heading levels should only increase by one",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/heading-order?application=playwright",
+        "nodes": 1
+      },
+      {
+        "id": "landmark-unique",
+        "impact": "moderate",
+        "description": "Ensure landmarks are unique",
+        "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-unique?application=playwright",
+        "nodes": 1
+      }
+    ],
+    "smartActions": [
+      "🤖 Exploring: https://www.twitch.tv/p/legal/cookie-policy/",
+      "🖱️ Scrolled halfway down",
+      "🧾 Detected 1 form(s)",
+      "✍️ Filled input (text): \"Sample input text\"",
+      "⚠️ Failed to click nav link: \"Skip to content\"",
+      "⚠️ Failed to click nav link: \"Deutsch\"",
+      "⚠️ Failed to click nav link: \"English\"",
+      "📜 Scrolled to bottom"
+    ],
+    "formsDetected": 1,
+    "securityAudit": {
+      "isHttps": true,
+      "mixedContent": [],
+      "headers": [
+        {
+          "name": "Content-Security-Policy",
+          "value": null,
+          "present": false,
+          "description": "Helps prevent XSS attacks by defining allowed content sources.",
+          "compliant": false
+        },
+        {
+          "name": "Strict-Transport-Security",
+          "value": null,
+          "present": false,
+          "description": "Enforces secure (HTTPS) connections to the server.",
+          "compliant": false
+        },
+        {
+          "name": "X-Frame-Options",
+          "value": null,
+          "present": false,
+          "description": "Protects against Clickjacking attacks.",
+          "compliant": false
+        },
+        {
+          "name": "X-Content-Type-Options",
+          "value": null,
+          "present": false,
+          "description": "Prevents browsers from MIME-sniffing a response away from the declared content-type.",
+          "compliant": false
+        },
+        {
+          "name": "Referrer-Policy",
+          "value": null,
+          "present": false,
+          "description": "Controls how much referrer information is sent with requests.",
+          "compliant": false
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://www.twitch.tv/p/legal/privacy-notice/",
+    "title": "Welcome to Twitch Legal",
+    "consoleMessages": [
+      {
+        "type": "error",
+        "text": "The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element."
+      },
+      {
+        "type": "error",
+        "text": "Refused to connect to 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap' because it violates the following Content Security Policy directive: \"default-src 'self'\". Note that 'connect-src' was not explicitly set, so 'default-src' is used as a fallback.\n"
+      },
+      {
+        "type": "warning",
+        "text": "Couldn't load preload assets:  ProgressEvent"
+      },
+      {
+        "type": "warning",
+        "text": "⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition."
+      },
+      {
+        "type": "warning",
+        "text": "⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "23:38:25 - [VideoTransformer] WebGPU adapter unavailable"
+      },
+      {
+        "type": "warning",
+        "text": "23:38:25 - [VideoTransformer] WebGPU adapter unavailable"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 429 ()"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+      },
+      {
+        "type": "log",
+        "text": "Amazon IVS Player SDK 1.46.0-rc.3"
+      },
+      {
+        "type": "log",
+        "text": "Amazon IVS Player SDK 1.46.0-rc.3"
+      },
+      {
+        "type": "log",
+        "text": "MediaCapabilities found [Object, Object, Object, Object, Object]"
+      },
+      {
+        "type": "error",
+        "text": "Player stopping playback - error Player:2 (ErrorNotSupported code 0 - No playable format)"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0C0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0F0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A020BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A050BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0C0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0F0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A020DF01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "error",
+        "text": "[GraphQL] One or more GraphQL errors were detected on request 01K75EJ6GD9W0CABTYVW8258K2. PinnedChatSettings: unauthenticated [Object]"
+      },
+      {
+        "type": "error",
+        "text": "[GraphQL] One or more GraphQL errors were detected on request 01K75EJ7KY9NWCFKDMCYV66ZBG. PinnedChatSettings: unauthenticated [Object]"
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "log",
+        "text": "ups..."
+      }
+    ],
+    "requests": [
+      {
+        "url": "https://f1turniejstremerow.pl/3.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/2.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/4.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/1.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts",
+        "status": 204
+      },
+      {
+        "url": "https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/cookie-policy/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/privacy-notice/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002",
+        "status": 204
+      },
+      {
+        "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272",
+        "status": 204
+      }
+    ],
+    "failedRequests": [
+      {
+        "url": "https://f1turniejstremerow.pl/3.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/2.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/4.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/1.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts",
+        "status": 204
+      },
+      {
+        "url": "https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/cookie-policy/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/privacy-notice/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002",
+        "status": 204
+      },
+      {
+        "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272",
+        "status": 204
+      }
+    ],
+    "screenshotPath": "reports/screenshots/1760045954335.png",
+    "loadTime": 0.509,
+    "domContentLoaded": 0.505,
+    "ttfb": 0.466,
+    "speedRating": {
+      "loadTime": "🟢 Fast",
+      "domContentLoaded": "🟢 Fast",
+      "ttfb": "🟡 Medium"
+    },
+    "accessibility": [
+      {
+        "id": "landmark-unique",
+        "impact": "moderate",
+        "description": "Ensure landmarks are unique",
+        "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-unique?application=playwright",
+        "nodes": 1
+      }
+    ],
+    "smartActions": [
+      "🤖 Exploring: https://www.twitch.tv/p/legal/privacy-notice/",
+      "🖱️ Scrolled halfway down",
+      "🧾 Detected 1 form(s)",
+      "✍️ Filled input (text): \"Sample input text\"",
+      "⚠️ Failed to click nav link: \"Skip to content\"",
+      "⚠️ Failed to click nav link: \"Deutsch\"",
+      "⚠️ Failed to click nav link: \"English\"",
+      "📜 Scrolled to bottom"
+    ],
+    "formsDetected": 1,
+    "securityAudit": {
+      "isHttps": true,
+      "mixedContent": [],
+      "headers": [
+        {
+          "name": "Content-Security-Policy",
+          "value": null,
+          "present": false,
+          "description": "Helps prevent XSS attacks by defining allowed content sources.",
+          "compliant": false
+        },
+        {
+          "name": "Strict-Transport-Security",
+          "value": null,
+          "present": false,
+          "description": "Enforces secure (HTTPS) connections to the server.",
+          "compliant": false
+        },
+        {
+          "name": "X-Frame-Options",
+          "value": null,
+          "present": false,
+          "description": "Protects against Clickjacking attacks.",
+          "compliant": false
+        },
+        {
+          "name": "X-Content-Type-Options",
+          "value": null,
+          "present": false,
+          "description": "Prevents browsers from MIME-sniffing a response away from the declared content-type.",
+          "compliant": false
+        },
+        {
+          "name": "Referrer-Policy",
+          "value": null,
+          "present": false,
+          "description": "Controls how much referrer information is sent with requests.",
+          "compliant": false
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://twinklecandle.com/",
+    "title": "Świece sojowe | sklep internetowy Twinkle Candle",
+    "consoleMessages": [
+      {
+        "type": "error",
+        "text": "The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element."
+      },
+      {
+        "type": "error",
+        "text": "Refused to connect to 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap' because it violates the following Content Security Policy directive: \"default-src 'self'\". Note that 'connect-src' was not explicitly set, so 'default-src' is used as a fallback.\n"
+      },
+      {
+        "type": "warning",
+        "text": "Couldn't load preload assets:  ProgressEvent"
+      },
+      {
+        "type": "warning",
+        "text": "⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition."
+      },
+      {
+        "type": "warning",
+        "text": "⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "23:38:25 - [VideoTransformer] WebGPU adapter unavailable"
+      },
+      {
+        "type": "warning",
+        "text": "23:38:25 - [VideoTransformer] WebGPU adapter unavailable"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 429 ()"
+      },
+      {
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+      },
+      {
+        "type": "log",
+        "text": "Amazon IVS Player SDK 1.46.0-rc.3"
+      },
+      {
+        "type": "log",
+        "text": "Amazon IVS Player SDK 1.46.0-rc.3"
+      },
+      {
+        "type": "log",
+        "text": "MediaCapabilities found [Object, Object, Object, Object, Object]"
+      },
+      {
+        "type": "error",
+        "text": "Player stopping playback - error Player:2 (ErrorNotSupported code 0 - No playable format)"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0C0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0F0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A020BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A050BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0C0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "No available adapters."
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "log",
+        "text": "Error"
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0F0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A020DF01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "error",
+        "text": "[GraphQL] One or more GraphQL errors were detected on request 01K75EJ6GD9W0CABTYVW8258K2. PinnedChatSettings: unauthenticated [Object]"
+      },
+      {
+        "type": "error",
+        "text": "[GraphQL] One or more GraphQL errors were detected on request 01K75EJ7KY9NWCFKDMCYV66ZBG. PinnedChatSettings: unauthenticated [Object]"
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "warning",
+        "text": "External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences."
+      },
+      {
+        "type": "log",
+        "text": "ups..."
+      }
+    ],
+    "requests": [
+      {
+        "url": "https://f1turniejstremerow.pl/3.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/2.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/4.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/1.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts",
+        "status": 204
+      },
+      {
+        "url": "https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/cookie-policy/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/privacy-notice/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002",
+        "status": 204
+      },
+      {
+        "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272",
+        "status": 204
+      }
+    ],
+    "failedRequests": [
+      {
+        "url": "https://f1turniejstremerow.pl/3.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/2.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/4.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://f1turniejstremerow.pl/1.mp4",
+        "status": 206
+      },
+      {
+        "url": "https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts",
+        "status": 204
+      },
+      {
+        "url": "https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796",
+        "status": 429
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/cookie-policy/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://www.twitch.tv/p/legal/privacy-notice/",
+        "status": 302
+      },
+      {
+        "url": "https://spade.twitch.tv/track",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917",
+        "status": 204
+      },
+      {
+        "url": "https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002",
+        "status": 204
+      },
+      {
+        "url": "https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213",
+        "status": 204
+      },
+      {
+        "url": "https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272",
+        "status": 204
+      }
+    ],
+    "screenshotPath": "reports/screenshots/1760045965866.png",
+    "loadTime": 1.75,
+    "domContentLoaded": 0.611,
+    "ttfb": 0.114,
+    "speedRating": {
+      "loadTime": "🟢 Fast",
+      "domContentLoaded": "🟢 Fast",
+      "ttfb": "🟢 Fast"
+    },
+    "accessibility": [
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+        "help": "ARIA hidden element must not be focusable or contain focusable elements",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-hidden-focus?application=playwright",
+        "nodes": 1
       },
       {
         "id": "empty-heading",
@@ -128,7 +2015,7 @@
       }
     ],
     "smartActions": [
-      "🤖 Exploring: https://twinklecandle.com",
+      "🤖 Exploring: https://twinklecandle.com/",
       "🖱️ Scrolled halfway down",
       "🧾 Detected 2 form(s)",
       "✍️ Filled input (search): \"Sample input text\"",
@@ -139,6 +2026,47 @@
       "⚠️ Failed to click nav link: \"TWINKLE CANDLE\"",
       "📜 Scrolled to bottom"
     ],
-    "formsDetected": 2
+    "formsDetected": 2,
+    "securityAudit": {
+      "isHttps": true,
+      "mixedContent": [],
+      "headers": [
+        {
+          "name": "Content-Security-Policy",
+          "value": null,
+          "present": false,
+          "description": "Helps prevent XSS attacks by defining allowed content sources.",
+          "compliant": false
+        },
+        {
+          "name": "Strict-Transport-Security",
+          "value": "max-age=60; includeSubdomains",
+          "present": true,
+          "description": "Enforces secure (HTTPS) connections to the server.",
+          "compliant": true
+        },
+        {
+          "name": "X-Frame-Options",
+          "value": null,
+          "present": false,
+          "description": "Protects against Clickjacking attacks.",
+          "compliant": false
+        },
+        {
+          "name": "X-Content-Type-Options",
+          "value": "nosniff",
+          "present": true,
+          "description": "Prevents browsers from MIME-sniffing a response away from the declared content-type.",
+          "compliant": true
+        },
+        {
+          "name": "Referrer-Policy",
+          "value": null,
+          "present": false,
+          "description": "Controls how much referrer information is sent with requests.",
+          "compliant": false
+        }
+      ]
+    }
   }
 ]
