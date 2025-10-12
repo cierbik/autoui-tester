@@ -29,7 +29,6 @@ export class BasePage {
     this.screenshotService = new ScreenshotService(page);
     this.accessibilityService = new AccessibilityService(page);
     this.smartExplorer = new SmartExplorer(page);
-    // 👇 POPRAWKA 1: Przekaż 'page' do konstruktora SecurityAuditor
     this.securityAuditor = new SecurityAuditor();
   }
 
