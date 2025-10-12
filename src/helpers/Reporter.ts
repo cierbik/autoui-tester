@@ -29,10 +29,14 @@ interface ReportData {
   domContentLoaded?: number;
   smartActions?: string[];
   formsDetected?: number;
-  securityAudit: SecurityAuditResult; // Zakładamy, że to jest w danych
+  securityAudit: SecurityAuditResult;
+  speedRating?: {
+    loadTime: string;
+    domContentLoaded: string;
+    ttfb: string;
+  };
 }
 
-// Interfejsy dla audytu bezpieczeństwa, które powinny być importowane
 interface MixedContentResult {
   url: string;
   type: "active" | "passive";
@@ -107,9 +111,15 @@ export class Reporter {
         <td class="security-cell">${this._formatSecurityAudit(
           r.securityAudit
         )}</td>
-        <td>${r.ttfb?.toFixed(2) ?? "-"} s</td>
-        <td>${r.loadTime?.toFixed(2) ?? "-"} s</td>
-        <td>${r.domContentLoaded?.toFixed(2) ?? "-"} s</td>
+        <td>${r.ttfb?.toFixed(2) ?? "-"} s <span class="rating">${
+      r.speedRating?.ttfb ?? ""
+    }</span></td>
+        <td>${r.loadTime?.toFixed(2) ?? "-"} s <span class="rating">${
+      r.speedRating?.loadTime ?? ""
+    }</span></td>
+        <td>${r.domContentLoaded?.toFixed(2) ?? "-"} s <span class="rating">${
+      r.speedRating?.domContentLoaded ?? ""
+    }</span></td>
         <td class="wrap">${r.smartActions?.join("<br>") || "-"}</td>
         <td>${r.formsDetected ?? "-"}</td>
       </tr>`;
@@ -341,6 +351,11 @@ export class Reporter {
       .mc-label-active { background-color: var(--critical-color); }
       .mc-label-passive { background-color: var(--moderate-color); }
 
+      .rating {
+        margin-left: 0.5em;
+        font-size: 0.9em;
+        font-weight: bold;
+      } 
       @media (max-width: 768px) {
         body { padding: 1rem; }
         .summary { flex-direction: column; gap: 0.5rem; align-items: center; }
