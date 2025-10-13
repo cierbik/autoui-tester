@@ -1,5 +1,6 @@
 import fs from "fs-extra";
 import path from "path";
+import { SeoAuditResult } from "../types/interfaces";
 
 // 💡 Lepsze typowanie dla 'impact' w AccessibilityIssue
 interface AccessibilityIssue {
@@ -17,6 +18,7 @@ interface FailedRequest {
   url: string;
   status: number;
 }
+
 interface ReportData {
   url: string;
   title: string;
@@ -30,6 +32,7 @@ interface ReportData {
   smartActions?: string[];
   formsDetected?: number;
   securityAudit: SecurityAuditResult;
+  seoAudit: SeoAuditResult;
   speedRating?: {
     loadTime: string;
     domContentLoaded: string;
@@ -80,9 +83,52 @@ export class Reporter {
     console.log(`✅ Interactive HTML report generated at: ${filePath}`);
   }
 
-  /**
-   * Generates a single <tr> row for the report table.
-   */
+  private _formatContentSeoAudit(audit: SeoAuditResult): string {
+    // Podstawowe SEO
+    const basicSeoHtml = `
+      <div class="seo-item"><strong>Title Length:</strong> ${
+        audit.titleLength
+      } chars</div>
+      <div class="seo-item"><strong>Meta Desc:</strong> ${
+        audit.metaDescription ? "✅ Found" : "❌ Missing"
+      }</div>
+      <div class="seo-item"><strong>H1 Tags:</strong> ${
+        audit.h1Count === 1 ? "✅ 1" : `⚠️ ${audit.h1Count}`
+      }</div>
+    `;
+
+    // Uszkodzone linki
+    let brokenLinksHtml = "";
+    if (audit.brokenLinks.length > 0) {
+      const items = audit.brokenLinks
+        .map(
+          (l) =>
+            `<li><span class="status-code">${l.status}</span> ${l.url}</li>`
+        )
+        .join("");
+      brokenLinksHtml = `<div class="seo-section"><strong>Broken Links Found:</strong><ul>${items}</ul></div>`;
+    }
+
+    // Analiza obrazków
+    const largeImages = audit.imageAnalysis.filter((img) => img.sizeInKb > 200);
+    const missingAlts = audit.imageAnalysis.filter((img) => img.altTextMissing);
+    let imageAnalysisHtml = "";
+    if (largeImages.length > 0 || missingAlts.length > 0) {
+      imageAnalysisHtml = `<div class="seo-section"><strong>Image Issues:</strong><ul>`;
+      if (missingAlts.length > 0) {
+        imageAnalysisHtml += `<li>⚠️ ${missingAlts.length} images missing alt text</li>`;
+      }
+      if (largeImages.length > 0) {
+        imageAnalysisHtml += `<li>🐘 ${largeImages.length} images larger than 200 KB</li>`;
+      }
+      imageAnalysisHtml += `</ul></div>`;
+    }
+
+    return `<div class="seo-cell">${basicSeoHtml}${brokenLinksHtml}${
+      imageAnalysisHtml ||
+      '<div class="seo-section-ok">✅ No major content issues</div>'
+    }</div>`;
+  }
   private _generateTableRow(r: ReportData): string {
     const relativeScreenshotPath = path
       .relative(this.outputDir, r.screenshotPath)
@@ -111,6 +157,7 @@ export class Reporter {
         <td class="security-cell">${this._formatSecurityAudit(
           r.securityAudit
         )}</td>
+        <td>${this._formatContentSeoAudit(r.seoAudit)}</td>
         <td>${r.ttfb?.toFixed(2) ?? "-"} s <span class="rating">${
       r.speedRating?.ttfb ?? ""
     }</span></td>
@@ -238,6 +285,7 @@ export class Reporter {
                 <th>Screenshot</th>
                 <th>Accessibility (WCAG)</th>
                 <th>Security Audit</th>
+                <th>Content & SEO Audit</th>
                 <th>TTFB</th>
                 <th>Load</th>
                 <th>DOM</th>
@@ -335,7 +383,7 @@ export class Reporter {
       .modal-close { position: absolute; top: 20px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer; }
       #modal-caption { text-align: center; color: #ccc; padding: 10px 0; }
 
-      /* --- FIX: Dodano brakujące style dla audytu bezpieczeństwa --- */
+    /* --- FIX: Dodano brakujące style dla audytu bezpieczeństwa --- */
       .security-cell { font-size: 0.85rem; white-space: normal; }
       .https-status { font-weight: bold; padding-bottom: 0.5rem; margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
       .https-secure { color: var(--accent-color); }
@@ -350,7 +398,14 @@ export class Reporter {
       .mc-label { display: inline-block; padding: 2px 5px; border-radius: 4px; font-size: 0.75em; font-weight: bold; color: #111; margin-right: 0.5rem; }
       .mc-label-active { background-color: var(--critical-color); }
       .mc-label-passive { background-color: var(--moderate-color); }
-
+    /* --- SEO & Content Audit Styles --- */
+      .seo-cell { font-size: 0.85rem; }
+      .seo-item { margin-bottom: 0.25rem; }
+      .seo-section { margin-top: 0.8rem; padding-top: 0.5rem; border-top: 1px solid var(--border-color); }
+      .seo-section-ok { margin-top: 0.8rem; padding-top: 0.5rem; border-top: 1px solid var(--border-color); color: var(--accent-color); font-weight: bold; }
+      .seo-section ul { margin: 0.25rem 0 0; padding-left: 1rem; max-height: 100px; overflow-y: auto; }
+      .seo-section li { margin-bottom: 0.25rem; word-break: break-all; }
+      .status-code { font-weight: bold; color: var(--critical-color); margin-right: 0.5em; }
       .rating {
         margin-left: 0.5em;
         font-size: 0.9em;

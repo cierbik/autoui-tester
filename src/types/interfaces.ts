@@ -10,7 +10,24 @@ export interface HeaderAuditResult {
   description: string;
   compliant: boolean;
 }
+export interface BrokenLink {
+  url: string;
+  status: number;
+}
 
+export interface ImageAnalysis {
+  src: string;
+  altTextMissing: boolean;
+  sizeInKb: number;
+}
+
+export interface SeoAuditResult {
+  titleLength: number;
+  metaDescription: string | null;
+  h1Count: number;
+  brokenLinks: BrokenLink[]; // 👈 Dodaj to
+  imageAnalysis: ImageAnalysis[]; // 👈 I to
+}
 export interface SecurityAuditResult {
   isHttps: boolean;
   mixedContent: MixedContentResult[];
@@ -42,4 +59,5 @@ export interface PageResult {
   smartActions?: string[]; // 🔹 np. kliknięcia AI
   formsDetected?: number;
   securityAudit: SecurityAuditResult;
+  seoAudit: SeoAuditResult;
 }
