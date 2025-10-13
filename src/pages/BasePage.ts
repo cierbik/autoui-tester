@@ -7,6 +7,7 @@ import { ScreenshotService } from "../services/ScreenshotService";
 import { AccessibilityService } from "../services/AccessibilityService";
 import { SmartExplorer } from "../services/SmartExplorer";
 import { SecurityAuditor } from "../services/SecurityAuditor";
+import { ContentSeoService } from "../services/ContentSeoService";
 
 export class BasePage {
   protected page: Page;
@@ -20,6 +21,7 @@ export class BasePage {
   private accessibilityService: AccessibilityService;
   private smartExplorer: SmartExplorer;
   private securityAuditor: SecurityAuditor;
+  private contentSeoService: ContentSeoService;
 
   constructor(page: Page) {
     this.page = page;
@@ -30,6 +32,7 @@ export class BasePage {
     this.accessibilityService = new AccessibilityService(page);
     this.smartExplorer = new SmartExplorer(page);
     this.securityAuditor = new SecurityAuditor();
+    this.contentSeoService = new ContentSeoService(page);
   }
 
   async explore(url: string, depth = 0): Promise<void> {
@@ -54,7 +57,7 @@ export class BasePage {
 
     // Smart exploration
     const smartData = await this.smartExplorer.explorePage(url);
-
+    const SeoAudit = await this.contentSeoService.audit();
     // Store results
     this.results.push({
       url,
@@ -71,6 +74,7 @@ export class BasePage {
       smartActions: smartData.actions,
       formsDetected: smartData.forms,
       securityAudit: securityAudit,
+      seoAudit: SeoAudit,
     });
 
     // Get and process links
