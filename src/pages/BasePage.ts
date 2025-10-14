@@ -72,7 +72,7 @@ export class BasePage {
         this.performanceService.collectMetrics(),
         this.screenshotService.takeScreenshot(url),
         this.accessibilityService.scan(),
-        this.smartExplorer.explorePage(url),
+        this.smartExplorer.explorePage(),
         this.securityAuditor.audit(this.page, response),
         this.contentSeoService.audit(),
       ]);
