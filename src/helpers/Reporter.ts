@@ -152,47 +152,53 @@ export class Reporter {
     }</div>`;
   }
   private _generateTableRow(r: ReportData): string {
-    const relativeScreenshotPath = path
-      .relative(this.outputDir, r.screenshotPath)
-      .replace(/\\/g, "/");
+    // Rzutuj 'r' na 'any', aby uniknąć błędów TS dla niekompletnych obiektów
+    const result = r as any;
 
-    // FIX: Usunięto duplikaty i poprawiono strukturę HTML oraz wartości
+    const relativeScreenshotPath = result.screenshotPath
+      ? path.relative(this.outputDir, result.screenshotPath).replace(/\\/g, "/")
+      : null;
+
+    // Używaj operatora '??' do zapewnienia wartości domyślnych dla każdego pola
     return `
-      <tr>
-        <td><a href="${r.url}" target="_blank">${r.url}</a></td>
-        <td>${r.title}</td>
-        <td class="cell-scrollable">${this._formatConsoleMessages(
-          r.consoleMessages
-        )}</td>
-        <td class="cell-scrollable">${this._formatFailedRequests(
-          r.failedRequests
-        )}</td>
-        <td>
-          <img 
-            src="${relativeScreenshotPath}" 
-            alt="Screenshot of ${r.title}" 
-            class="screenshot-thumb" 
-            loading="lazy"
-          />
-        </td>
-        <td>${this._formatAccessibility(r.accessibility)}</td>
-        <td class="security-cell">${this._formatSecurityAudit(
-          r.securityAudit
-        )}</td>
-        <td>${this._formatContentSeoAudit(r.seoAudit)}</td>
-        <td>${r.ttfb?.toFixed(2) ?? "-"} s <span class="rating">${
-      r.speedRating?.ttfb ?? ""
+    <tr>
+      <td><a href="${result.url}" target="_blank">${result.url}</a></td>
+      <td>${result.title ?? "N/A"}</td>
+      <td class="cell-scrollable">${this._formatConsoleMessages(
+        result.consoleMessages ?? []
+      )}</td>
+      <td class="cell-scrollable">${this._formatFailedRequests(
+        result.failedRequests ?? []
+      )}</td>
+      <td>
+        ${
+          relativeScreenshotPath
+            ? `<img src="${relativeScreenshotPath}" alt="Screenshot of ${result.title}" class="screenshot-thumb" loading="lazy" />`
+            : `<span class="no-data">${
+                result.title === "CRAWL_ERROR" ? "Crawl Error" : "No Screenshot"
+              }</span>`
+        }
+      </td>
+      <td>${this._formatAccessibility(result.accessibility)}</td>
+      <td class="security-cell">${this._formatSecurityAudit(
+        result.securityAudit
+      )}</td>
+      <td>${result.ttfb?.toFixed(2) ?? "-"} s <span class="rating">${
+      result.speedRating?.ttfb ?? ""
     }</span></td>
-        <td>${r.loadTime?.toFixed(2) ?? "-"} s <span class="rating">${
-      r.speedRating?.loadTime ?? ""
+      <td>${result.loadTime?.toFixed(2) ?? "-"} s <span class="rating">${
+      result.speedRating?.loadTime ?? ""
     }</span></td>
-        <td>${r.domContentLoaded?.toFixed(2) ?? "-"} s <span class="rating">${
-      r.speedRating?.domContentLoaded ?? ""
+      <td>${
+        result.domContentLoaded?.toFixed(2) ?? "-"
+      } s <span class="rating">${
+      result.speedRating?.domContentLoaded ?? ""
     }</span></td>
-        <td class="wrap">${r.smartActions?.join("<br>") || "-"}</td>
-        <td>${r.formsDetected ?? "-"}</td>
-        <td>${this._formatNetworkAnalysis(r.networkAnalysis)}</td>
-      </tr>`;
+      <td class="wrap">${result.smartActions?.join("<br>") || "-"}</td>
+      <td>${result.formsDetected ?? "-"}</td>
+      <td>${this._formatContentSeoAudit(result.seoAudit)}</td>
+      <td>${this._formatNetworkAnalysis(result.networkAnalysis)}</td>
+    </tr>`;
   }
 
   // --- Cell Formatting Helpers ---

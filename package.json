@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@axe-core/playwright": "^4.10.2",
+    "@faker-js/faker": "^10.1.0",
     "fs-extra": "^11.3.2",
     "playwright": "^1.55.1"
   },
