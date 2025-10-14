@@ -1,6 +1,6 @@
 import fs from "fs-extra";
 import path from "path";
-import { SeoAuditResult } from "../types/interfaces";
+import { SeoAuditResult, NetworkAnalysisResult } from "../types/interfaces";
 
 // 💡 Lepsze typowanie dla 'impact' w AccessibilityIssue
 interface AccessibilityIssue {
@@ -38,6 +38,7 @@ interface ReportData {
     domContentLoaded: string;
     ttfb: string;
   };
+  networkAnalysis: NetworkAnalysisResult;
 }
 
 interface MixedContentResult {
@@ -82,7 +83,28 @@ export class Reporter {
     await fs.writeFile(filePath, html, "utf8");
     console.log(`✅ Interactive HTML report generated at: ${filePath}`);
   }
+  private _formatNetworkAnalysis(analysis: NetworkAnalysisResult): string {
+    if (!analysis) return '<span class="no-data">-</span>';
 
+    const summaryHtml = `
+    <div class="net-summary-item"><strong>Page Weight:</strong> ${analysis.totalPageWeightKb} KB</div>
+    <div class="net-summary-item"><strong>Requests:</strong> ${analysis.totalRequests}</div>
+    <div class="net-summary-item"><strong>Unused CSS:</strong> ${analysis.unusedCssPercentage}%</div>
+  `;
+
+    let heaviestHtml = "";
+    if (analysis.topHeaviestResources.length > 0) {
+      const items = analysis.topHeaviestResources
+        .map(
+          (res) =>
+            `<li><strong>${res.sizeInKb} KB</strong> - <span class="net-url">${res.url}</span></li>`
+        )
+        .join("");
+      heaviestHtml = `<div class="net-section"><strong>Heaviest Resources:</strong><ul>${items}</ul></div>`;
+    }
+
+    return `<div class="net-cell">${summaryHtml}${heaviestHtml}</div>`;
+  }
   private _formatContentSeoAudit(audit: SeoAuditResult): string {
     // Podstawowe SEO
     const basicSeoHtml = `
@@ -169,6 +191,7 @@ export class Reporter {
     }</span></td>
         <td class="wrap">${r.smartActions?.join("<br>") || "-"}</td>
         <td>${r.formsDetected ?? "-"}</td>
+        <td>${this._formatNetworkAnalysis(r.networkAnalysis)}</td>
       </tr>`;
   }
 
@@ -291,6 +314,7 @@ export class Reporter {
                 <th>DOM</th>
                 <th>Actions</th>
                 <th>Forms</th>
+                <th>Network Analysis</th>
               </tr>
             </thead>
             <tbody>${rows}</tbody>
@@ -357,8 +381,14 @@ export class Reporter {
       header { text-align: center; margin-bottom: 2rem; }
       h1 { color: var(--accent-color); margin: 0 0 1rem 0; }
       .summary { display: flex; justify-content: center; gap: 2rem; background: var(--surface-color); padding: 1rem; border-radius: 8px; flex-wrap: wrap; }
-      .table-container { width: 100%; overflow-x: auto; border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-      table { border-collapse: collapse; width: 100%; min-width: 1200px; }
+      .table-container {
+          width: 100%; /* Kontener zajmuje całą dostępną szerokość */
+          overflow-x: auto; /* Włącza poziomy scrollbar, GDY tabela jest za szeroka */
+          border: 1px solid var(--border-color);
+          border-radius: 8px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+      table { border-collapse: collapse; width: 100%; min-width: 1800px }
       th, td { border: 1px solid var(--border-color); padding: 0.8rem 1rem; text-align: left; vertical-align: top; }
       th { background-color: var(--header-bg); position: sticky; top: 0; z-index: 2; font-size: 0.9rem; white-space: nowrap; }
       tr:nth-child(even) { background-color: var(--surface-color); }
@@ -411,6 +441,34 @@ export class Reporter {
         font-size: 0.9em;
         font-weight: bold;
       } 
+    /* --- Network Analysis Styles --- */
+.net-cell { 
+  font-size: 0.85rem; 
+  white-space: normal;
+}
+.net-summary-item { 
+  margin-bottom: 0.25rem; 
+}
+.net-section { 
+  margin-top: 0.8rem; 
+  padding-top: 0.5rem; 
+  border-top: 1px solid var(--border-color); 
+}
+.net-section ul { 
+  margin: 0.25rem 0 0; 
+  padding-left: 1rem; 
+  list-style-type: none; 
+  max-height: 120px;
+  overflow-y: auto;
+}
+.net-section li { 
+  margin-bottom: 0.25rem; 
+}
+.net-url { 
+  word-break: break-all; 
+  opacity: 0.8; 
+  font-size: 0.9em;
+}    
       @media (max-width: 768px) {
         body { padding: 1rem; }
         .summary { flex-direction: column; gap: 0.5rem; align-items: center; }

@@ -15,12 +15,27 @@ export interface BrokenLink {
   status: number;
 }
 
+export interface ResourceInfo {
+  url: string;
+  type: string;
+  sizeInKb: number;
+}
+
+export interface NetworkAnalysisResult {
+  totalPageWeightKb: number;
+  totalRequests: number;
+  topHeaviestResources: ResourceInfo[];
+  unusedCssPercentage: number;
+}
 export interface ImageAnalysis {
   src: string;
   altTextMissing: boolean;
   sizeInKb: number;
 }
-
+export interface CrawlerConfig {
+  maxDepth: number;
+  maxLinksPerPage: number;
+}
 export interface SeoAuditResult {
   titleLength: number;
   metaDescription: string | null;
@@ -39,6 +54,7 @@ export interface PageResult {
   consoleMessages: { type: string; text: string }[];
   requests: { url: string; status: number }[];
   screenshotPath: string;
+  htppStatus: number;
   failedRequests: { url: string; status: number }[];
   loadTime?: number;
   domContentLoaded?: number;
@@ -60,4 +76,5 @@ export interface PageResult {
   formsDetected?: number;
   securityAudit: SecurityAuditResult;
   seoAudit: SeoAuditResult;
+  networkAnalysis: NetworkAnalysisResult;
 }
