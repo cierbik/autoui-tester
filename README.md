@@ -1,9 +1,3 @@
-Of course. Your current `README.md` has some formatting issues and is missing some of the key features we've built, like the CI/CD integration and the streamlined `npm` scripts.
-
-Here is a completely updated and polished version. It's cleaned up, professionally formatted for GitHub, and includes all the latest features of your project.
-
------
-
 ````markdown
 # AutoUI Tester 🤖🧪
 
@@ -205,5 +199,3 @@ Contributions are welcome\! If you have ideas for new features or improvements, 
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-```
-```
