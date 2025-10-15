@@ -1,0 +1,55 @@
+# .github/workflows/ui-audit.yml
+
+# The name of your workflow, which will be visible on GitHub
+name: AutoUI Tester Audit
+
+# Defines when the workflow should run
+on:
+  # On every push to the 'main' branch
+  push:
+    branches: [main]
+  # On every Pull Request that targets the 'main' branch
+  pull_request:
+    branches: [main]
+
+# Defines the jobs to be executed
+jobs:
+  audit:
+    name: Run UI Audit
+    # Run on the latest available Ubuntu machine
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Step: Check out your repository's source code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Step: Set up the Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20" # Use a stable version of Node.js
+          cache: "npm" # Enable npm package caching for faster installs
+
+      # 3. Step: Install project dependencies (uses `npm ci` for speed and consistency)
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Step: Install Playwright browsers along with system dependencies
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      # 5. Step: Run the audit script
+      - name: Run AutoUI Tester
+        # Replace `https://example.com` with the URL of the site you want to test
+        # You can use `--depth 1` to speed up tests in the CI environment
+        run: npx ts-node src/main.ts crawl https://example.com --depth 1
+
+      # 6. Step: Upload the generated report as an "artifact"
+      - name: Upload report artifact
+        # This step will always run, even if the previous one fails, so you can see the report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-audit-report
+          path: reports/ # The path to the folder that should be saved

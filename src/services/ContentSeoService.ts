@@ -58,14 +58,12 @@ export class ContentSeoService {
 
   /** Analizuje wszystkie obrazki pod kątem braku tekstu alternatywnego i rozmiaru */
   private async _analyzeImages(): Promise<ImageAnalysis[]> {
-    const images = await this.page
-      .locator("img")
-      .evaluateAll((imgs) =>
-        imgs.map((img) => ({
-          src: (img as HTMLImageElement).src,
-          alt: (img as HTMLImageElement).alt,
-        }))
-      );
+    const images = await this.page.locator("img").evaluateAll((imgs) =>
+      imgs.map((img) => ({
+        src: (img as HTMLImageElement).src,
+        alt: (img as HTMLImageElement).alt,
+      }))
+    );
 
     const analysisResults: ImageAnalysis[] = [];
     for (const img of images) {
