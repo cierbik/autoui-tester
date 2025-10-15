@@ -18,13 +18,17 @@ export class ContentSeoService {
     };
   }
 
-  /** Zbiera podstawowe dane SEO (przeniesione z poprzedniej wersji) */
+  /** Collecting basic SEO information like title, meta description, and H1 tags */
   private async _getBasicSeo() {
     const titleLength = (await this.page.title()).length;
-    const metaDescription = await this.page
-      .locator('meta[name="description"]')
-      .getAttribute("content");
+    const metaDescLocator = this.page.locator('meta[name="description"]');
+    const metaDescription =
+      (await metaDescLocator.count()) > 0
+        ? await metaDescLocator.getAttribute("content")
+        : null;
+
     const h1Count = await this.page.locator("h1").count();
+
     return { titleLength, metaDescription, h1Count };
   }
 

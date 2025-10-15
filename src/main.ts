@@ -2,10 +2,10 @@
 
 import { chromium } from "playwright";
 import { Command } from "commander";
-import { BasePage } from "../src/pages/BasePage";
-import { Reporter } from "../src/helpers/Reporter";
-import { ReportHelper } from "../src/helpers/ReportHelper";
-import { PageResult } from "../src/types/interfaces"; // Assuming types are in this path
+import { BasePage } from "./pages/BasePage";
+import { Reporter } from "./helpers/Reporter";
+import { ReportHelper } from "./helpers/ReportHelper";
+import { PageResult } from "./types/interfaces"; // Assuming types are in this path
 
 // 👇 1. The entire file is now structured around the CLI command
 const program = new Command();
@@ -22,7 +22,7 @@ program
   .description("Crawl a website and generate a report")
   .argument("<url>", "The starting URL to crawl")
   .option("-d, --depth <number>", "Maximum crawl depth", "2")
-  .option("-l, --max-links <number>", "Maximum links to follow per page", "10")
+  .option("-l, --max-links <number>", "Maximum links to follow per page", "2")
   .option("-o, --output <string>", "Output directory for the report", "reports")
   .action(async (url, options) => {
     console.log("🚀 Starting crawl for:", url);

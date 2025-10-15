@@ -7,7 +7,9 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node tests/main.ts"
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "audit": "npm run build && npm run start --"
   },
   "dependencies": {
     "@axe-core/playwright": "^4.10.2",
