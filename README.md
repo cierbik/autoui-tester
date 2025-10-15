@@ -1,123 +1,98 @@
+Of course. Your current `README.md` has some formatting issues and is missing some of the key features we've built, like the CI/CD integration and the streamlined `npm` scripts.
 
+Here is a completely updated and polished version. It's cleaned up, professionally formatted for GitHub, and includes all the latest features of your project.
+
+-----
+
+````markdown
 # AutoUI Tester 🤖🧪
 
-[](https://opensource.org/licenses/MIT)
-[](https://www.typescriptlang.org/)
-[](https://playwright.dev/)
-[](https://www.google.com/search?q=package.json)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/Language-TypeScript-blue.svg)](https://www.typescriptlang.org/)
+[![Playwright](https://img.shields.io/badge/Framework-Playwright-green.svg)](https://playwright.dev/)
+[![Version](https://img.shields.io/badge/Version-1.0.0-orange.svg)](package.json)
+[![CI Status](https://github.com/your-username/autoui-tester/actions/workflows/ui-audit.yml/badge.svg)](https://github.com/your-username/autoui-tester/actions)
 
 **AutoUI Tester** is an advanced and modular framework based on Playwright, designed for automated website auditing. The tool independently explores an entire website, collects key metrics, captures screenshots, and generates a clean, interactive HTML report—all without needing to write test scripts.
 
------
 
-## \#\# ✨ Key Features
+
+---
+## ✨ Key Features
 
 The tool performs a comprehensive analysis of every discovered page, covering:
 
-  * **🕵️ Smart Exploration:**
+- **🕵️ Smart Exploration:** Automatically discovers and follows internal links up to a configurable depth, collecting titles, HTTP statuses, and screenshots.
 
-      * Automatically discovers and follows internal links up to a configurable depth.
-      * Collects page titles, HTTP statuses, and captures screenshots for every visited page.
+- **📊 Performance Analysis:** Measures key metrics (**TTFB**, **DOM Content Loaded**, **Load Time**) and provides an instant rating (🟢 Fast / 🟡 Medium / 🔴 Slow).
 
-  * **📊 Performance Analysis:**
+- **♿ Accessibility Audit (WCAG):** Uses the **axe-core** engine to check for compliance with WCAG standards, detecting issues like missing `alt` attributes, low contrast, and ARIA violations.
 
-      * Measures key Web Vitals: **TTFB**, **DOM Content Loaded**, and **Load Time**.
-      * Automatically provides a rating for each metric (🟢 Fast / 🟡 Medium / 🔴 Slow) for immediate feedback.
+- **🛡️ Security Audit:** Checks for key HTTP security headers (CSP, HSTS, etc.) and detects resources loaded over an insecure connection (Mixed Content).
 
-  * **♿ Accessibility Audit (WCAG):**
+- **🎯 Content & SEO Audit:** Finds and reports **broken links**, analyzes images for missing alt text and large file sizes, and checks basic SEO metrics.
 
-      * Uses the **axe-core** engine to check for compliance with WCAG standards.
-      * Detects issues such as missing `alt` attributes, low contrast, and ARIA violations.
+- **🌐 Network & Resource Analysis:** Calculates total **page weight**, counts network requests, identifies the heaviest resources, and detects **unused CSS**.
 
-  * **🛡️ Security Audit:**
+- **🤖 Smart Interaction:** Simulates user behavior by automatically filling forms with mock data and clicking on key action buttons.
 
-      * Checks for the presence and correctness of key HTTP security headers (CSP, HSTS, X-Frame-Options, etc.).
-      * Detects resources loaded over an insecure connection (Mixed Content).
+- **🧾 Interactive Reporting:** Generates a single, self-contained **HTML** file with a detailed, filterable, and sortable results table.
 
-  * **🎯 Content & SEO Audit:**
+---
+## 🛠️ Tech Stack
 
-      * Finds and reports **broken links** that return 4xx/5xx errors.
-      * Analyzes images for missing alt text and excessively large file sizes.
-      * Checks basic SEO metrics like title length, meta description presence, and `<h1>` tag count.
+- **[Playwright](https://playwright.dev/):** For browser automation and crawling.
+- **[TypeScript](https://www.typescriptlang.org/):** For robust and type-safe code.
+- **[Node.js](https://nodejs.org/):** As the runtime environment.
+- **[Commander.js](https://github.com/tj/commander.js):** To create a professional command-line interface (CLI).
+- **[Axe-Core](https://github.com/dequelabs/axe-core):** For accessibility scanning.
+- **[Faker.js](https://fakerjs.dev/):** For generating realistic mock data for form filling.
 
-  * **🌐 Network & Resource Analysis:**
+---
+## 🚀 Getting Started
 
-      * Calculates the **total page weight** and the number of network requests.
-      * Identifies the **top 5 heaviest resources** (images, scripts) that slow down loading.
-      * Detects **unused CSS**, indicating potential areas for optimization.
+### Prerequisites
 
-  * **🧾 Interactive Reporting:**
+- [Node.js](https://nodejs.org/) (version 18.x or higher)
+- npm (comes with Node.js)
 
-      * Generates a single, self-contained **HTML** file with a clean results table.
-      * Allows for easy viewing of screenshots, failed requests, and detailed audit results.
+### Installation & Setup
 
------
-
-## \#\# 🛠️ Tech Stack
-
-  * **[Playwright](https://playwright.dev/):** For browser automation and crawling.
-  * **[TypeScript](https://www.typescriptlang.org/):** For robust and type-safe code.
-  * **[Node.js](https://nodejs.org/):** As the runtime environment.
-  * **[Commander.js](https://www.google.com/search?q=https://github.com/tj/commander.js):** To create a professional command-line interface (CLI).
-  * **[Axe-Core](https://github.com/dequelabs/axe-core):** For accessibility scanning.
-
------
-
-## \#\# 🚀 Getting Started
-
-### \#\#\# Prerequisites
-
-  * [Node.js](https://nodejs.org/) (version 18.x or higher is recommended)
-  * npm (comes with Node.js)
-
-### \#\#\# Installation
-
-1.  Clone the repository:
-
+1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/autoui-tester.git
+    git clone [https://github.com/your-username/autoui-tester.git](https://github.com/your-username/autoui-tester.git)
     cd autoui-tester
     ```
 
-2.  Install the dependencies:
-
+2.  **Install dependencies:**
     ```bash
-    npm install
+    npm ci
     ```
 
-3.  Install Playwright's browsers:
-
+3.  **Install Playwright's browsers:** (The `--with-deps` flag is crucial for CI environments)
     ```bash
-    npx playwright install
+    npx playwright install --with-deps
     ```
 
-### \#\#\# Usage
+4.  **Configure the `audit` script:**
+    Open your `package.json` file and add the `audit` script to the `"scripts"` section.
+    ```json
+    "scripts": {
+      "audit": "ts-node src/main.ts"
+    },
+    ```
 
-Run the crawler using the CLI, providing a starting URL.
+---
+## 💻 CLI Usage
 
+The primary way to use the tool is via the `npm run audit` script. All arguments after `--` are passed directly to the application.
+
+**To display the help menu:**
 ```bash
-npx ts-node src/index.ts crawl https://example.com
-```
+npm run audit -- crawl --help
+````
 
-You can customize the crawl using various flags.
-
-```bash
-# Crawl up to depth 1, following a maximum of 5 links per page
-npx ts-node src/index.ts crawl https://example.com --depth 1 --max-links 5
-
-# Save the report to a different directory
-npx ts-node src/index.ts crawl https://example.com --output my-custom-report
-```
-
------
-
-## \#\# 💻 CLI Usage
-
-The tool is controlled via a command-line interface. You can view all available options by using the `--help` flag.
-
-```bash
-npx ts-node src/index.ts crawl --help
-```
+This will show all available commands and options:
 
 ```
 Usage: autoui-tester crawl [options] <url>
@@ -134,31 +109,86 @@ Options:
   -h, --help            display help for command
 ```
 
------
+### Example Commands
 
-## \#\# ⚙️ Configuration
+```bash
+# Run a basic crawl with default settings
+npm run audit -- crawl [https://example.com](https://example.com)
 
-The crawler's behavior is controlled via CLI flags passed to the `crawl` command.
-
-| Flag             | Description                        | Default Value |
-| ---------------- | ---------------------------------- | ------------- |
-| `-d`, `--depth`  | The maximum depth of the crawl.    | `2`           |
-| `-l`, `--max-links`| Max links to follow on each page.  | `10`          |
-| `-o`, `--output` | The directory to save the report.  | `reports`     |
+# Run a shallow crawl (depth 0) and save to a custom folder
+npm run audit -- crawl [https://example.com](https://example.com) --depth 0 --output my-audit-report
+```
 
 -----
 
-## \#\# 📊 Output
+## ⚙️ CI/CD Integration
 
-After the crawl is complete, the tool generates the following in the output directory (default: `reports/`):
+This tool is designed to be used as a quality gate in a CI/CD pipeline like GitHub Actions. It can automatically fail a build if certain quality thresholds are not met (e.g., if new critical accessibility issues or broken links are found).
 
-  * `report.html`: The main interactive HTML report.
-  * `screenshots/`: A directory containing all captured screenshots.
-  * `report.json` (Optional): A JSON file with the raw data from the crawl, useful for further analysis or integration.
+To set this up, create a `.github/workflows/ui-audit.yml` file in your repository.
+
+\<details\>
+\<summary\>Click to see an example GitHub Actions workflow file\</summary\>
+
+```yaml
+# .github/workflows/ui-audit.yml
+
+name: AutoUI Tester Audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  audit:
+    name: Run UI Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run AutoUI Tester
+        # Replace the URL with your staging or preview deployment URL
+        run: npm run audit -- crawl [https://your-staging-site.com](https://your-staging-site.com) --depth 1
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-audit-report
+          path: reports/
+```
+
+\</details\>
 
 -----
 
-## \#\# 🤝 Contributing
+## 📊 Output
+
+After the crawl is complete, the tool generates the following in the specified output directory (default: `reports/`):
+
+  - **`report.html`**: The main interactive HTML report.
+  - **`report.json`**: A JSON file with the raw data from the crawl, useful for diffing or further analysis.
+  - **`screenshots/`**: A directory containing all captured screenshots.
+
+-----
+
+## 🤝 Contributing
 
 Contributions are welcome\! If you have ideas for new features or improvements, feel free to open an issue or submit a pull request.
 
@@ -171,6 +201,9 @@ Contributions are welcome\! If you have ideas for new features or improvements, 
 
 -----
 
-## \#\# 📄 License
+## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+```
+```
