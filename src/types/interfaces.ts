@@ -77,4 +77,5 @@ export interface PageResult {
   securityAudit: SecurityAuditResult;
   seoAudit: SeoAuditResult;
   networkAnalysis: NetworkAnalysisResult;
+  viewport: string;
 }

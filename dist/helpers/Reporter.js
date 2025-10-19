@@ -46,7 +46,7 @@ class Reporter {
         return `<div class="net-cell">${summaryHtml}${heaviestHtml}</div>`;
     }
     _formatContentSeoAudit(audit) {
-        // Podstawowe SEO
+        // SEO basic info
         const basicSeoHtml = `
       <div class="seo-item"><strong>Title Length:</strong> ${audit.titleLength} chars</div>
       <div class="seo-item"><strong>Meta Desc:</strong> ${audit.metaDescription ? "✅ Found" : "❌ Missing"}</div>
@@ -125,7 +125,7 @@ class Reporter {
         const httpsStatus = audit.isHttps
             ? `<div class="https-status https-secure">🛡️ Secure (HTTPS)</div>`
             : `<div class="https-status https-insecure">❌ Insecure (HTTP)</div>`;
-        // 2. Lista nagłówków bezpieczeństwa
+        // 2. List of headers
         const headersList = audit.headers
             .map((h) => {
             const icon = h.compliant ? "✅" : "❌";
@@ -135,7 +135,7 @@ class Reporter {
             </div>`;
         })
             .join("");
-        // 3. Lista "Mixed Content" (jeśli istnieje)
+        // 3. "Mixed Content" section
         let mixedContentList = "";
         if (audit.mixedContent.length > 0) {
             const items = audit.mixedContent

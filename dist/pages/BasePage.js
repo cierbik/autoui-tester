@@ -15,6 +15,7 @@ class BasePage {
     visited = new Set();
     results = [];
     config; // Configuration object
+    viewportName;
     navigationService;
     performanceService;
     monitoringService;
@@ -24,12 +25,13 @@ class BasePage {
     securityAuditor;
     contentSeoService;
     networkService;
-    constructor(page, config) {
+    constructor(page, viewportName, config) {
         this.page = page;
+        this.viewportName = viewportName;
         // 👇 FIX: Introducing a config object for flexibility
         this.config = {
             maxDepth: 1,
-            maxLinksPerPage: 1,
+            maxLinksPerPage: 2,
             ...config,
         };
         // Initialize services
@@ -47,7 +49,7 @@ class BasePage {
         if (this.visited.has(url) || depth > this.config.maxDepth)
             return;
         this.visited.add(url);
-        console.log(`🔍 Visiting: ${url}`);
+        console.log(`[${this.viewportName}] 🔍 Visiting: ${url}`);
         // 👇 FIX: Start listening for network requests BEFORE navigating to the page
         this.networkService.startListening();
         try {
@@ -55,7 +57,7 @@ class BasePage {
             // 👇 FIX: Running all independent audits in PARALLEL for maximum performance
             const [perf, screenshotPath, accessibility, smartData, securityAudit, seoAudit,] = await Promise.all([
                 this.performanceService.collectMetrics(),
-                this.screenshotService.takeScreenshot(url),
+                this.screenshotService.takeScreenshot(url, this.viewportName),
                 this.accessibilityService.scan(),
                 this.smartExplorer.explorePage(),
                 this.securityAuditor.audit(this.page, response),
@@ -67,6 +69,7 @@ class BasePage {
             this.results.push({
                 url,
                 title,
+                viewport: this.viewportName,
                 htppStatus: status,
                 consoleMessages: this.monitoringService.getConsoleMessages(),
                 requests: this.monitoringService.getFailedRequests(), // This field is likely redundant if you have failedRequests
@@ -87,7 +90,12 @@ class BasePage {
         catch (error) {
             console.error(`❌ Failed to process ${url}:`, error);
             // Optional: Save error information to the results
-            this.results.push({ url, title: "CRAWL_ERROR", httpStatus: 0 });
+            this.results.push({
+                url,
+                title: "CRAWL_ERROR",
+                viewport: this.viewportName,
+                httpStatus: 0,
+            });
         }
         const links = await this.navigationService.getPageLinks();
         await this.processLinks(links, depth);

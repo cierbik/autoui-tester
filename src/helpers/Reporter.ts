@@ -2,14 +2,14 @@ import fs from "fs-extra";
 import path from "path";
 import { SeoAuditResult, NetworkAnalysisResult } from "../types/interfaces";
 
-// 💡 Lepsze typowanie dla 'impact' w AccessibilityIssue
+// better typing for accessibility issues
 interface AccessibilityIssue {
   impact?: "critical" | "serious" | "moderate" | "minor" | string;
   description: string;
   helpUrl: string;
 }
 
-// Interfejsy dla danych wejściowych (bez zmian)
+// Interfaces for structured report data
 interface ConsoleMessage {
   type: string;
   text: string;
@@ -106,7 +106,7 @@ export class Reporter {
     return `<div class="net-cell">${summaryHtml}${heaviestHtml}</div>`;
   }
   private _formatContentSeoAudit(audit: SeoAuditResult): string {
-    // Podstawowe SEO
+    // SEO basic info
     const basicSeoHtml = `
       <div class="seo-item"><strong>Title Length:</strong> ${
         audit.titleLength
@@ -222,7 +222,7 @@ export class Reporter {
       ? `<div class="https-status https-secure">🛡️ Secure (HTTPS)</div>`
       : `<div class="https-status https-insecure">❌ Insecure (HTTP)</div>`;
 
-    // 2. Lista nagłówków bezpieczeństwa
+    // 2. List of headers
     const headersList = audit.headers
       .map((h) => {
         const icon = h.compliant ? "✅" : "❌";
@@ -233,7 +233,7 @@ export class Reporter {
       })
       .join("");
 
-    // 3. Lista "Mixed Content" (jeśli istnieje)
+    // 3. "Mixed Content" section
     let mixedContentList = "";
     if (audit.mixedContent.length > 0) {
       const items = audit.mixedContent

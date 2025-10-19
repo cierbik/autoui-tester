@@ -1,13 +1,19 @@
 // src/main.ts
 
-import { chromium } from "playwright";
+import { chromium, devices, Browser, Page, BrowserContext } from "playwright";
 import { Command } from "commander";
 import { BasePage } from "./pages/BasePage";
 import { Reporter } from "./helpers/Reporter";
 import { ReportHelper } from "./helpers/ReportHelper";
-import { PageResult } from "./types/interfaces"; // Assuming types are in this path
+import { PageResult } from "./types/interfaces";
 
-// 👇 1. The entire file is now structured around the CLI command
+// A map of predefined viewport configurations
+const VIEWPORT_CONFIGS: { [key: string]: any } = {
+  desktop: { viewport: { width: 1920, height: 1080 } },
+  mobile: devices["iPhone 13 Pro"],
+  tablet: devices["iPad Pro 11"],
+};
+
 const program = new Command();
 
 program
@@ -24,66 +30,140 @@ program
   .option("-d, --depth <number>", "Maximum crawl depth", "2")
   .option("-l, --max-links <number>", "Maximum links to follow per page", "2")
   .option("-o, --output <string>", "Output directory for the report", "reports")
-  .action(async (url, options) => {
+  .option(
+    "-v, --viewports <string>",
+    'Comma-separated viewports (e.g., "desktop,mobile")',
+    "desktop"
+  )
+  .action(async (url: string, options: any) => {
     console.log("🚀 Starting crawl for:", url);
     console.log("⚙️ Options:", options);
 
-    // 👇 2. Report clearing now uses the dynamic output path from options
+    // Clear the report directory based on the output option
     await ReportHelper.clearReports(options.output);
 
-    const browser = await chromium.launch({ headless: true });
-    const context = await browser.newContext();
-    const page = await context.newPage();
+    const browser: Browser = await chromium.launch({ headless: true });
 
-    // 👇 3. Crawler config is created from CLI options
-    const crawlerConfig = {
-      maxDepth: parseInt(options.depth, 10),
-      maxLinksPerPage: parseInt(options.maxLinks, 10),
-    };
+    // An array to collect results from all viewports
+    let allResults: PageResult[] = [];
 
-    const crawler = new BasePage(page, crawlerConfig);
+    // Parse the comma-separated viewport names
+    const viewportNames: string[] = options.viewports
+      .split(",")
+      .map((v: string) => v.trim());
 
-    try {
-      // 👇 4. The hardcoded loop is replaced by a single call with the URL from the CLI
-      await crawler.explore(url);
-    } catch (error) {
-      console.error("An unexpected error occurred during the crawl:", error);
-    } finally {
-      await browser.close();
+    // --- VIEWPORT LOOP ---
+    // Iterate over each requested viewport name
+    for (const viewportName of viewportNames) {
+      console.log(`\n--- Starting audit for viewport: ${viewportName} ---`);
 
-      const results = crawler.getResults();
-      if (results.length > 0) {
-        // 👇 5. The Reporter also uses the dynamic output path
-        const reporter = new Reporter(results, options.output);
-        await reporter.generateHtmlReport();
-        await ReportHelper.saveResults(results, options.output); // Pass path to saveResults as well
-
-        analyzeResultsForCI(results);
-      } else {
-        console.log("No results were generated.");
+      const viewportConfig = VIEWPORT_CONFIGS[viewportName];
+      if (!viewportConfig) {
+        console.warn(`⚠️ Unknown viewport name: ${viewportName}. Skipping.`);
+        continue; // Skip to the next viewport
       }
+
+      // Create a new context and page for this specific viewport
+      const context: BrowserContext = await browser.newContext(viewportConfig);
+      const page: Page = await context.newPage();
+
+      // Prepare the config for the crawler instance
+      const crawlerConfig = {
+        maxDepth: parseInt(options.depth, 10),
+        maxLinksPerPage: parseInt(options.maxLinks, 10),
+      };
+
+      // Create a new BasePage (crawler) instance for this context
+      const crawler = new BasePage(page, viewportName, crawlerConfig);
+
+      try {
+        // Start the crawl
+        await crawler.explore(url);
+        // Add the results from this crawl to the main results array
+        allResults = allResults.concat(crawler.getResults());
+      } catch (error) {
+        console.error(
+          `An unexpected error occurred during crawl for viewport ${viewportName}:`,
+          error
+        );
+      } finally {
+        await context.close(); // Close the context to free up resources
+      }
+    }
+    // --- END OF VIEWPORT LOOP ---
+
+    await browser.close(); // Close the browser after all viewports are done
+
+    // Generate the final report if any results were collected
+    if (allResults.length > 0) {
+      const reporter = new Reporter(allResults, options.output);
+      await reporter.generateHtmlReport();
+      await ReportHelper.saveResults(allResults, options.output);
+
+      // Run the CI analysis on the combined results
+      analyzeResultsForCI(allResults);
+    } else {
+      console.log("No results were generated across all viewports.");
     }
   });
 
 /**
- * Analyzes results for CI thresholds.
+ * Analyzes the crawl results against defined quality thresholds.
+ * Exits with a non-zero code if any threshold is breached (for CI/CD).
  * @param results The array of PageResult objects.
  */
 function analyzeResultsForCI(results: PageResult[]): void {
-  // ... (The CI analysis function we created earlier)
   console.log("\n🔍 Analyzing results for CI thresholds...");
 
-  const thresholds = { maxCriticalAccessibilityIssues: 0, maxBrokenLinks: 0 };
+  // Define your quality gates (thresholds) here
+  const thresholds = {
+    maxCriticalAccessibilityIssues: 0,
+    maxBrokenLinks: 5,
+  };
+
+  let criticalAccessibilityIssues = 0;
+  let brokenLinks = 0;
   let issuesFound = false;
-  // ... (rest of the function logic)
+
+  // Aggregate issues from all page results
+  for (const result of results) {
+    if (result.accessibility) {
+      criticalAccessibilityIssues += result.accessibility.filter(
+        (issue: any) => issue.impact === "critical"
+      ).length;
+    }
+    if (result.seoAudit && result.seoAudit.brokenLinks) {
+      brokenLinks += result.seoAudit.brokenLinks.length;
+    }
+  }
+
+  console.log(
+    `- Found ${criticalAccessibilityIssues} critical accessibility issues.`
+  );
+  console.log(`- Found ${brokenLinks} broken links.`);
+
+  // Check if any thresholds were breached
+  if (criticalAccessibilityIssues > thresholds.maxCriticalAccessibilityIssues) {
+    console.error(
+      `❌ CI Threshold breached: Found ${criticalAccessibilityIssues} critical accessibility issues (limit is ${thresholds.maxCriticalAccessibilityIssues}).`
+    );
+    issuesFound = true;
+  }
+
+  if (brokenLinks > thresholds.maxBrokenLinks) {
+    console.error(
+      `❌ CI Threshold breached: Found ${brokenLinks} broken links (limit is ${thresholds.maxBrokenLinks}).`
+    );
+    issuesFound = true;
+  }
 
   if (issuesFound) {
     console.log("\n🔥 Failing CI build due to quality issues.");
-    process.exit(1);
+    process.exit(1); // Exit with an error code to fail the pipeline
   } else {
     console.log("\n✅ All quality gates passed!");
   }
 }
 
-// 👇 6. This line parses the command-line arguments and executes the appropriate action
+// Parse command-line arguments and run the program
 program.parse(process.argv);

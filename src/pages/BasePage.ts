@@ -15,6 +15,7 @@ export class BasePage {
   protected visited = new Set<string>();
   protected results: PageResult[] = [];
   private config: CrawlerConfig; // Configuration object
+  private viewportName: string;
 
   private navigationService: PageNavigationService;
   private performanceService: PerformanceService;
@@ -26,12 +27,17 @@ export class BasePage {
   private contentSeoService: ContentSeoService;
   private networkService: NetworkService;
 
-  constructor(page: Page, config?: Partial<CrawlerConfig>) {
+  constructor(
+    page: Page,
+    viewportName: string,
+    config?: Partial<CrawlerConfig>
+  ) {
     this.page = page;
+    this.viewportName = viewportName;
     // 👇 FIX: Introducing a config object for flexibility
     this.config = {
       maxDepth: 1,
-      maxLinksPerPage: 1,
+      maxLinksPerPage: 2,
       ...config,
     };
 
@@ -51,8 +57,7 @@ export class BasePage {
     if (this.visited.has(url) || depth > this.config.maxDepth) return;
     this.visited.add(url);
 
-    console.log(`🔍 Visiting: ${url}`);
-
+    console.log(`[${this.viewportName}] 🔍 Visiting: ${url}`);
     // 👇 FIX: Start listening for network requests BEFORE navigating to the page
     this.networkService.startListening();
 
@@ -70,7 +75,7 @@ export class BasePage {
         seoAudit,
       ] = await Promise.all([
         this.performanceService.collectMetrics(),
-        this.screenshotService.takeScreenshot(url),
+        this.screenshotService.takeScreenshot(url, this.viewportName),
         this.accessibilityService.scan(),
         this.smartExplorer.explorePage(),
         this.securityAuditor.audit(this.page, response),
@@ -84,6 +89,7 @@ export class BasePage {
       this.results.push({
         url,
         title,
+        viewport: this.viewportName,
         htppStatus: status,
         consoleMessages: this.monitoringService.getConsoleMessages(),
         requests: this.monitoringService.getFailedRequests(), // This field is likely redundant if you have failedRequests
@@ -103,7 +109,12 @@ export class BasePage {
     } catch (error) {
       console.error(`❌ Failed to process ${url}:`, error);
       // Optional: Save error information to the results
-      this.results.push({ url, title: "CRAWL_ERROR", httpStatus: 0 } as any);
+      this.results.push({
+        url,
+        title: "CRAWL_ERROR",
+        viewport: this.viewportName,
+        httpStatus: 0,
+      } as any);
     }
 
     const links = await this.navigationService.getPageLinks();

@@ -1,0 +1,834 @@
+[
+  {
+    "url": "https://automationintesting.online/",
+    "title": "Restful-booker-platform demo",
+    "viewport": "desktop",
+    "htppStatus": 200,
+    "consoleMessages": [
+      {
+        "type": "log",
+        "text": "Got initial bounds:  {ne: Array(2), sw: Array(2)}"
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0C028006C3A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      }
+    ],
+    "requests": [],
+    "failedRequests": [],
+    "screenshotPath": "reports\\screenshots\\_-desktop.png",
+    "loadTime": 0.396,
+    "domContentLoaded": 0.396,
+    "ttfb": 0.12,
+    "speedRating": {
+      "loadTime": "🟢 Fast",
+      "domContentLoaded": "🟢 Fast",
+      "ttfb": "🟢 Fast"
+    },
+    "accessibility": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
+        "nodes": 4
+      },
+      {
+        "id": "heading-order",
+        "impact": "moderate",
+        "description": "Ensure the order of headings is semantically correct",
+        "help": "Heading levels should only increase by one",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/heading-order?application=playwright",
+        "nodes": 4
+      },
+      {
+        "id": "label",
+        "impact": "critical",
+        "description": "Ensure every form element has a label",
+        "help": "Form elements must have labels",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label?application=playwright",
+        "nodes": 3
+      },
+      {
+        "id": "landmark-one-main",
+        "impact": "moderate",
+        "description": "Ensure the document has a main landmark",
+        "help": "Document should have one main landmark",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=playwright",
+        "nodes": 1
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "description": "Ensure links have discernible text",
+        "help": "Links must have discernible text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-name?application=playwright",
+        "nodes": 3
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "description": "Ensure all page content is contained by landmarks",
+        "help": "All page content should be contained by landmarks",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/region?application=playwright",
+        "nodes": 14
+      }
+    ],
+    "smartActions": [
+      "🤖 Exploring: https://automationintesting.online/",
+      "🧾 Detected 2 form(s)",
+      "✍️ Filled input (text)",
+      "✍️ Filled input (text)",
+      "✍️ Filled input (text)",
+      "✍️ Filled input (email)",
+      "✍️ Filled input (tel)",
+      "✍️ Filled input (text)",
+      "✍️ Filled input (text)",
+      "🟢 Clicked button: \"Next Month\"",
+      "🖱️ Scrolled down the page",
+      "📜 Scrolled to bottom"
+    ],
+    "formsDetected": 2,
+    "securityAudit": {
+      "isHttps": true,
+      "mixedContent": [],
+      "headers": [
+        {
+          "name": "Content-Security-Policy",
+          "value": null,
+          "present": false,
+          "description": "Helps prevent XSS attacks by defining allowed content sources.",
+          "compliant": false
+        },
+        {
+          "name": "Strict-Transport-Security",
+          "value": null,
+          "present": false,
+          "description": "Enforces secure (HTTPS) connections to the server.",
+          "compliant": false
+        },
+        {
+          "name": "X-Frame-Options",
+          "value": null,
+          "present": false,
+          "description": "Protects against Clickjacking attacks.",
+          "compliant": false
+        },
+        {
+          "name": "X-Content-Type-Options",
+          "value": null,
+          "present": false,
+          "description": "Prevents browsers from MIME-sniffing a response away from the declared content-type.",
+          "compliant": false
+        },
+        {
+          "name": "Referrer-Policy",
+          "value": null,
+          "present": false,
+          "description": "Controls how much referrer information is sent with requests.",
+          "compliant": false
+        }
+      ]
+    },
+    "seoAudit": {
+      "titleLength": 28,
+      "metaDescription": "A platform for testing restful web services",
+      "h1Count": 1,
+      "brokenLinks": [],
+      "imageAnalysis": [
+        {
+          "src": "https://automationintesting.online/images/room1.jpg",
+          "altTextMissing": false,
+          "sizeInKb": 57
+        },
+        {
+          "src": "https://automationintesting.online/images/room2.jpg",
+          "altTextMissing": false,
+          "sizeInKb": 83
+        },
+        {
+          "src": "https://automationintesting.online/images/room3.jpg",
+          "altTextMissing": false,
+          "sizeInKb": 79
+        },
+        {
+          "src": "https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/17/65998/42915.png",
+          "altTextMissing": true,
+          "sizeInKb": 11
+        },
+        {
+          "src": "https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/17/65998/42916.png",
+          "altTextMissing": true,
+          "sizeInKb": 11
+        },
+        {
+          "src": "https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/17/65998/42917.png",
+          "altTextMissing": true,
+          "sizeInKb": 5
+        },
+        {
+          "src": "https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/17/65999/42915.png",
+          "altTextMissing": true,
+          "sizeInKb": 11
+        },
+        {
+          "src": "https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/17/65999/42916.png",
+          "altTextMissing": true,
+          "sizeInKb": 10
+        },
+        {
+          "src": "https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/17/65999/42917.png",
+          "altTextMissing": true,
+          "sizeInKb": 8
+        },
+        {
+          "src": "https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/17/66000/42915.png",
+          "altTextMissing": true,
+          "sizeInKb": 11
+        },
+        {
+          "src": "https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/17/66000/42916.png",
+          "altTextMissing": true,
+          "sizeInKb": 13
+        },
+        {
+          "src": "https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/17/66000/42917.png",
+          "altTextMissing": true,
+          "sizeInKb": 12
+        }
+      ]
+    },
+    "networkAnalysis": {
+      "totalPageWeightKb": 937,
+      "totalRequests": 19,
+      "topHeaviestResources": [
+        {
+          "url": "https://automationintesting.online/images/rbp-logo.jpg",
+          "type": "image",
+          "sizeInKb": 426
+        },
+        {
+          "url": "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/fonts/bootstrap-icons.woff2?1fa40e8900654d2863d011707b9fb6f2",
+          "type": "font",
+          "sizeInKb": 118
+        },
+        {
+          "url": "https://automationintesting.online/images/room2.jpg",
+          "type": "image",
+          "sizeInKb": 83
+        },
+        {
+          "url": "https://automationintesting.online/images/room3.jpg",
+          "type": "image",
+          "sizeInKb": 79
+        },
+        {
+          "url": "https://automationintesting.online/images/room1.jpg",
+          "type": "image",
+          "sizeInKb": 57
+        }
+      ],
+      "unusedCssPercentage": 94
+    }
+  },
+  {
+    "url": "https://pigeon-maps.js.org/",
+    "title": "Demo | Pigeon Maps",
+    "viewport": "desktop",
+    "htppStatus": 200,
+    "consoleMessages": [
+      {
+        "type": "log",
+        "text": "Got initial bounds:  {ne: Array(2), sw: Array(2)}"
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0C028006C3A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      }
+    ],
+    "requests": [],
+    "failedRequests": [],
+    "screenshotPath": "reports\\screenshots\\_-desktop.png",
+    "loadTime": -1760902565.896,
+    "domContentLoaded": 1.215,
+    "ttfb": 0.189,
+    "speedRating": {
+      "loadTime": "🟢 Fast",
+      "domContentLoaded": "🟢 Fast",
+      "ttfb": "🟢 Fast"
+    },
+    "accessibility": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
+        "nodes": 11
+      },
+      {
+        "id": "landmark-one-main",
+        "impact": "moderate",
+        "description": "Ensure the document has a main landmark",
+        "help": "Document should have one main landmark",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=playwright",
+        "nodes": 1
+      }
+    ],
+    "smartActions": [
+      "🤖 Exploring: https://pigeon-maps.js.org/",
+      "⚠️ Could not check input (checkbox): locator.check: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"checkbox\"], input[type=\"radio\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"checkbox\" class=\"toggleScreenReader_JnkT\" aria-label=\"Switch between dark and light mode\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"toggle_Pssr toggle_TdHA\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"toggle_Pssr toggle_TdHA\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    57 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"toggle_Pssr toggle_TdHA\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "✔️ Checked input (checkbox)",
+      "✔️ Checked input (checkbox)",
+      "🖱️ Scrolled down the page",
+      "📜 Scrolled to bottom"
+    ],
+    "formsDetected": 0,
+    "securityAudit": {
+      "isHttps": true,
+      "mixedContent": [],
+      "headers": [
+        {
+          "name": "Content-Security-Policy",
+          "value": null,
+          "present": false,
+          "description": "Helps prevent XSS attacks by defining allowed content sources.",
+          "compliant": false
+        },
+        {
+          "name": "Strict-Transport-Security",
+          "value": null,
+          "present": false,
+          "description": "Enforces secure (HTTPS) connections to the server.",
+          "compliant": false
+        },
+        {
+          "name": "X-Frame-Options",
+          "value": null,
+          "present": false,
+          "description": "Protects against Clickjacking attacks.",
+          "compliant": false
+        },
+        {
+          "name": "X-Content-Type-Options",
+          "value": null,
+          "present": false,
+          "description": "Prevents browsers from MIME-sniffing a response away from the declared content-type.",
+          "compliant": false
+        },
+        {
+          "name": "Referrer-Policy",
+          "value": null,
+          "present": false,
+          "description": "Controls how much referrer information is sent with requests.",
+          "compliant": false
+        }
+      ]
+    },
+    "seoAudit": {
+      "titleLength": 18,
+      "metaDescription": "ReactJS maps without external dependencies",
+      "h1Count": 1,
+      "brokenLinks": [
+        {
+          "url": "https://twitter.com/mariusandra",
+          "status": 403
+        }
+      ],
+      "imageAnalysis": [
+        {
+          "src": "https://pigeon-maps.js.org/img/logo.svg",
+          "altTextMissing": false,
+          "sizeInKb": 1
+        },
+        {
+          "src": "https://pigeon-maps.js.org/img/logo.svg",
+          "altTextMissing": false,
+          "sizeInKb": 1
+        },
+        {
+          "src": "https://a.tile.openstreetmap.org/6/31/20.png",
+          "altTextMissing": true,
+          "sizeInKb": 37
+        },
+        {
+          "src": "https://b.tile.openstreetmap.org/6/31/21.png",
+          "altTextMissing": true,
+          "sizeInKb": 31
+        },
+        {
+          "src": "https://c.tile.openstreetmap.org/6/31/22.png",
+          "altTextMissing": true,
+          "sizeInKb": 27
+        },
+        {
+          "src": "https://b.tile.openstreetmap.org/6/32/20.png",
+          "altTextMissing": true,
+          "sizeInKb": 7
+        },
+        {
+          "src": "https://c.tile.openstreetmap.org/6/32/21.png",
+          "altTextMissing": true,
+          "sizeInKb": 42
+        },
+        {
+          "src": "https://a.tile.openstreetmap.org/6/32/22.png",
+          "altTextMissing": true,
+          "sizeInKb": 54
+        },
+        {
+          "src": "https://c.tile.openstreetmap.org/6/33/20.png",
+          "altTextMissing": true,
+          "sizeInKb": 35
+        },
+        {
+          "src": "https://a.tile.openstreetmap.org/6/33/21.png",
+          "altTextMissing": true,
+          "sizeInKb": 55
+        },
+        {
+          "src": "https://b.tile.openstreetmap.org/6/33/22.png",
+          "altTextMissing": true,
+          "sizeInKb": 53
+        }
+      ]
+    },
+    "networkAnalysis": {
+      "totalPageWeightKb": 717,
+      "totalRequests": 25,
+      "topHeaviestResources": [
+        {
+          "url": "https://a.tile.openstreetmap.org/6/33/21.png",
+          "type": "image",
+          "sizeInKb": 55
+        },
+        {
+          "url": "https://a.tile.openstreetmap.org/6/32/22.png",
+          "type": "image",
+          "sizeInKb": 54
+        },
+        {
+          "url": "https://b.tile.openstreetmap.org/6/34/21.png",
+          "type": "image",
+          "sizeInKb": 54
+        },
+        {
+          "url": "https://b.tile.openstreetmap.org/6/33/22.png",
+          "type": "image",
+          "sizeInKb": 53
+        },
+        {
+          "url": "https://c.tile.openstreetmap.org/6/35/21.png",
+          "type": "image",
+          "sizeInKb": 53
+        }
+      ],
+      "unusedCssPercentage": 69
+    }
+  },
+  {
+    "url": "https://github.com/mariusandra/pigeon-maps",
+    "title": "GitHub - mariusandra/pigeon-maps: ReactJS Maps without external dependencies",
+    "viewport": "desktop",
+    "htppStatus": 200,
+    "consoleMessages": [
+      {
+        "type": "log",
+        "text": "Got initial bounds:  {ne: Array(2), sw: Array(2)}"
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0C028006C3A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      }
+    ],
+    "requests": [],
+    "failedRequests": [],
+    "screenshotPath": "reports\\screenshots\\_mariusandra_pigeon-maps-desktop.png",
+    "loadTime": -1760902598.58,
+    "domContentLoaded": 1.818,
+    "ttfb": 0.607,
+    "speedRating": {
+      "loadTime": "🟢 Fast",
+      "domContentLoaded": "🟡 Medium",
+      "ttfb": "🔴 Slow"
+    },
+    "accessibility": [],
+    "smartActions": [
+      "🤖 Exploring: https://github.com/mariusandra/pigeon-maps",
+      "🧾 Detected 3 form(s)",
+      "⚠️ Could not fill input (text): locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"text\"], input[type=\"email\"], input[type=\"password\"], input[type=\"tel\"], input[type=\"number\"], textarea').first()\u001b[22m\n\u001b[2m    - locator resolved to <input value=\"\" type=\"text\" role=\"combobox\" autocomplete=\"off\" spellcheck=\"false\" aria-expanded=\"false\" id=\"query-builder-test\" aria-haspopup=\"listbox\" aria-autocomplete=\"list\" name=\"query-builder-test\" data-view-component=\"true\" data-target=\"query-builder.input\" aria-controls=\"query-builder-test-results\" class=\"FormControl-input QueryBuilder-Input FormControl-medium\" aria-describedby=\"validation-89b425bf-9540-46b9-9f6d-d43e308011e2\" data-action=\"↵          input:query-builder#inputChange↵          b…/>\u001b[22m\n\u001b[2m    - fill(\"Sonitus ab amor.\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying fill action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "⚠️ Could not fill input (text): locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"text\"], input[type=\"email\"], input[type=\"password\"], input[type=\"tel\"], input[type=\"number\"], textarea').nth(1)\u001b[22m\n\u001b[2m    - locator resolved to <textarea id=\"feedback\" name=\"feedback\" class=\"form-control width-full mb-2\"></textarea>\u001b[22m\n\u001b[2m    - fill(\"Spectaculum aspicio tripudio.\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    59 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying fill action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "⚠️ Could not fill input (text): locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"text\"], input[type=\"email\"], input[type=\"password\"], input[type=\"tel\"], input[type=\"number\"], textarea').nth(2)\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"text\" required=\"\" maxlength=\"50\" autocomplete=\"off\" spellcheck=\"false\" class=\"form-control\" id=\"custom_scope_name\" name=\"custom_scope_name\" placeholder=\"github-ruby\" data-target=\"custom-scopes.customScopesNameField\"/>\u001b[22m\n\u001b[2m    - fill(\"Magnam volo summisse.\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    59 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying fill action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "⚠️ Could not fill input (text): locator.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"text\"], input[type=\"email\"], input[type=\"password\"], input[type=\"tel\"], input[type=\"number\"], textarea').nth(3)\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"text\" required=\"\" maxlength=\"500\" autocomplete=\"off\" class=\"form-control\" id=\"custom_scope_query\" name=\"custom_scope_query\" data-target=\"custom-scopes.customScopesQueryField\" placeholder=\"(repo:mona/a OR repo:mona/b) AND lang:python\"/>\u001b[22m\n\u001b[2m    - fill(\"Clamo causa tergo.\")\u001b[22m\n\u001b[2m  - attempting fill action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying fill action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    59 × waiting for element to be visible, enabled and editable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying fill action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "✍️ Filled input (text)",
+      "⚠️ Could not check input (checkbox): locator.check: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"checkbox\"], input[type=\"radio\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"checkbox\" id=\"include_email\" name=\"include_email\" class=\"form-control mr-2\" aria-label=\"Include my email address so I can be contacted\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "🟢 Clicked button: \"Manage cookies\"",
+      "🖱️ Scrolled down the page",
+      "📜 Scrolled to bottom"
+    ],
+    "formsDetected": 3,
+    "securityAudit": {
+      "isHttps": true,
+      "mixedContent": [],
+      "headers": [
+        {
+          "name": "Content-Security-Policy",
+          "value": "default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net/ productionresultssa1.blob.core.windows.net/ productionresultssa2.blob.core.windows.net/ productionresultssa3.blob.core.windows.net/ productionresultssa4.blob.core.windows.net/ productionresultssa5.blob.core.windows.net/ productionresultssa6.blob.core.windows.net/ productionresultssa7.blob.core.windows.net/ productionresultssa8.blob.core.windows.net/ productionresultssa9.blob.core.windows.net/ productionresultssa10.blob.core.windows.net/ productionresultssa11.blob.core.windows.net/ productionresultssa12.blob.core.windows.net/ productionresultssa13.blob.core.windows.net/ productionresultssa14.blob.core.windows.net/ productionresultssa15.blob.core.windows.net/ productionresultssa16.blob.core.windows.net/ productionresultssa17.blob.core.windows.net/ productionresultssa18.blob.core.windows.net/ productionresultssa19.blob.core.windows.net/ github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com marketplace-screenshots.githubusercontent.com/ copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/",
+          "present": true,
+          "description": "Helps prevent XSS attacks by defining allowed content sources.",
+          "compliant": true
+        },
+        {
+          "name": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubdomains; preload",
+          "present": true,
+          "description": "Enforces secure (HTTPS) connections to the server.",
+          "compliant": true
+        },
+        {
+          "name": "X-Frame-Options",
+          "value": "deny",
+          "present": true,
+          "description": "Protects against Clickjacking attacks.",
+          "compliant": false
+        },
+        {
+          "name": "X-Content-Type-Options",
+          "value": "nosniff",
+          "present": true,
+          "description": "Prevents browsers from MIME-sniffing a response away from the declared content-type.",
+          "compliant": true
+        },
+        {
+          "name": "Referrer-Policy",
+          "value": "no-referrer-when-downgrade",
+          "present": true,
+          "description": "Controls how much referrer information is sent with requests.",
+          "compliant": false
+        }
+      ]
+    },
+    "seoAudit": {
+      "titleLength": 76,
+      "metaDescription": "ReactJS Maps without external dependencies. Contribute to mariusandra/pigeon-maps development by creating an account on GitHub.",
+      "h1Count": 5,
+      "brokenLinks": [
+        {
+          "url": "https://github.com/marketplace",
+          "status": 400
+        },
+        {
+          "url": "https://github.com/mariusandra/pigeon-maps/blob/main/.prettierrc.js",
+          "status": 429
+        },
+        {
+          "url": "https://github.com/mariusandra/pigeon-maps/blob/main/README.md",
+          "status": 429
+        },
+        {
+          "url": "https://github.com/mariusandra/pigeon-maps/blob/main/yarn.lock",
+          "status": 429
+        },
+        {
+          "url": "https://www.npmjs.com/package/pigeon-maps",
+          "status": 403
+        }
+      ],
+      "imageAnalysis": [
+        {
+          "src": "https://camo.githubusercontent.com/aac71c838ba11fc76b4f8ebeb6524cff6774d55816c1dc0321649879c68dbe78/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f706967656f6e2d6d6170732e737667",
+          "altTextMissing": false,
+          "sizeInKb": 1
+        },
+        {
+          "src": "https://camo.githubusercontent.com/e22cae0dfa846e33df9e92a17114ba7882d7a90203f2390f39f7895805263a00/68747470733a2f2f62616467656e2e6e65742f62756e646c6570686f6269612f6d696e2f706967656f6e2d6d617073",
+          "altTextMissing": false,
+          "sizeInKb": 1
+        },
+        {
+          "src": "https://camo.githubusercontent.com/ceed3f5774979c0c86a751cca593053fddba4c96c1919048815b4dbad5c478ca/68747470733a2f2f62616467656e2e6e65742f62756e646c6570686f6269612f6d696e7a69702f706967656f6e2d6d617073",
+          "altTextMissing": false,
+          "sizeInKb": 1
+        },
+        {
+          "src": "https://camo.githubusercontent.com/e22cae0dfa846e33df9e92a17114ba7882d7a90203f2390f39f7895805263a00/68747470733a2f2f62616467656e2e6e65742f62756e646c6570686f6269612f6d696e2f706967656f6e2d6d617073",
+          "altTextMissing": false,
+          "sizeInKb": 1
+        },
+        {
+          "src": "https://camo.githubusercontent.com/ceed3f5774979c0c86a751cca593053fddba4c96c1919048815b4dbad5c478ca/68747470733a2f2f62616467656e2e6e65742f62756e646c6570686f6269612f6d696e7a69702f706967656f6e2d6d617073",
+          "altTextMissing": false,
+          "sizeInKb": 1
+        },
+        {
+          "src": "https://avatars.githubusercontent.com/u/13031593?s=64&v=4",
+          "altTextMissing": false,
+          "sizeInKb": 4
+        },
+        {
+          "src": "https://avatars.githubusercontent.com/u/141041402?s=64&v=4",
+          "altTextMissing": false,
+          "sizeInKb": 1
+        },
+        {
+          "src": "https://avatars.githubusercontent.com/u/71936582?s=64&v=4",
+          "altTextMissing": false,
+          "sizeInKb": 4
+        },
+        {
+          "src": "https://avatars.githubusercontent.com/u/11014911?s=64&v=4",
+          "altTextMissing": false,
+          "sizeInKb": 1
+        },
+        {
+          "src": "https://avatars.githubusercontent.com/u/187594010?s=64&v=4",
+          "altTextMissing": false,
+          "sizeInKb": 2
+        },
+        {
+          "src": "https://avatars.githubusercontent.com/u/127729183?s=64&v=4",
+          "altTextMissing": false,
+          "sizeInKb": 1
+        },
+        {
+          "src": "https://avatars.githubusercontent.com/u/50518955?s=64&v=4",
+          "altTextMissing": false,
+          "sizeInKb": 8
+        },
+        {
+          "src": "https://avatars.githubusercontent.com/u/63572085?s=64&v=4",
+          "altTextMissing": false,
+          "sizeInKb": 1
+        }
+      ]
+    },
+    "networkAnalysis": {
+      "totalPageWeightKb": 1205,
+      "totalRequests": 141,
+      "topHeaviestResources": [
+        {
+          "url": "https://github.githubassets.com/assets/primer-react-10977e218f81.js",
+          "type": "script",
+          "sizeInKb": 119
+        },
+        {
+          "url": "https://github.githubassets.com/assets/octicons-react-dfcd3f5e8531.js",
+          "type": "script",
+          "sizeInKb": 93
+        },
+        {
+          "url": "https://github.githubassets.com/assets/behaviors-2c0a177b1bbe.js",
+          "type": "script",
+          "sizeInKb": 59
+        },
+        {
+          "url": "https://github.githubassets.com/assets/react-lib-25ef56e89e94.js",
+          "type": "script",
+          "sizeInKb": 56
+        },
+        {
+          "url": "https://github.githubassets.com/assets/react-core-ca4f004636c1.js",
+          "type": "script",
+          "sizeInKb": 52
+        }
+      ],
+      "unusedCssPercentage": 86
+    }
+  },
+  {
+    "url": "https://www.openstreetmap.org/copyright",
+    "title": "Copyright and License | OpenStreetMap",
+    "viewport": "desktop",
+    "htppStatus": 200,
+    "consoleMessages": [
+      {
+        "type": "log",
+        "text": "Got initial bounds:  {ne: Array(2), sw: Array(2)}"
+      },
+      {
+        "type": "warning",
+        "text": "[GroupMarkerNotSet(crbug.com/242999)!:A0C028006C3A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content."
+      }
+    ],
+    "requests": [],
+    "failedRequests": [],
+    "screenshotPath": "reports\\screenshots\\_copyright-desktop.png",
+    "loadTime": 0.654,
+    "domContentLoaded": 0.649,
+    "ttfb": 0.196,
+    "speedRating": {
+      "loadTime": "🟢 Fast",
+      "domContentLoaded": "🟢 Fast",
+      "ttfb": "🟢 Fast"
+    },
+    "accessibility": [
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "description": "Ensure buttons have discernible text",
+        "help": "Buttons must have discernible text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/button-name?application=playwright",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright",
+        "nodes": 10
+      },
+      {
+        "id": "heading-order",
+        "impact": "moderate",
+        "description": "Ensure the order of headings is semantically correct",
+        "help": "Heading levels should only increase by one",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/heading-order?application=playwright",
+        "nodes": 1
+      },
+      {
+        "id": "landmark-one-main",
+        "impact": "moderate",
+        "description": "Ensure the document has a main landmark",
+        "help": "Document should have one main landmark",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=playwright",
+        "nodes": 1
+      },
+      {
+        "id": "landmark-unique",
+        "impact": "moderate",
+        "description": "Ensure landmarks are unique",
+        "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-unique?application=playwright",
+        "nodes": 1
+      },
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "description": "Ensure links are distinguished from surrounding text in a way that does not rely on color",
+        "help": "Links must be distinguishable without relying on color",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/link-in-text-block?application=playwright",
+        "nodes": 42
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "description": "Ensure all page content is contained by landmarks",
+        "help": "All page content should be contained by landmarks",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/region?application=playwright",
+        "nodes": 1
+      }
+    ],
+    "smartActions": [
+      "🤖 Exploring: https://www.openstreetmap.org/copyright",
+      "🖱️ Scrolled down the page",
+      "📜 Scrolled to bottom"
+    ],
+    "formsDetected": 0,
+    "securityAudit": {
+      "isHttps": true,
+      "mixedContent": [],
+      "headers": [
+        {
+          "name": "Content-Security-Policy",
+          "value": "default-src 'self'; child-src 'self'; connect-src 'self' matomo.openstreetmap.org; font-src 'none'; form-action 'self'; frame-ancestors 'self'; frame-src 'self'; img-src 'self' data: www.gravatar.com *.wp.com tile.openstreetmap.org gps.tile.openstreetmap.org *.tile.thunderforest.com tile.tracestrack.com *.openstreetmap.fr matomo.openstreetmap.org https://openstreetmap-user-avatars.s3.dualstack.eu-west-1.amazonaws.com https://openstreetmap-gps-images.s3.dualstack.eu-west-1.amazonaws.com; manifest-src 'self'; media-src 'none'; object-src 'self'; script-src 'self' matomo.openstreetmap.org 'nonce-r6tTG2S047sgVvhCw+yWDqkcj+F3xAUv'; style-src 'self' 'nonce-r6tTG2S047sgVvhCw+yWDqkcj+F3xAUv'; worker-src blob:",
+          "present": true,
+          "description": "Helps prevent XSS attacks by defining allowed content sources.",
+          "compliant": true
+        },
+        {
+          "name": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload",
+          "present": true,
+          "description": "Enforces secure (HTTPS) connections to the server.",
+          "compliant": true
+        },
+        {
+          "name": "X-Frame-Options",
+          "value": "SAMEORIGIN",
+          "present": true,
+          "description": "Protects against Clickjacking attacks.",
+          "compliant": true
+        },
+        {
+          "name": "X-Content-Type-Options",
+          "value": "nosniff",
+          "present": true,
+          "description": "Prevents browsers from MIME-sniffing a response away from the declared content-type.",
+          "compliant": true
+        },
+        {
+          "name": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin",
+          "present": true,
+          "description": "Controls how much referrer information is sent with requests.",
+          "compliant": true
+        }
+      ]
+    },
+    "seoAudit": {
+      "titleLength": 37,
+      "metaDescription": "OpenStreetMap is the free wiki world map.",
+      "h1Count": 4,
+      "brokenLinks": [
+        {
+          "url": "https://www.openstreetmap.org/edit",
+          "status": 403
+        },
+        {
+          "url": "https://www.openstreetmap.org/edit?editor=id",
+          "status": 403
+        },
+        {
+          "url": "https://www.vorarlberg.at/vorarlberg/bauen_wohnen/bauen/vermessung_geoinformation/weitereinformationen/services/wmsdienste.htm",
+          "status": 502
+        }
+      ],
+      "imageAnalysis": [
+        {
+          "src": "https://www.openstreetmap.org/assets/osm_logo-4b074077c29e100f40ee64f5177886e36b570d4cc3ab10c7b263003d09642e3f.svg",
+          "altTextMissing": false,
+          "sizeInKb": 10
+        },
+        {
+          "src": "https://www.openstreetmap.org/assets/attribution_example-bb415dddb3aa93744f8d5622ed0730e785d032f208b6439dd7595f545ec3a805.png",
+          "altTextMissing": false,
+          "sizeInKb": 2
+        }
+      ]
+    },
+    "networkAnalysis": {
+      "totalPageWeightKb": 981,
+      "totalRequests": 10,
+      "topHeaviestResources": [
+        {
+          "url": "https://www.openstreetmap.org/assets/application-03635ea4df142db8927ad16215c127bf06c48cb7c274bb97ed33b728af9e765c.js",
+          "type": "script",
+          "sizeInKb": 471
+        },
+        {
+          "url": "blob:https://www.openstreetmap.org/d3443bff-bd63-41c4-8485-61499e43fceb",
+          "type": "script",
+          "sizeInKb": 401
+        },
+        {
+          "url": "https://www.openstreetmap.org/assets/turbo-d85ef71ce6bcbe2f31479d6a403c500384b45d54b2a8a6802ba67843a1bf5ade.js",
+          "type": "script",
+          "sizeInKb": 35
+        },
+        {
+          "url": "https://www.openstreetmap.org/assets/screen-auto-ltr-5fd465e080a7e4cc60d3286fcb8275a1fd3dff5a3bacbf48dba27c88ec8912cd.css",
+          "type": "stylesheet",
+          "sizeInKb": 30
+        },
+        {
+          "url": "https://matomo.openstreetmap.org/matomo.js",
+          "type": "script",
+          "sizeInKb": 19
+        }
+      ],
+      "unusedCssPercentage": 94
+    }
+  }
+]

@@ -28,7 +28,7 @@ class ContentSeoService {
         const h1Count = await this.page.locator("h1").count();
         return { titleLength, metaDescription, h1Count };
     }
-    /** Znajduje wszystkie linki na stronie i sprawdza, czy nie są uszkodzone */
+    /** Finding all links on the page and checking their HTTP status */
     async _findBrokenLinks() {
         const links = await this.page.$$eval("a[href]", (anchors) => anchors.map((a) => a.href));
         const uniqueLinks = [...new Set(links)].filter((link) => link.startsWith("http"));
@@ -43,13 +43,13 @@ class ContentSeoService {
                 }
             }
             catch (error) {
-                // Ignorujemy błędy timeoutu lub DNS, aby nie przerywać skanowania
+                // Ignore network errors and timeouts to not flood the report
                 console.warn(`Could not check link ${link}:`, error.message);
             }
         }
         return brokenLinks;
     }
-    /** Analizuje wszystkie obrazki pod kątem braku tekstu alternatywnego i rozmiaru */
+    /** Analyzing images for alt text and size */
     async _analyzeImages() {
         const images = await this.page.locator("img").evaluateAll((imgs) => imgs.map((img) => ({
             src: img.src,
