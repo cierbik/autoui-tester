@@ -1,291 +1,179 @@
-import fs from "fs-extra";
-import path from "path";
-import { SeoAuditResult, NetworkAnalysisResult } from "../types/interfaces";
-
-// better typing for accessibility issues
-interface AccessibilityIssue {
-  impact?: "critical" | "serious" | "moderate" | "minor" | string;
-  description: string;
-  helpUrl: string;
-}
-
-// Interfaces for structured report data
-interface ConsoleMessage {
-  type: string;
-  text: string;
-}
-interface FailedRequest {
-  url: string;
-  status: number;
-}
-
-interface ReportData {
-  url: string;
-  title: string;
-  consoleMessages: ConsoleMessage[];
-  failedRequests: FailedRequest[];
-  screenshotPath: string;
-  accessibility?: AccessibilityIssue[];
-  ttfb?: number;
-  loadTime?: number;
-  domContentLoaded?: number;
-  smartActions?: string[];
-  formsDetected?: number;
-  securityAudit: SecurityAuditResult;
-  seoAudit: SeoAuditResult;
-  speedRating?: {
-    loadTime: string;
-    domContentLoaded: string;
-    ttfb: string;
-  };
-  networkAnalysis: NetworkAnalysisResult;
-}
-
-interface MixedContentResult {
-  url: string;
-  type: "active" | "passive";
-}
-interface HeaderAuditResult {
-  name: string;
-  value: string | null;
-  present: boolean;
-  description: string;
-  compliant: boolean;
-}
-interface SecurityAuditResult {
-  isHttps: boolean;
-  mixedContent: MixedContentResult[];
-  headers: HeaderAuditResult[];
-}
-
-export class Reporter {
-  constructor(private results: ReportData[], private outputDir = "reports") {}
-
-  public async generateHtmlReport(): Promise<void> {
-    await fs.ensureDir(this.outputDir);
-
-    const reportDate = new Date().toLocaleString("en-US");
-    const totalIssues = this.results.reduce(
-      (acc, r) => acc + (r.accessibility?.length ?? 0),
-      0
-    );
-
-    const summary = {
-      pageCount: this.results.length,
-      totalAccessibilityIssues: totalIssues,
-      reportDate: reportDate,
-    };
-
-    const rows = this.results.map((r) => this._generateTableRow(r)).join("");
-    const html = this._generateFullHtml(rows, summary);
-
-    const filePath = path.join(this.outputDir, "report.html");
-    await fs.writeFile(filePath, html, "utf8");
-    console.log(`✅ Interactive HTML report generated at: ${filePath}`);
-  }
-  private _formatNetworkAnalysis(analysis: NetworkAnalysisResult): string {
-    if (!analysis) return '<span class="no-data">-</span>';
-
-    const summaryHtml = `
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Reporter = void 0;
+const fs_extra_1 = __importDefault(require("fs-extra"));
+const path_1 = __importDefault(require("path"));
+class Reporter {
+    results;
+    outputDir;
+    constructor(results, outputDir = "reports") {
+        this.results = results;
+        this.outputDir = outputDir;
+    }
+    async generateHtmlReport() {
+        await fs_extra_1.default.ensureDir(this.outputDir);
+        const reportDate = new Date().toLocaleString("en-US");
+        const totalIssues = this.results.reduce((acc, r) => acc + (r.accessibility?.length ?? 0), 0);
+        const summary = {
+            pageCount: this.results.length,
+            totalAccessibilityIssues: totalIssues,
+            reportDate: reportDate,
+        };
+        const rows = this.results.map((r) => this._generateTableRow(r)).join("");
+        const html = this._generateFullHtml(rows, summary);
+        const filePath = path_1.default.join(this.outputDir, "report.html");
+        await fs_extra_1.default.writeFile(filePath, html, "utf8");
+        console.log(`✅ Interactive HTML report generated at: ${filePath}`);
+    }
+    _formatNetworkAnalysis(analysis) {
+        if (!analysis)
+            return '<span class="no-data">-</span>';
+        const summaryHtml = `
     <div class="net-summary-item"><strong>Page Weight:</strong> ${analysis.totalPageWeightKb} KB</div>
     <div class="net-summary-item"><strong>Requests:</strong> ${analysis.totalRequests}</div>
     <div class="net-summary-item"><strong>Unused CSS:</strong> ${analysis.unusedCssPercentage}%</div>
   `;
-
-    let heaviestHtml = "";
-    if (analysis.topHeaviestResources.length > 0) {
-      const items = analysis.topHeaviestResources
-        .map(
-          (res) =>
-            `<li><strong>${res.sizeInKb} KB</strong> - <span class="net-url">${res.url}</span></li>`
-        )
-        .join("");
-      heaviestHtml = `<div class="net-section"><strong>Heaviest Resources:</strong><ul>${items}</ul></div>`;
+        let heaviestHtml = "";
+        if (analysis.topHeaviestResources.length > 0) {
+            const items = analysis.topHeaviestResources
+                .map((res) => `<li><strong>${res.sizeInKb} KB</strong> - <span class="net-url">${res.url}</span></li>`)
+                .join("");
+            heaviestHtml = `<div class="net-section"><strong>Heaviest Resources:</strong><ul>${items}</ul></div>`;
+        }
+        return `<div class="net-cell">${summaryHtml}${heaviestHtml}</div>`;
     }
-
-    return `<div class="net-cell">${summaryHtml}${heaviestHtml}</div>`;
-  }
-  private _formatContentSeoAudit(audit: SeoAuditResult): string {
-    // SEO basic info
-    const basicSeoHtml = `
-      <div class="seo-item"><strong>Title Length:</strong> ${
-        audit.titleLength
-      } chars</div>
-      <div class="seo-item"><strong>Meta Desc:</strong> ${
-        audit.metaDescription ? "✅ Found" : "❌ Missing"
-      }</div>
-      <div class="seo-item"><strong>H1 Tags:</strong> ${
-        audit.h1Count === 1 ? "✅ 1" : `⚠️ ${audit.h1Count}`
-      }</div>
+    _formatContentSeoAudit(audit) {
+        // SEO basic info
+        const basicSeoHtml = `
+      <div class="seo-item"><strong>Title Length:</strong> ${audit.titleLength} chars</div>
+      <div class="seo-item"><strong>Meta Desc:</strong> ${audit.metaDescription ? "✅ Found" : "❌ Missing"}</div>
+      <div class="seo-item"><strong>H1 Tags:</strong> ${audit.h1Count === 1 ? "✅ 1" : `⚠️ ${audit.h1Count}`}</div>
     `;
-
-    // Uszkodzone linki
-    let brokenLinksHtml = "";
-    if (audit.brokenLinks.length > 0) {
-      const items = audit.brokenLinks
-        .map(
-          (l) =>
-            `<li><span class="status-code">${l.status}</span> ${l.url}</li>`
-        )
-        .join("");
-      brokenLinksHtml = `<div class="seo-section"><strong>Broken Links Found:</strong><ul>${items}</ul></div>`;
+        // Uszkodzone linki
+        let brokenLinksHtml = "";
+        if (audit.brokenLinks.length > 0) {
+            const items = audit.brokenLinks
+                .map((l) => `<li><span class="status-code">${l.status}</span> ${l.url}</li>`)
+                .join("");
+            brokenLinksHtml = `<div class="seo-section"><strong>Broken Links Found:</strong><ul>${items}</ul></div>`;
+        }
+        // Analiza obrazków
+        const largeImages = audit.imageAnalysis.filter((img) => img.sizeInKb > 200);
+        const missingAlts = audit.imageAnalysis.filter((img) => img.altTextMissing);
+        let imageAnalysisHtml = "";
+        if (largeImages.length > 0 || missingAlts.length > 0) {
+            imageAnalysisHtml = `<div class="seo-section"><strong>Image Issues:</strong><ul>`;
+            if (missingAlts.length > 0) {
+                imageAnalysisHtml += `<li>⚠️ ${missingAlts.length} images missing alt text</li>`;
+            }
+            if (largeImages.length > 0) {
+                imageAnalysisHtml += `<li>🐘 ${largeImages.length} images larger than 200 KB</li>`;
+            }
+            imageAnalysisHtml += `</ul></div>`;
+        }
+        return `<div class="seo-cell">${basicSeoHtml}${brokenLinksHtml}${imageAnalysisHtml ||
+            '<div class="seo-section-ok">✅ No major content issues</div>'}</div>`;
     }
-
-    // Analiza obrazków
-    const largeImages = audit.imageAnalysis.filter((img) => img.sizeInKb > 200);
-    const missingAlts = audit.imageAnalysis.filter((img) => img.altTextMissing);
-    let imageAnalysisHtml = "";
-    if (largeImages.length > 0 || missingAlts.length > 0) {
-      imageAnalysisHtml = `<div class="seo-section"><strong>Image Issues:</strong><ul>`;
-      if (missingAlts.length > 0) {
-        imageAnalysisHtml += `<li>⚠️ ${missingAlts.length} images missing alt text</li>`;
-      }
-      if (largeImages.length > 0) {
-        imageAnalysisHtml += `<li>🐘 ${largeImages.length} images larger than 200 KB</li>`;
-      }
-      imageAnalysisHtml += `</ul></div>`;
-    }
-
-    return `<div class="seo-cell">${basicSeoHtml}${brokenLinksHtml}${
-      imageAnalysisHtml ||
-      '<div class="seo-section-ok">✅ No major content issues</div>'
-    }</div>`;
-  }
-  private _generateTableRow(r: ReportData): string {
-    // Rzutuj 'r' na 'any', aby uniknąć błędów TS dla niekompletnych obiektów
-    const result = r as any;
-
-    const relativeScreenshotPath = result.screenshotPath
-      ? path.relative(this.outputDir, result.screenshotPath).replace(/\\/g, "/")
-      : null;
-
-    // Używaj operatora '??' do zapewnienia wartości domyślnych dla każdego pola
-    return `
+    _generateTableRow(r) {
+        // Rzutuj 'r' na 'any', aby uniknąć błędów TS dla niekompletnych obiektów
+        const result = r;
+        const relativeScreenshotPath = result.screenshotPath
+            ? path_1.default.relative(this.outputDir, result.screenshotPath).replace(/\\/g, "/")
+            : null;
+        // Używaj operatora '??' do zapewnienia wartości domyślnych dla każdego pola
+        return `
     <tr>
       <td><a href="${result.url}" target="_blank">${result.url}</a></td>
       <td>${result.title ?? "N/A"}</td>
-      <td class="cell-scrollable">${this._formatConsoleMessages(
-        result.consoleMessages ?? []
-      )}</td>
-      <td class="cell-scrollable">${this._formatFailedRequests(
-        result.failedRequests ?? []
-      )}</td>
+      <td class="cell-scrollable">${this._formatConsoleMessages(result.consoleMessages ?? [])}</td>
+      <td class="cell-scrollable">${this._formatFailedRequests(result.failedRequests ?? [])}</td>
       <td>
-        ${
-          relativeScreenshotPath
+        ${relativeScreenshotPath
             ? `<img src="${relativeScreenshotPath}" alt="Screenshot of ${result.title}" class="screenshot-thumb" loading="lazy" />`
-            : `<span class="no-data">${
-                result.title === "CRAWL_ERROR" ? "Crawl Error" : "No Screenshot"
-              }</span>`
-        }
+            : `<span class="no-data">${result.title === "CRAWL_ERROR" ? "Crawl Error" : "No Screenshot"}</span>`}
       </td>
       <td>${this._formatAccessibility(result.accessibility)}</td>
-      <td class="security-cell">${this._formatSecurityAudit(
-        result.securityAudit
-      )}</td>
-      <td>${result.ttfb?.toFixed(2) ?? "-"} s <span class="rating">${
-      result.speedRating?.ttfb ?? ""
-    }</span></td>
-      <td>${result.loadTime?.toFixed(2) ?? "-"} s <span class="rating">${
-      result.speedRating?.loadTime ?? ""
-    }</span></td>
-      <td>${
-        result.domContentLoaded?.toFixed(2) ?? "-"
-      } s <span class="rating">${
-      result.speedRating?.domContentLoaded ?? ""
-    }</span></td>
+      <td class="security-cell">${this._formatSecurityAudit(result.securityAudit)}</td>
+      <td>${result.ttfb?.toFixed(2) ?? "-"} s <span class="rating">${result.speedRating?.ttfb ?? ""}</span></td>
+      <td>${result.loadTime?.toFixed(2) ?? "-"} s <span class="rating">${result.speedRating?.loadTime ?? ""}</span></td>
+      <td>${result.domContentLoaded?.toFixed(2) ?? "-"} s <span class="rating">${result.speedRating?.domContentLoaded ?? ""}</span></td>
       <td class="wrap">${result.smartActions?.join("<br>") || "-"}</td>
       <td>${result.formsDetected ?? "-"}</td>
       <td>${this._formatContentSeoAudit(result.seoAudit)}</td>
       <td>${this._formatNetworkAnalysis(result.networkAnalysis)}</td>
     </tr>`;
-  }
-
-  // --- Cell Formatting Helpers ---
-
-  private _formatConsoleMessages(messages: ConsoleMessage[]): string {
-    if (!messages.length) return `<span class="no-data">-</span>`;
-    return messages.map((m) => `[${m.type}] ${m.text}`).join("<br>");
-  }
-
-  private _formatFailedRequests(requests: FailedRequest[]): string {
-    if (!requests.length) return `<span class="no-data">-</span>`;
-    return requests.map((fr) => `${fr.url} (${fr.status})`).join("<br>");
-  }
-
-  private _formatSecurityAudit(audit: SecurityAuditResult): string {
-    if (!audit) {
-      return '<span class="no-data">N/A (Crawl Error)</span>';
     }
-    // 1. Status HTTPS
-    const httpsStatus = audit.isHttps
-      ? `<div class="https-status https-secure">🛡️ Secure (HTTPS)</div>`
-      : `<div class="https-status https-insecure">❌ Insecure (HTTP)</div>`;
-
-    // 2. List of headers
-    const headersList = audit.headers
-      .map((h) => {
-        const icon = h.compliant ? "✅" : "❌";
-        const statusClass = h.compliant ? "compliant" : "non-compliant";
-        return `<div class="header-item ${statusClass}" title="${h.description}">
+    // --- Cell Formatting Helpers ---
+    _formatConsoleMessages(messages) {
+        if (!messages.length)
+            return `<span class="no-data">-</span>`;
+        return messages.map((m) => `[${m.type}] ${m.text}`).join("<br>");
+    }
+    _formatFailedRequests(requests) {
+        if (!requests.length)
+            return `<span class="no-data">-</span>`;
+        return requests.map((fr) => `${fr.url} (${fr.status})`).join("<br>");
+    }
+    _formatSecurityAudit(audit) {
+        if (!audit) {
+            return '<span class="no-data">N/A (Crawl Error)</span>';
+        }
+        // 1. Status HTTPS
+        const httpsStatus = audit.isHttps
+            ? `<div class="https-status https-secure">🛡️ Secure (HTTPS)</div>`
+            : `<div class="https-status https-insecure">❌ Insecure (HTTP)</div>`;
+        // 2. List of headers
+        const headersList = audit.headers
+            .map((h) => {
+            const icon = h.compliant ? "✅" : "❌";
+            const statusClass = h.compliant ? "compliant" : "non-compliant";
+            return `<div class="header-item ${statusClass}" title="${h.description}">
               <span>${icon} ${h.name}</span>
             </div>`;
-      })
-      .join("");
-
-    // 3. "Mixed Content" section
-    let mixedContentList = "";
-    if (audit.mixedContent.length > 0) {
-      const items = audit.mixedContent
-        .map((mc) => {
-          const typeClass =
-            mc.type === "active" ? "mc-label-active" : "mc-label-passive";
-          return `<li class="mixed-content-item">
+        })
+            .join("");
+        // 3. "Mixed Content" section
+        let mixedContentList = "";
+        if (audit.mixedContent.length > 0) {
+            const items = audit.mixedContent
+                .map((mc) => {
+                const typeClass = mc.type === "active" ? "mc-label-active" : "mc-label-passive";
+                return `<li class="mixed-content-item">
                 <span class="mc-label ${typeClass}">${mc.type}</span>
                 <span class="mc-url">${mc.url}</span>
               </li>`;
-        })
-        .join("");
-
-      mixedContentList = `<div class="mixed-content-list">
+            })
+                .join("");
+            mixedContentList = `<div class="mixed-content-list">
                           <strong class="mixed-content-title">Mixed Content Found:</strong>
                           <ul>${items}</ul>
                         </div>`;
+        }
+        return `${httpsStatus}<div class="headers-list">${headersList}</div>${mixedContentList}`;
     }
-
-    return `${httpsStatus}<div class="headers-list">${headersList}</div>${mixedContentList}`;
-  }
-
-  private _formatAccessibility(issues?: AccessibilityIssue[]): string {
-    if (!issues?.length) {
-      return '<div class="accessibility-ok">✅ No issues found</div>';
-    }
-    return issues
-      .map((a) => {
-        const impact = a.impact?.toLowerCase() || "unknown";
-        return `
+    _formatAccessibility(issues) {
+        if (!issues?.length) {
+            return '<div class="accessibility-ok">✅ No issues found</div>';
+        }
+        return issues
+            .map((a) => {
+            const impact = a.impact?.toLowerCase() || "unknown";
+            return `
           <div class="issue issue-${impact}">
             <span class="impact-label">${impact.toUpperCase()}</span>
-            <p>${a.description} <a href="${
-          a.helpUrl
-        }" target="_blank" title="Learn more">[?]</a></p>
+            <p>${a.description} <a href="${a.helpUrl}" target="_blank" title="Learn more">[?]</a></p>
           </div>`;
-      })
-      .join("");
-  }
-
-  /**
-   * Generates the full HTML structure.
-   */
-  private _generateFullHtml(
-    rows: string,
-    summary: {
-      pageCount: number;
-      totalAccessibilityIssues: number;
-      reportDate: string;
+        })
+            .join("");
     }
-  ): string {
-    return `
+    /**
+     * Generates the full HTML structure.
+     */
+    _generateFullHtml(rows, summary) {
+        return `
       <!DOCTYPE html>
       <html lang="en">
       <head>
@@ -300,9 +188,7 @@ export class Reporter {
           <div class="summary">
             <div><strong>Date:</strong> ${summary.reportDate}</div>
             <div><strong>Pages Scanned:</strong> ${summary.pageCount}</div>
-            <div><strong>Accessibility Issues Found:</strong> ${
-              summary.totalAccessibilityIssues
-            }</div>
+            <div><strong>Accessibility Issues Found:</strong> ${summary.totalAccessibilityIssues}</div>
           </div>
         </header>
         
@@ -339,13 +225,12 @@ export class Reporter {
         <script>${this._getScripts()}</script>
       </body>
       </html>`;
-  }
-
-  /**
-   * Returns the JavaScript code for the report.
-   */
-  private _getScripts(): string {
-    return `
+    }
+    /**
+     * Returns the JavaScript code for the report.
+     */
+    _getScripts() {
+        return `
       document.addEventListener('DOMContentLoaded', () => {
         const modal = document.getElementById('modal');
         const modalImg = document.getElementById('modal-img');
@@ -369,13 +254,12 @@ export class Reporter {
         };
       });
     `;
-  }
-
-  /**
-   * Returns the CSS styles for the report.
-   */
-  private _getStyles(): string {
-    return `
+    }
+    /**
+     * Returns the CSS styles for the report.
+     */
+    _getStyles() {
+        return `
       :root {
         --bg-color: #1a1a1a; --surface-color: #242424; --text-color: #f0f0f0;
         --border-color: #3d3d3d; --header-bg: #2c2c2c; --accent-color: #00bfa5;
@@ -484,5 +368,6 @@ export class Reporter {
         th, td { padding: 0.6rem; font-size: 0.9rem; }
       }
     `;
-  }
+    }
 }
+exports.Reporter = Reporter;

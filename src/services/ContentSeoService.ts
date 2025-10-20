@@ -18,17 +18,21 @@ export class ContentSeoService {
     };
   }
 
-  /** Zbiera podstawowe dane SEO (przeniesione z poprzedniej wersji) */
+  /** Collecting basic SEO information like title, meta description, and H1 tags */
   private async _getBasicSeo() {
     const titleLength = (await this.page.title()).length;
-    const metaDescription = await this.page
-      .locator('meta[name="description"]')
-      .getAttribute("content");
+    const metaDescLocator = this.page.locator('meta[name="description"]');
+    const metaDescription =
+      (await metaDescLocator.count()) > 0
+        ? await metaDescLocator.getAttribute("content")
+        : null;
+
     const h1Count = await this.page.locator("h1").count();
+
     return { titleLength, metaDescription, h1Count };
   }
 
-  /** Znajduje wszystkie linki na stronie i sprawdza, czy nie są uszkodzone */
+  /** Finding all links on the page and checking their HTTP status */
   private async _findBrokenLinks(): Promise<BrokenLink[]> {
     const links = await this.page.$$eval(
       "a[href]",
@@ -49,14 +53,14 @@ export class ContentSeoService {
           brokenLinks.push({ url: link, status: response.status() });
         }
       } catch (error) {
-        // Ignorujemy błędy timeoutu lub DNS, aby nie przerywać skanowania
+        // Ignore network errors and timeouts to not flood the report
         console.warn(`Could not check link ${link}:`, error.message);
       }
     }
     return brokenLinks;
   }
 
-  /** Analizuje wszystkie obrazki pod kątem braku tekstu alternatywnego i rozmiaru */
+  /** Analyzing images for alt text and size */
   private async _analyzeImages(): Promise<ImageAnalysis[]> {
     const images = await this.page.locator("img").evaluateAll((imgs) =>
       imgs.map((img) => ({

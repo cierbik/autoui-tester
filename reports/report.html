@@ -20,8 +20,14 @@
       header { text-align: center; margin-bottom: 2rem; }
       h1 { color: var(--accent-color); margin: 0 0 1rem 0; }
       .summary { display: flex; justify-content: center; gap: 2rem; background: var(--surface-color); padding: 1rem; border-radius: 8px; flex-wrap: wrap; }
-      .table-container { width: 100%; overflow-x: auto; border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-      table { border-collapse: collapse; width: 100%; min-width: 1200px; }
+      .table-container {
+          width: 100%; /* Kontener zajmuje całą dostępną szerokość */
+          overflow-x: auto; /* Włącza poziomy scrollbar, GDY tabela jest za szeroka */
+          border: 1px solid var(--border-color);
+          border-radius: 8px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+      table { border-collapse: collapse; width: 100%; min-width: 1800px }
       th, td { border: 1px solid var(--border-color); padding: 0.8rem 1rem; text-align: left; vertical-align: top; }
       th { background-color: var(--header-bg); position: sticky; top: 0; z-index: 2; font-size: 0.9rem; white-space: nowrap; }
       tr:nth-child(even) { background-color: var(--surface-color); }
@@ -46,7 +52,7 @@
       .modal-close { position: absolute; top: 20px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer; }
       #modal-caption { text-align: center; color: #ccc; padding: 10px 0; }
 
-      /* --- FIX: Dodano brakujące style dla audytu bezpieczeństwa --- */
+    /* --- FIX: Dodano brakujące style dla audytu bezpieczeństwa --- */
       .security-cell { font-size: 0.85rem; white-space: normal; }
       .https-status { font-weight: bold; padding-bottom: 0.5rem; margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
       .https-secure { color: var(--accent-color); }
@@ -61,7 +67,47 @@
       .mc-label { display: inline-block; padding: 2px 5px; border-radius: 4px; font-size: 0.75em; font-weight: bold; color: #111; margin-right: 0.5rem; }
       .mc-label-active { background-color: var(--critical-color); }
       .mc-label-passive { background-color: var(--moderate-color); }
-
+    /* --- SEO & Content Audit Styles --- */
+      .seo-cell { font-size: 0.85rem; }
+      .seo-item { margin-bottom: 0.25rem; }
+      .seo-section { margin-top: 0.8rem; padding-top: 0.5rem; border-top: 1px solid var(--border-color); }
+      .seo-section-ok { margin-top: 0.8rem; padding-top: 0.5rem; border-top: 1px solid var(--border-color); color: var(--accent-color); font-weight: bold; }
+      .seo-section ul { margin: 0.25rem 0 0; padding-left: 1rem; max-height: 100px; overflow-y: auto; }
+      .seo-section li { margin-bottom: 0.25rem; word-break: break-all; }
+      .status-code { font-weight: bold; color: var(--critical-color); margin-right: 0.5em; }
+      .rating {
+        margin-left: 0.5em;
+        font-size: 0.9em;
+        font-weight: bold;
+      } 
+    /* --- Network Analysis Styles --- */
+.net-cell { 
+  font-size: 0.85rem; 
+  white-space: normal;
+}
+.net-summary-item { 
+  margin-bottom: 0.25rem; 
+}
+.net-section { 
+  margin-top: 0.8rem; 
+  padding-top: 0.5rem; 
+  border-top: 1px solid var(--border-color); 
+}
+.net-section ul { 
+  margin: 0.25rem 0 0; 
+  padding-left: 1rem; 
+  list-style-type: none; 
+  max-height: 120px;
+  overflow-y: auto;
+}
+.net-section li { 
+  margin-bottom: 0.25rem; 
+}
+.net-url { 
+  word-break: break-all; 
+  opacity: 0.8; 
+  font-size: 0.9em;
+}    
       @media (max-width: 768px) {
         body { padding: 1rem; }
         .summary { flex-direction: column; gap: 0.5rem; align-items: center; }
@@ -73,9 +119,9 @@
         <header>
           <h1>UI Test Report</h1>
           <div class="summary">
-            <div><strong>Date:</strong> 10/9/2025, 11:40:03 PM</div>
-            <div><strong>Pages Scanned:</strong> 5</div>
-            <div><strong>Accessibility Issues Found:</strong> 18</div>
+            <div><strong>Date:</strong> 10/19/2025, 9:39:48 PM</div>
+            <div><strong>Pages Scanned:</strong> 4</div>
+            <div><strong>Accessibility Issues Found:</strong> 15</div>
           </div>
         </header>
         
@@ -90,204 +136,36 @@
                 <th>Screenshot</th>
                 <th>Accessibility (WCAG)</th>
                 <th>Security Audit</th>
+                <th>Content & SEO Audit</th>
                 <th>TTFB</th>
                 <th>Load</th>
                 <th>DOM</th>
                 <th>Actions</th>
                 <th>Forms</th>
+                <th>Network Analysis</th>
               </tr>
             </thead>
             <tbody>
-      <tr>
-        <td><a href="https://f1turniejstremerow.pl/" target="_blank">https://f1turniejstremerow.pl/</a></td>
-        <td>F1 Turniej Streamerów - Walka o Pieniądze i Sławę</td>
-        <td class="cell-scrollable">[error] The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element.<br>[error] Refused to connect to 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap' because it violates the following Content Security Policy directive: "default-src 'self'". Note that 'connect-src' was not explicitly set, so 'default-src' is used as a fallback.
-<br>[warning] Couldn't load preload assets:  ProgressEvent<br>[warning] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.<br>[warning] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.<br>[warning] No available adapters.<br>[warning] No available adapters.<br>[warning] 23:38:25 - [VideoTransformer] WebGPU adapter unavailable<br>[warning] 23:38:25 - [VideoTransformer] WebGPU adapter unavailable<br>[error] Failed to load resource: the server responded with a status of 429 ()<br>[error] Failed to load resource: the server responded with a status of 429 (Too Many Requests)<br>[log] Amazon IVS Player SDK 1.46.0-rc.3<br>[log] Amazon IVS Player SDK 1.46.0-rc.3<br>[log] MediaCapabilities found [Object, Object, Object, Object, Object]<br>[error] Player stopping playback - error Player:2 (ErrorNotSupported code 0 - No playable format)<br>[log] Error<br>[log] Error<br>[log] Error<br>[log] Error<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0C0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0F0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] No available adapters.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A020BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A050BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0C0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] No available adapters.<br>[log] Error<br>[log] Error<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0F0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A020DF01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[error] [GraphQL] One or more GraphQL errors were detected on request 01K75EJ6GD9W0CABTYVW8258K2. PinnedChatSettings: unauthenticated [Object]<br>[error] [GraphQL] One or more GraphQL errors were detected on request 01K75EJ7KY9NWCFKDMCYV66ZBG. PinnedChatSettings: unauthenticated [Object]<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[log] ups...</td>
-        <td class="cell-scrollable">https://f1turniejstremerow.pl/3.mp4 (206)<br>https://f1turniejstremerow.pl/2.mp4 (206)<br>https://f1turniejstremerow.pl/4.mp4 (206)<br>https://f1turniejstremerow.pl/1.mp4 (206)<br>https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts (204)<br>https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796 (429)<br>https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796 (429)<br>https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl (204)<br>https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl (204)<br>https://www.twitch.tv/p/legal/cookie-policy/ (302)<br>https://spade.twitch.tv/track (204)<br>https://www.twitch.tv/p/legal/privacy-notice/ (302)<br>https://spade.twitch.tv/track (204)<br>https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917 (204)<br>https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002 (204)<br>https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794 (204)<br>https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213 (204)<br>https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272 (204)</td>
-        <td>
-          <img 
-            src="screenshots/1760045901238.png" 
-            alt="Screenshot of F1 Turniej Streamerów - Walka o Pieniądze i Sławę" 
-            class="screenshot-thumb" 
-            loading="lazy"
-          />
-        </td>
-        <td>
-          <div class="issue issue-moderate">
-            <span class="impact-label">MODERATE</span>
-            <p>Ensure all page content is contained by landmarks <a href="https://dequeuniversity.com/rules/axe/4.10/region?application=playwright" target="_blank" title="Learn more">[?]</a></p>
-          </div></td>
-        <td class="security-cell"><div class="https-status https-secure">🛡️ Secure (HTTPS)</div><div class="headers-list"><div class="header-item non-compliant" title="Helps prevent XSS attacks by defining allowed content sources.">
-              <span>❌ Content-Security-Policy</span>
-            </div><div class="header-item non-compliant" title="Enforces secure (HTTPS) connections to the server.">
-              <span>❌ Strict-Transport-Security</span>
-            </div><div class="header-item non-compliant" title="Protects against Clickjacking attacks.">
-              <span>❌ X-Frame-Options</span>
-            </div><div class="header-item non-compliant" title="Prevents browsers from MIME-sniffing a response away from the declared content-type.">
-              <span>❌ X-Content-Type-Options</span>
-            </div><div class="header-item non-compliant" title="Controls how much referrer information is sent with requests.">
-              <span>❌ Referrer-Policy</span>
-            </div></div></td>
-        <td>0.25 s</td>
-        <td>1.30 s</td>
-        <td>0.54 s</td>
-        <td class="wrap">🤖 Exploring: https://f1turniejstremerow.pl/<br>🖱️ Scrolled halfway down<br>⚠️ Failed to click nav link: "F1 TURNIEJ STREAMERÓW"<br>⚠️ Failed to click nav link: "Przedsmak rywalizacji"<br>⚠️ Failed to click nav link: "Regulamin"<br>📜 Scrolled to bottom</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td><a href="https://www.twitch.tv/mrdzinold" target="_blank">https://www.twitch.tv/mrdzinold</a></td>
-        <td>Twitch</td>
-        <td class="cell-scrollable">[error] The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element.<br>[error] Refused to connect to 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap' because it violates the following Content Security Policy directive: "default-src 'self'". Note that 'connect-src' was not explicitly set, so 'default-src' is used as a fallback.
-<br>[warning] Couldn't load preload assets:  ProgressEvent<br>[warning] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.<br>[warning] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.<br>[warning] No available adapters.<br>[warning] No available adapters.<br>[warning] 23:38:25 - [VideoTransformer] WebGPU adapter unavailable<br>[warning] 23:38:25 - [VideoTransformer] WebGPU adapter unavailable<br>[error] Failed to load resource: the server responded with a status of 429 ()<br>[error] Failed to load resource: the server responded with a status of 429 (Too Many Requests)<br>[log] Amazon IVS Player SDK 1.46.0-rc.3<br>[log] Amazon IVS Player SDK 1.46.0-rc.3<br>[log] MediaCapabilities found [Object, Object, Object, Object, Object]<br>[error] Player stopping playback - error Player:2 (ErrorNotSupported code 0 - No playable format)<br>[log] Error<br>[log] Error<br>[log] Error<br>[log] Error<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0C0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0F0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] No available adapters.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A020BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A050BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0C0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] No available adapters.<br>[log] Error<br>[log] Error<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0F0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A020DF01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[error] [GraphQL] One or more GraphQL errors were detected on request 01K75EJ6GD9W0CABTYVW8258K2. PinnedChatSettings: unauthenticated [Object]<br>[error] [GraphQL] One or more GraphQL errors were detected on request 01K75EJ7KY9NWCFKDMCYV66ZBG. PinnedChatSettings: unauthenticated [Object]<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[log] ups...</td>
-        <td class="cell-scrollable">https://f1turniejstremerow.pl/3.mp4 (206)<br>https://f1turniejstremerow.pl/2.mp4 (206)<br>https://f1turniejstremerow.pl/4.mp4 (206)<br>https://f1turniejstremerow.pl/1.mp4 (206)<br>https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts (204)<br>https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796 (429)<br>https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796 (429)<br>https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl (204)<br>https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl (204)<br>https://www.twitch.tv/p/legal/cookie-policy/ (302)<br>https://spade.twitch.tv/track (204)<br>https://www.twitch.tv/p/legal/privacy-notice/ (302)<br>https://spade.twitch.tv/track (204)<br>https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917 (204)<br>https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002 (204)<br>https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794 (204)<br>https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213 (204)<br>https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272 (204)</td>
-        <td>
-          <img 
-            src="screenshots/1760045905793.png" 
-            alt="Screenshot of Twitch" 
-            class="screenshot-thumb" 
-            loading="lazy"
-          />
-        </td>
-        <td>
+    <tr>
+      <td><a href="https://automationintesting.online/" target="_blank">https://automationintesting.online/</a></td>
+      <td>Restful-booker-platform demo</td>
+      <td class="cell-scrollable">[log] Got initial bounds:  {ne: Array(2), sw: Array(2)}<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0C028006C3A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.</td>
+      <td class="cell-scrollable"><span class="no-data">-</span></td>
+      <td>
+        <img src="screenshots/_-desktop.png" alt="Screenshot of Restful-booker-platform demo" class="screenshot-thumb" loading="lazy" />
+      </td>
+      <td>
           <div class="issue issue-serious">
             <span class="impact-label">SERIOUS</span>
-            <p>Ensure every ARIA dialog and alertdialog node has an accessible name <a href="https://dequeuniversity.com/rules/axe/4.10/aria-dialog-name?application=playwright" target="_blank" title="Learn more">[?]</a></p>
+            <p>Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright" target="_blank" title="Learn more">[?]</a></p>
           </div>
-          <div class="issue issue-serious">
-            <span class="impact-label">SERIOUS</span>
-            <p>Ensure the autocomplete attribute is correct and suitable for the form field <a href="https://dequeuniversity.com/rules/axe/4.10/autocomplete-valid?application=playwright" target="_blank" title="Learn more">[?]</a></p>
-          </div>
-          <div class="issue issue-moderate">
-            <span class="impact-label">MODERATE</span>
-            <p>Ensure the complementary landmark or aside is at top level <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-complementary-is-top-level?application=playwright" target="_blank" title="Learn more">[?]</a></p>
-          </div>
-          <div class="issue issue-serious">
-            <span class="impact-label">SERIOUS</span>
-            <p>Ensure interactive controls are not nested as they are not always announced by screen readers or can cause focus problems for assistive technologies <a href="https://dequeuniversity.com/rules/axe/4.10/nested-interactive?application=playwright" target="_blank" title="Learn more">[?]</a></p>
-          </div>
-          <div class="issue issue-moderate">
-            <span class="impact-label">MODERATE</span>
-            <p>Ensure all page content is contained by landmarks <a href="https://dequeuniversity.com/rules/axe/4.10/region?application=playwright" target="_blank" title="Learn more">[?]</a></p>
-          </div>
-          <div class="issue issue-serious">
-            <span class="impact-label">SERIOUS</span>
-            <p>Ensure elements that have scrollable content are accessible by keyboard <a href="https://dequeuniversity.com/rules/axe/4.10/scrollable-region-focusable?application=playwright" target="_blank" title="Learn more">[?]</a></p>
-          </div></td>
-        <td class="security-cell"><div class="https-status https-secure">🛡️ Secure (HTTPS)</div><div class="headers-list"><div class="header-item non-compliant" title="Helps prevent XSS attacks by defining allowed content sources.">
-              <span>❌ Content-Security-Policy</span>
-            </div><div class="header-item compliant" title="Enforces secure (HTTPS) connections to the server.">
-              <span>✅ Strict-Transport-Security</span>
-            </div><div class="header-item compliant" title="Protects against Clickjacking attacks.">
-              <span>✅ X-Frame-Options</span>
-            </div><div class="header-item compliant" title="Prevents browsers from MIME-sniffing a response away from the declared content-type.">
-              <span>✅ X-Content-Type-Options</span>
-            </div><div class="header-item non-compliant" title="Controls how much referrer information is sent with requests.">
-              <span>❌ Referrer-Policy</span>
-            </div></div></td>
-        <td>0.14 s</td>
-        <td>0.82 s</td>
-        <td>0.67 s</td>
-        <td class="wrap">🤖 Exploring: https://www.twitch.tv/mrdzinold<br>🖱️ Scrolled halfway down<br>✍️ Filled input (search): "Sample input text"<br>⚠️ Could not fill input (search)<br>🟢 Clicked button: "Pokaż więcej"<br>🟢 Clicked button: "hubikoks69892Patriotaa96711xmerghani667hubikoks69892Patriotaa96711xmerghani667"<br>🔴 Failed to click button: "Pokaż"<br>🧭 Navigated via menu link: "PrzeglądajPrzeglądaj"<br>📜 Scrolled to bottom</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td><a href="https://www.twitch.tv/p/legal/cookie-policy/" target="_blank">https://www.twitch.tv/p/legal/cookie-policy/</a></td>
-        <td>Welcome to Twitch Legal</td>
-        <td class="cell-scrollable">[error] The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element.<br>[error] Refused to connect to 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap' because it violates the following Content Security Policy directive: "default-src 'self'". Note that 'connect-src' was not explicitly set, so 'default-src' is used as a fallback.
-<br>[warning] Couldn't load preload assets:  ProgressEvent<br>[warning] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.<br>[warning] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.<br>[warning] No available adapters.<br>[warning] No available adapters.<br>[warning] 23:38:25 - [VideoTransformer] WebGPU adapter unavailable<br>[warning] 23:38:25 - [VideoTransformer] WebGPU adapter unavailable<br>[error] Failed to load resource: the server responded with a status of 429 ()<br>[error] Failed to load resource: the server responded with a status of 429 (Too Many Requests)<br>[log] Amazon IVS Player SDK 1.46.0-rc.3<br>[log] Amazon IVS Player SDK 1.46.0-rc.3<br>[log] MediaCapabilities found [Object, Object, Object, Object, Object]<br>[error] Player stopping playback - error Player:2 (ErrorNotSupported code 0 - No playable format)<br>[log] Error<br>[log] Error<br>[log] Error<br>[log] Error<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0C0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0F0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] No available adapters.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A020BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A050BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0C0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] No available adapters.<br>[log] Error<br>[log] Error<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0F0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A020DF01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[error] [GraphQL] One or more GraphQL errors were detected on request 01K75EJ6GD9W0CABTYVW8258K2. PinnedChatSettings: unauthenticated [Object]<br>[error] [GraphQL] One or more GraphQL errors were detected on request 01K75EJ7KY9NWCFKDMCYV66ZBG. PinnedChatSettings: unauthenticated [Object]<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[log] ups...</td>
-        <td class="cell-scrollable">https://f1turniejstremerow.pl/3.mp4 (206)<br>https://f1turniejstremerow.pl/2.mp4 (206)<br>https://f1turniejstremerow.pl/4.mp4 (206)<br>https://f1turniejstremerow.pl/1.mp4 (206)<br>https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts (204)<br>https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796 (429)<br>https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796 (429)<br>https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl (204)<br>https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl (204)<br>https://www.twitch.tv/p/legal/cookie-policy/ (302)<br>https://spade.twitch.tv/track (204)<br>https://www.twitch.tv/p/legal/privacy-notice/ (302)<br>https://spade.twitch.tv/track (204)<br>https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917 (204)<br>https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002 (204)<br>https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794 (204)<br>https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213 (204)<br>https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272 (204)</td>
-        <td>
-          <img 
-            src="screenshots/1760045945129.png" 
-            alt="Screenshot of Welcome to Twitch Legal" 
-            class="screenshot-thumb" 
-            loading="lazy"
-          />
-        </td>
-        <td>
           <div class="issue issue-moderate">
             <span class="impact-label">MODERATE</span>
             <p>Ensure the order of headings is semantically correct <a href="https://dequeuniversity.com/rules/axe/4.10/heading-order?application=playwright" target="_blank" title="Learn more">[?]</a></p>
           </div>
-          <div class="issue issue-moderate">
-            <span class="impact-label">MODERATE</span>
-            <p>Ensure landmarks are unique <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-unique?application=playwright" target="_blank" title="Learn more">[?]</a></p>
-          </div></td>
-        <td class="security-cell"><div class="https-status https-secure">🛡️ Secure (HTTPS)</div><div class="headers-list"><div class="header-item non-compliant" title="Helps prevent XSS attacks by defining allowed content sources.">
-              <span>❌ Content-Security-Policy</span>
-            </div><div class="header-item non-compliant" title="Enforces secure (HTTPS) connections to the server.">
-              <span>❌ Strict-Transport-Security</span>
-            </div><div class="header-item non-compliant" title="Protects against Clickjacking attacks.">
-              <span>❌ X-Frame-Options</span>
-            </div><div class="header-item non-compliant" title="Prevents browsers from MIME-sniffing a response away from the declared content-type.">
-              <span>❌ X-Content-Type-Options</span>
-            </div><div class="header-item non-compliant" title="Controls how much referrer information is sent with requests.">
-              <span>❌ Referrer-Policy</span>
-            </div></div></td>
-        <td>0.61 s</td>
-        <td>1.28 s</td>
-        <td>1.20 s</td>
-        <td class="wrap">🤖 Exploring: https://www.twitch.tv/p/legal/cookie-policy/<br>🖱️ Scrolled halfway down<br>🧾 Detected 1 form(s)<br>✍️ Filled input (text): "Sample input text"<br>⚠️ Failed to click nav link: "Skip to content"<br>⚠️ Failed to click nav link: "Deutsch"<br>⚠️ Failed to click nav link: "English"<br>📜 Scrolled to bottom</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td><a href="https://www.twitch.tv/p/legal/privacy-notice/" target="_blank">https://www.twitch.tv/p/legal/privacy-notice/</a></td>
-        <td>Welcome to Twitch Legal</td>
-        <td class="cell-scrollable">[error] The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element.<br>[error] Refused to connect to 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap' because it violates the following Content Security Policy directive: "default-src 'self'". Note that 'connect-src' was not explicitly set, so 'default-src' is used as a fallback.
-<br>[warning] Couldn't load preload assets:  ProgressEvent<br>[warning] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.<br>[warning] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.<br>[warning] No available adapters.<br>[warning] No available adapters.<br>[warning] 23:38:25 - [VideoTransformer] WebGPU adapter unavailable<br>[warning] 23:38:25 - [VideoTransformer] WebGPU adapter unavailable<br>[error] Failed to load resource: the server responded with a status of 429 ()<br>[error] Failed to load resource: the server responded with a status of 429 (Too Many Requests)<br>[log] Amazon IVS Player SDK 1.46.0-rc.3<br>[log] Amazon IVS Player SDK 1.46.0-rc.3<br>[log] MediaCapabilities found [Object, Object, Object, Object, Object]<br>[error] Player stopping playback - error Player:2 (ErrorNotSupported code 0 - No playable format)<br>[log] Error<br>[log] Error<br>[log] Error<br>[log] Error<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0C0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0F0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] No available adapters.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A020BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A050BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0C0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] No available adapters.<br>[log] Error<br>[log] Error<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0F0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A020DF01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[error] [GraphQL] One or more GraphQL errors were detected on request 01K75EJ6GD9W0CABTYVW8258K2. PinnedChatSettings: unauthenticated [Object]<br>[error] [GraphQL] One or more GraphQL errors were detected on request 01K75EJ7KY9NWCFKDMCYV66ZBG. PinnedChatSettings: unauthenticated [Object]<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[log] ups...</td>
-        <td class="cell-scrollable">https://f1turniejstremerow.pl/3.mp4 (206)<br>https://f1turniejstremerow.pl/2.mp4 (206)<br>https://f1turniejstremerow.pl/4.mp4 (206)<br>https://f1turniejstremerow.pl/1.mp4 (206)<br>https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts (204)<br>https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796 (429)<br>https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796 (429)<br>https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl (204)<br>https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl (204)<br>https://www.twitch.tv/p/legal/cookie-policy/ (302)<br>https://spade.twitch.tv/track (204)<br>https://www.twitch.tv/p/legal/privacy-notice/ (302)<br>https://spade.twitch.tv/track (204)<br>https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917 (204)<br>https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002 (204)<br>https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794 (204)<br>https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213 (204)<br>https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272 (204)</td>
-        <td>
-          <img 
-            src="screenshots/1760045954335.png" 
-            alt="Screenshot of Welcome to Twitch Legal" 
-            class="screenshot-thumb" 
-            loading="lazy"
-          />
-        </td>
-        <td>
-          <div class="issue issue-moderate">
-            <span class="impact-label">MODERATE</span>
-            <p>Ensure landmarks are unique <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-unique?application=playwright" target="_blank" title="Learn more">[?]</a></p>
-          </div></td>
-        <td class="security-cell"><div class="https-status https-secure">🛡️ Secure (HTTPS)</div><div class="headers-list"><div class="header-item non-compliant" title="Helps prevent XSS attacks by defining allowed content sources.">
-              <span>❌ Content-Security-Policy</span>
-            </div><div class="header-item non-compliant" title="Enforces secure (HTTPS) connections to the server.">
-              <span>❌ Strict-Transport-Security</span>
-            </div><div class="header-item non-compliant" title="Protects against Clickjacking attacks.">
-              <span>❌ X-Frame-Options</span>
-            </div><div class="header-item non-compliant" title="Prevents browsers from MIME-sniffing a response away from the declared content-type.">
-              <span>❌ X-Content-Type-Options</span>
-            </div><div class="header-item non-compliant" title="Controls how much referrer information is sent with requests.">
-              <span>❌ Referrer-Policy</span>
-            </div></div></td>
-        <td>0.47 s</td>
-        <td>0.51 s</td>
-        <td>0.51 s</td>
-        <td class="wrap">🤖 Exploring: https://www.twitch.tv/p/legal/privacy-notice/<br>🖱️ Scrolled halfway down<br>🧾 Detected 1 form(s)<br>✍️ Filled input (text): "Sample input text"<br>⚠️ Failed to click nav link: "Skip to content"<br>⚠️ Failed to click nav link: "Deutsch"<br>⚠️ Failed to click nav link: "English"<br>📜 Scrolled to bottom</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td><a href="https://twinklecandle.com/" target="_blank">https://twinklecandle.com/</a></td>
-        <td>Świece sojowe | sklep internetowy Twinkle Candle</td>
-        <td class="cell-scrollable">[error] The Content Security Policy directive 'frame-ancestors' is ignored when delivered via a <meta> element.<br>[error] Refused to connect to 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap' because it violates the following Content Security Policy directive: "default-src 'self'". Note that 'connect-src' was not explicitly set, so 'default-src' is used as a fallback.
-<br>[warning] Couldn't load preload assets:  ProgressEvent<br>[warning] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.<br>[warning] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.<br>[warning] No available adapters.<br>[warning] No available adapters.<br>[warning] 23:38:25 - [VideoTransformer] WebGPU adapter unavailable<br>[warning] 23:38:25 - [VideoTransformer] WebGPU adapter unavailable<br>[error] Failed to load resource: the server responded with a status of 429 ()<br>[error] Failed to load resource: the server responded with a status of 429 (Too Many Requests)<br>[log] Amazon IVS Player SDK 1.46.0-rc.3<br>[log] Amazon IVS Player SDK 1.46.0-rc.3<br>[log] MediaCapabilities found [Object, Object, Object, Object, Object]<br>[error] Player stopping playback - error Player:2 (ErrorNotSupported code 0 - No playable format)<br>[log] Error<br>[log] Error<br>[log] Error<br>[log] Error<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0C0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0F0B900D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] No available adapters.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A020BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A050BA00D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0C0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] No available adapters.<br>[log] Error<br>[log] Error<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0F0DE01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A020DF01D4790000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[error] [GraphQL] One or more GraphQL errors were detected on request 01K75EJ6GD9W0CABTYVW8258K2. PinnedChatSettings: unauthenticated [Object]<br>[error] [GraphQL] One or more GraphQL errors were detected on request 01K75EJ7KY9NWCFKDMCYV66ZBG. PinnedChatSettings: unauthenticated [Object]<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[warning] External links and mailto links with LocationDescriptorObjects are not supported! Pass a string instead: https://help.twitch.tv/s/article/how-to-customize-content#ContentDisplayPreferences.<br>[log] ups...</td>
-        <td class="cell-scrollable">https://f1turniejstremerow.pl/3.mp4 (206)<br>https://f1turniejstremerow.pl/2.mp4 (206)<br>https://f1turniejstremerow.pl/4.mp4 (206)<br>https://f1turniejstremerow.pl/1.mp4 (206)<br>https://video-edge-fc6c1c.pdx01.abs.hls.ttvnw.net/v1/segment/CnyhPiM4f70YTT80y-2UqdwaqEIm29G_d_tNsWURw28cBTU2aqon_hs2FIlgqMnRTcd8tYymPr0Bs_xKp-Y0OOWSQo4HIcB1Jf0hsF5789nl34yJGNFvvdcs5jnxgRALmj0XADI0nkgSzbnQaK7cZPk3r4y1d4zlIlhL3G3uKbJAwfj0U_1mJF1r08C7WfXzVibIFKr2disFu9qexnVa9xiuGeqgHVMS3xxqhhZyKPCbsAWTpyyfICQGkgGO03Em8u5kGpgm495lebgUWRB5ocHCBWrq0_TWFOVVWJtLa88IcfhydClSalPL0nEeJgJTqEgHauB4KkeNtTZxtvXdBBIxgjAy4p7k0G8Yq4QH8YLm4EXwh0w41OksU4FOgqROHPOqLUFREGCXW5xrH9YrxVmLwfmh7De2HFYoY2L0uuATo2PrDuGbDdygCdCCISKAESqQzdC8v-JebiFs56hx8jLwCStrOlPIClMm-kwZZo0sz55sYs7N1G0y4_BB2CJObie-2KVOMq39CgiBMyI223wy1j2AsBlORYW8CFKTaY3lLfbfoUPXYzvT_fFjm-ixsrjXoa-XnUbVEwPJV_DZT8_Lfb7ZpbzxQKtF0z85twM11JUlpYuuAWxTKSwvWRew2PyrvQQsC56WEcvV6-3o6_Po9Y-VyQ4zRJ0jtvMiJkSAlzEw8VDF45k3UnkE5T-i9uc3fDabnHsbmDc_Dq6j7ko8KXj5HKyVui4riUhpJ6DtCzxGtAnOrv4jgQEMaCimka3XyeyXtOsN.ts (204)<br>https://gql.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796 (429)<br>https://passport.twitch.tv/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/fp?x-kpsdk-v=j-1.1.28796 (429)<br>https://edge.ads.twitch.tv/ads/format?dur=123&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=DIRECTORY_BANNER&pid=8427245284641760045942931&cb=6906964&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%2C%22game%22%3A%22undefined%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=6b23cc4c7c26c0c9f350c0f77840efee&tcor=IAKfmE5DP5pYu36DU6DAaQ6QZUJ9QSKQ&ulang=pl (204)<br>https://edge.ads.twitch.tv/ads?dur=120&geoc=PL&did=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&dt=2&afmt=OUTSTREAM_BROWSE_PAGE_VIDEO&pid=5595852750461760045942948&cb=3851278&ws=1280x720&u=https%3A%2F%2Fwww.twitch.tv%2Fdirectory&pj=%7B%22platform%22%3A%22web%22%2C%22delivery_type%22%3A%22csai%22%2C%22vb%22%3A%22null%22%2C%22adunit%22%3A%22web_csai%22%7D&gdprl=%7B%22status%22%3A%22cmp%22%7D&pbid=twitch&bp=midroll&aid=GYYH0esA2curXqQRLJDOsXMlw4qzWWUo&plat=web&sid=0843742df2df3ca55558b50bd11f8111&tcor=0843742df2df3ca55558b50bd11f8111&vtype=live&ulang=pl (204)<br>https://www.twitch.tv/p/legal/cookie-policy/ (302)<br>https://spade.twitch.tv/track (204)<br>https://www.twitch.tv/p/legal/privacy-notice/ (302)<br>https://spade.twitch.tv/track (204)<br>https://region1.google-analytics.com/g/collect?v=2&tid=G-LSTQPEYVB8&gtm=45je5a81h2v9185095923za200zd9185095923&_p=1760045964592&gcd=13l3l3l2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&_ee=1&tfd=917 (204)<br>https://region1.google-analytics.com/g/collect?v=2&tid=G-7BS8B27X65&gtm=45je5a80v9105750540z871730417za200zb71730417zd71730417&_p=1760045964572&gcd=13l3lPl2l1l1&npa=1&dma_cps=syphamo&dma=1&cid=521854273.1760045965&ul=pl-pl&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115834636~115834638~115868792~115868794&sid=1760045965&sct=1&seg=0&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&en=page_view&_fv=1&_ss=1&ep.isStorefront=false&up.isStorefront=false&up.shop_id=192336&up.license_type=saas&up.user_type=guest&up.theme_type=rwd&tfd=1002 (204)<br>https://stats.g.doubleclick.net/g/collect?v=2&_ng=1&tid=G-2GJ4P7M8LX&cid=521854273.1760045965&gtm=45je5a80v9136467202za200&aip=1&dma=1&dma_cps=syphamo&gcd=13l3l3l2l2l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794 (204)<br>https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&_gaz=1&gcd=13l3l3l2l2l1&npa=0&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAI&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&cu=PLN&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1213 (204)<br>https://region1.analytics.google.com/g/collect?v=2&tid=G-2GJ4P7M8LX&gtm=45je5a80v9136467202za200&_p=1760045964463&gcd=13l3l3l2l3l1&npa=1&dma_cps=syphamo&dma=1&ul=pl-pl&sr=1280x720&cid=521854273.1760045965&_ng=1&ir=1&uaa=x86&uab=64&uafvl=Chromium%3B140.0.7339.186%7CNot%253DA%253FBrand%3B24.0.0.0%7CHeadlessChrome%3B140.0.7339.186&uamb=0&uam=&uap=Windows&uapv=10.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=EBAIAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480709~115834636~115834638~115868792~115868794&dl=https%3A%2F%2Ftwinklecandle.com%2F&dt=%C5%9Awiece%20sojowe%20%7C%20sklep%20internetowy%20Twinkle%20Candle&sid=1760045965&sct=1&seg=1&_tu=wAQ&en=page_view&_ee=1&_et=41&tfd=6272 (204)</td>
-        <td>
-          <img 
-            src="screenshots/1760045965866.png" 
-            alt="Screenshot of Świece sojowe | sklep internetowy Twinkle Candle" 
-            class="screenshot-thumb" 
-            loading="lazy"
-          />
-        </td>
-        <td>
-          <div class="issue issue-serious">
-            <span class="impact-label">SERIOUS</span>
-            <p>Ensure aria-hidden elements are not focusable nor contain focusable elements <a href="https://dequeuniversity.com/rules/axe/4.10/aria-hidden-focus?application=playwright" target="_blank" title="Learn more">[?]</a></p>
-          </div>
-          <div class="issue issue-minor">
-            <span class="impact-label">MINOR</span>
-            <p>Ensure headings have discernible text <a href="https://dequeuniversity.com/rules/axe/4.10/empty-heading?application=playwright" target="_blank" title="Learn more">[?]</a></p>
+          <div class="issue issue-critical">
+            <span class="impact-label">CRITICAL</span>
+            <p>Ensure every form element has a label <a href="https://dequeuniversity.com/rules/axe/4.10/label?application=playwright" target="_blank" title="Learn more">[?]</a></p>
           </div>
           <div class="issue issue-moderate">
             <span class="impact-label">MODERATE</span>
@@ -297,24 +175,118 @@
             <span class="impact-label">SERIOUS</span>
             <p>Ensure links have discernible text <a href="https://dequeuniversity.com/rules/axe/4.10/link-name?application=playwright" target="_blank" title="Learn more">[?]</a></p>
           </div>
-          <div class="issue issue-critical">
-            <span class="impact-label">CRITICAL</span>
-            <p>Ensure <meta name="viewport"> does not disable text scaling and zooming <a href="https://dequeuniversity.com/rules/axe/4.10/meta-viewport?application=playwright" target="_blank" title="Learn more">[?]</a></p>
-          </div>
-          <div class="issue issue-moderate">
-            <span class="impact-label">MODERATE</span>
-            <p>Ensure that the page, or at least one of its frames contains a level-one heading <a href="https://dequeuniversity.com/rules/axe/4.10/page-has-heading-one?application=playwright" target="_blank" title="Learn more">[?]</a></p>
-          </div>
           <div class="issue issue-moderate">
             <span class="impact-label">MODERATE</span>
             <p>Ensure all page content is contained by landmarks <a href="https://dequeuniversity.com/rules/axe/4.10/region?application=playwright" target="_blank" title="Learn more">[?]</a></p>
-          </div>
-          <div class="issue issue-critical">
-            <span class="impact-label">CRITICAL</span>
-            <p>Ensure select element has an accessible name <a href="https://dequeuniversity.com/rules/axe/4.10/select-name?application=playwright" target="_blank" title="Learn more">[?]</a></p>
           </div></td>
-        <td class="security-cell"><div class="https-status https-secure">🛡️ Secure (HTTPS)</div><div class="headers-list"><div class="header-item non-compliant" title="Helps prevent XSS attacks by defining allowed content sources.">
+      <td class="security-cell"><div class="https-status https-secure">🛡️ Secure (HTTPS)</div><div class="headers-list"><div class="header-item non-compliant" title="Helps prevent XSS attacks by defining allowed content sources.">
               <span>❌ Content-Security-Policy</span>
+            </div><div class="header-item non-compliant" title="Enforces secure (HTTPS) connections to the server.">
+              <span>❌ Strict-Transport-Security</span>
+            </div><div class="header-item non-compliant" title="Protects against Clickjacking attacks.">
+              <span>❌ X-Frame-Options</span>
+            </div><div class="header-item non-compliant" title="Prevents browsers from MIME-sniffing a response away from the declared content-type.">
+              <span>❌ X-Content-Type-Options</span>
+            </div><div class="header-item non-compliant" title="Controls how much referrer information is sent with requests.">
+              <span>❌ Referrer-Policy</span>
+            </div></div></td>
+      <td>0.12 s <span class="rating">🟢 Fast</span></td>
+      <td>0.40 s <span class="rating">🟢 Fast</span></td>
+      <td>0.40 s <span class="rating">🟢 Fast</span></td>
+      <td class="wrap">🤖 Exploring: https://automationintesting.online/<br>🧾 Detected 2 form(s)<br>✍️ Filled input (text)<br>✍️ Filled input (text)<br>✍️ Filled input (text)<br>✍️ Filled input (email)<br>✍️ Filled input (tel)<br>✍️ Filled input (text)<br>✍️ Filled input (text)<br>🟢 Clicked button: "Next Month"<br>🖱️ Scrolled down the page<br>📜 Scrolled to bottom</td>
+      <td>2</td>
+      <td><div class="seo-cell">
+      <div class="seo-item"><strong>Title Length:</strong> 28 chars</div>
+      <div class="seo-item"><strong>Meta Desc:</strong> ✅ Found</div>
+      <div class="seo-item"><strong>H1 Tags:</strong> ✅ 1</div>
+    <div class="seo-section"><strong>Image Issues:</strong><ul><li>⚠️ 9 images missing alt text</li></ul></div></div></td>
+      <td><div class="net-cell">
+    <div class="net-summary-item"><strong>Page Weight:</strong> 937 KB</div>
+    <div class="net-summary-item"><strong>Requests:</strong> 19</div>
+    <div class="net-summary-item"><strong>Unused CSS:</strong> 94%</div>
+  <div class="net-section"><strong>Heaviest Resources:</strong><ul><li><strong>426 KB</strong> - <span class="net-url">https://automationintesting.online/images/rbp-logo.jpg</span></li><li><strong>118 KB</strong> - <span class="net-url">https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/fonts/bootstrap-icons.woff2?1fa40e8900654d2863d011707b9fb6f2</span></li><li><strong>83 KB</strong> - <span class="net-url">https://automationintesting.online/images/room2.jpg</span></li><li><strong>79 KB</strong> - <span class="net-url">https://automationintesting.online/images/room3.jpg</span></li><li><strong>57 KB</strong> - <span class="net-url">https://automationintesting.online/images/room1.jpg</span></li></ul></div></div></td>
+    </tr>
+    <tr>
+      <td><a href="https://pigeon-maps.js.org/" target="_blank">https://pigeon-maps.js.org/</a></td>
+      <td>Demo | Pigeon Maps</td>
+      <td class="cell-scrollable">[log] Got initial bounds:  {ne: Array(2), sw: Array(2)}<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0C028006C3A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.</td>
+      <td class="cell-scrollable"><span class="no-data">-</span></td>
+      <td>
+        <img src="screenshots/_-desktop.png" alt="Screenshot of Demo | Pigeon Maps" class="screenshot-thumb" loading="lazy" />
+      </td>
+      <td>
+          <div class="issue issue-serious">
+            <span class="impact-label">SERIOUS</span>
+            <p>Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright" target="_blank" title="Learn more">[?]</a></p>
+          </div>
+          <div class="issue issue-moderate">
+            <span class="impact-label">MODERATE</span>
+            <p>Ensure the document has a main landmark <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=playwright" target="_blank" title="Learn more">[?]</a></p>
+          </div></td>
+      <td class="security-cell"><div class="https-status https-secure">🛡️ Secure (HTTPS)</div><div class="headers-list"><div class="header-item non-compliant" title="Helps prevent XSS attacks by defining allowed content sources.">
+              <span>❌ Content-Security-Policy</span>
+            </div><div class="header-item non-compliant" title="Enforces secure (HTTPS) connections to the server.">
+              <span>❌ Strict-Transport-Security</span>
+            </div><div class="header-item non-compliant" title="Protects against Clickjacking attacks.">
+              <span>❌ X-Frame-Options</span>
+            </div><div class="header-item non-compliant" title="Prevents browsers from MIME-sniffing a response away from the declared content-type.">
+              <span>❌ X-Content-Type-Options</span>
+            </div><div class="header-item non-compliant" title="Controls how much referrer information is sent with requests.">
+              <span>❌ Referrer-Policy</span>
+            </div></div></td>
+      <td>0.19 s <span class="rating">🟢 Fast</span></td>
+      <td>-1760902565.90 s <span class="rating">🟢 Fast</span></td>
+      <td>1.22 s <span class="rating">🟢 Fast</span></td>
+      <td class="wrap">🤖 Exploring: https://pigeon-maps.js.org/<br>⚠️ Could not check input (checkbox): locator.check: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[type="checkbox"], input[type="radio"]').first()[22m
+[2m    - locator resolved to <input type="checkbox" class="toggleScreenReader_JnkT" aria-label="Switch between dark and light mode"/>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div class="toggle_Pssr toggle_TdHA">…</div> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div class="toggle_Pssr toggle_TdHA">…</div> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    57 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <div class="toggle_Pssr toggle_TdHA">…</div> intercepts pointer events[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+<br>✔️ Checked input (checkbox)<br>✔️ Checked input (checkbox)<br>🖱️ Scrolled down the page<br>📜 Scrolled to bottom</td>
+      <td>0</td>
+      <td><div class="seo-cell">
+      <div class="seo-item"><strong>Title Length:</strong> 18 chars</div>
+      <div class="seo-item"><strong>Meta Desc:</strong> ✅ Found</div>
+      <div class="seo-item"><strong>H1 Tags:</strong> ✅ 1</div>
+    <div class="seo-section"><strong>Broken Links Found:</strong><ul><li><span class="status-code">403</span> https://twitter.com/mariusandra</li></ul></div><div class="seo-section"><strong>Image Issues:</strong><ul><li>⚠️ 9 images missing alt text</li></ul></div></div></td>
+      <td><div class="net-cell">
+    <div class="net-summary-item"><strong>Page Weight:</strong> 717 KB</div>
+    <div class="net-summary-item"><strong>Requests:</strong> 25</div>
+    <div class="net-summary-item"><strong>Unused CSS:</strong> 69%</div>
+  <div class="net-section"><strong>Heaviest Resources:</strong><ul><li><strong>55 KB</strong> - <span class="net-url">https://a.tile.openstreetmap.org/6/33/21.png</span></li><li><strong>54 KB</strong> - <span class="net-url">https://a.tile.openstreetmap.org/6/32/22.png</span></li><li><strong>54 KB</strong> - <span class="net-url">https://b.tile.openstreetmap.org/6/34/21.png</span></li><li><strong>53 KB</strong> - <span class="net-url">https://b.tile.openstreetmap.org/6/33/22.png</span></li><li><strong>53 KB</strong> - <span class="net-url">https://c.tile.openstreetmap.org/6/35/21.png</span></li></ul></div></div></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/mariusandra/pigeon-maps" target="_blank">https://github.com/mariusandra/pigeon-maps</a></td>
+      <td>GitHub - mariusandra/pigeon-maps: ReactJS Maps without external dependencies</td>
+      <td class="cell-scrollable">[log] Got initial bounds:  {ne: Array(2), sw: Array(2)}<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0C028006C3A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.</td>
+      <td class="cell-scrollable"><span class="no-data">-</span></td>
+      <td>
+        <img src="screenshots/_mariusandra_pigeon-maps-desktop.png" alt="Screenshot of GitHub - mariusandra/pigeon-maps: ReactJS Maps without external dependencies" class="screenshot-thumb" loading="lazy" />
+      </td>
+      <td><div class="accessibility-ok">✅ No issues found</div></td>
+      <td class="security-cell"><div class="https-status https-secure">🛡️ Secure (HTTPS)</div><div class="headers-list"><div class="header-item compliant" title="Helps prevent XSS attacks by defining allowed content sources.">
+              <span>✅ Content-Security-Policy</span>
             </div><div class="header-item compliant" title="Enforces secure (HTTPS) connections to the server.">
               <span>✅ Strict-Transport-Security</span>
             </div><div class="header-item non-compliant" title="Protects against Clickjacking attacks.">
@@ -324,12 +296,175 @@
             </div><div class="header-item non-compliant" title="Controls how much referrer information is sent with requests.">
               <span>❌ Referrer-Policy</span>
             </div></div></td>
-        <td>0.11 s</td>
-        <td>1.75 s</td>
-        <td>0.61 s</td>
-        <td class="wrap">🤖 Exploring: https://twinklecandle.com/<br>🖱️ Scrolled halfway down<br>🧾 Detected 2 form(s)<br>✍️ Filled input (search): "Sample input text"<br>⚠️ Could not fill input (hidden)<br>✍️ Filled input (text): "Sample input text"<br>⚠️ Failed to click nav link: "Zarejestruj się"<br>⚠️ Failed to click nav link: "Zaloguj się"<br>⚠️ Failed to click nav link: "TWINKLE CANDLE"<br>📜 Scrolled to bottom</td>
-        <td>2</td>
-      </tr></tbody>
+      <td>0.61 s <span class="rating">🔴 Slow</span></td>
+      <td>-1760902598.58 s <span class="rating">🟢 Fast</span></td>
+      <td>1.82 s <span class="rating">🟡 Medium</span></td>
+      <td class="wrap">🤖 Exploring: https://github.com/mariusandra/pigeon-maps<br>🧾 Detected 3 form(s)<br>⚠️ Could not fill input (text): locator.fill: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], textarea').first()[22m
+[2m    - locator resolved to <input value="" type="text" role="combobox" autocomplete="off" spellcheck="false" aria-expanded="false" id="query-builder-test" aria-haspopup="listbox" aria-autocomplete="list" name="query-builder-test" data-view-component="true" data-target="query-builder.input" aria-controls="query-builder-test-results" class="FormControl-input QueryBuilder-Input FormControl-medium" aria-describedby="validation-89b425bf-9540-46b9-9f6d-d43e308011e2" data-action="↵          input:query-builder#inputChange↵          b…/>[22m
+[2m    - fill("Sonitus ab amor.")[22m
+[2m  - attempting fill action[22m
+[2m    2 × waiting for element to be visible, enabled and editable[22m
+[2m      - element is not visible[22m
+[2m    - retrying fill action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and editable[22m
+[2m      - element is not visible[22m
+[2m    - retrying fill action[22m
+[2m      - waiting 100ms[22m
+[2m    58 × waiting for element to be visible, enabled and editable[22m
+[2m       - element is not visible[22m
+[2m     - retrying fill action[22m
+[2m       - waiting 500ms[22m
+<br>⚠️ Could not fill input (text): locator.fill: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], textarea').nth(1)[22m
+[2m    - locator resolved to <textarea id="feedback" name="feedback" class="form-control width-full mb-2"></textarea>[22m
+[2m    - fill("Spectaculum aspicio tripudio.")[22m
+[2m  - attempting fill action[22m
+[2m    2 × waiting for element to be visible, enabled and editable[22m
+[2m      - element is not visible[22m
+[2m    - retrying fill action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and editable[22m
+[2m      - element is not visible[22m
+[2m    - retrying fill action[22m
+[2m      - waiting 100ms[22m
+[2m    59 × waiting for element to be visible, enabled and editable[22m
+[2m       - element is not visible[22m
+[2m     - retrying fill action[22m
+[2m       - waiting 500ms[22m
+<br>⚠️ Could not fill input (text): locator.fill: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], textarea').nth(2)[22m
+[2m    - locator resolved to <input type="text" required="" maxlength="50" autocomplete="off" spellcheck="false" class="form-control" id="custom_scope_name" name="custom_scope_name" placeholder="github-ruby" data-target="custom-scopes.customScopesNameField"/>[22m
+[2m    - fill("Magnam volo summisse.")[22m
+[2m  - attempting fill action[22m
+[2m    2 × waiting for element to be visible, enabled and editable[22m
+[2m      - element is not visible[22m
+[2m    - retrying fill action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and editable[22m
+[2m      - element is not visible[22m
+[2m    - retrying fill action[22m
+[2m      - waiting 100ms[22m
+[2m    59 × waiting for element to be visible, enabled and editable[22m
+[2m       - element is not visible[22m
+[2m     - retrying fill action[22m
+[2m       - waiting 500ms[22m
+<br>⚠️ Could not fill input (text): locator.fill: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], textarea').nth(3)[22m
+[2m    - locator resolved to <input type="text" required="" maxlength="500" autocomplete="off" class="form-control" id="custom_scope_query" name="custom_scope_query" data-target="custom-scopes.customScopesQueryField" placeholder="(repo:mona/a OR repo:mona/b) AND lang:python"/>[22m
+[2m    - fill("Clamo causa tergo.")[22m
+[2m  - attempting fill action[22m
+[2m    2 × waiting for element to be visible, enabled and editable[22m
+[2m      - element is not visible[22m
+[2m    - retrying fill action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and editable[22m
+[2m      - element is not visible[22m
+[2m    - retrying fill action[22m
+[2m      - waiting 100ms[22m
+[2m    59 × waiting for element to be visible, enabled and editable[22m
+[2m       - element is not visible[22m
+[2m     - retrying fill action[22m
+[2m       - waiting 500ms[22m
+<br>✍️ Filled input (text)<br>⚠️ Could not check input (checkbox): locator.check: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('input[type="checkbox"], input[type="radio"]').first()[22m
+[2m    - locator resolved to <input type="checkbox" id="include_email" name="include_email" class="form-control mr-2" aria-label="Include my email address so I can be contacted"/>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    58 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+<br>🟢 Clicked button: "Manage cookies"<br>🖱️ Scrolled down the page<br>📜 Scrolled to bottom</td>
+      <td>3</td>
+      <td><div class="seo-cell">
+      <div class="seo-item"><strong>Title Length:</strong> 76 chars</div>
+      <div class="seo-item"><strong>Meta Desc:</strong> ✅ Found</div>
+      <div class="seo-item"><strong>H1 Tags:</strong> ⚠️ 5</div>
+    <div class="seo-section"><strong>Broken Links Found:</strong><ul><li><span class="status-code">400</span> https://github.com/marketplace</li><li><span class="status-code">429</span> https://github.com/mariusandra/pigeon-maps/blob/main/.prettierrc.js</li><li><span class="status-code">429</span> https://github.com/mariusandra/pigeon-maps/blob/main/README.md</li><li><span class="status-code">429</span> https://github.com/mariusandra/pigeon-maps/blob/main/yarn.lock</li><li><span class="status-code">403</span> https://www.npmjs.com/package/pigeon-maps</li></ul></div><div class="seo-section-ok">✅ No major content issues</div></div></td>
+      <td><div class="net-cell">
+    <div class="net-summary-item"><strong>Page Weight:</strong> 1205 KB</div>
+    <div class="net-summary-item"><strong>Requests:</strong> 141</div>
+    <div class="net-summary-item"><strong>Unused CSS:</strong> 86%</div>
+  <div class="net-section"><strong>Heaviest Resources:</strong><ul><li><strong>119 KB</strong> - <span class="net-url">https://github.githubassets.com/assets/primer-react-10977e218f81.js</span></li><li><strong>93 KB</strong> - <span class="net-url">https://github.githubassets.com/assets/octicons-react-dfcd3f5e8531.js</span></li><li><strong>59 KB</strong> - <span class="net-url">https://github.githubassets.com/assets/behaviors-2c0a177b1bbe.js</span></li><li><strong>56 KB</strong> - <span class="net-url">https://github.githubassets.com/assets/react-lib-25ef56e89e94.js</span></li><li><strong>52 KB</strong> - <span class="net-url">https://github.githubassets.com/assets/react-core-ca4f004636c1.js</span></li></ul></div></div></td>
+    </tr>
+    <tr>
+      <td><a href="https://www.openstreetmap.org/copyright" target="_blank">https://www.openstreetmap.org/copyright</a></td>
+      <td>Copyright and License | OpenStreetMap</td>
+      <td class="cell-scrollable">[log] Got initial bounds:  {ne: Array(2), sw: Array(2)}<br>[warning] [GroupMarkerNotSet(crbug.com/242999)!:A0C028006C3A0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.</td>
+      <td class="cell-scrollable"><span class="no-data">-</span></td>
+      <td>
+        <img src="screenshots/_copyright-desktop.png" alt="Screenshot of Copyright and License | OpenStreetMap" class="screenshot-thumb" loading="lazy" />
+      </td>
+      <td>
+          <div class="issue issue-critical">
+            <span class="impact-label">CRITICAL</span>
+            <p>Ensure buttons have discernible text <a href="https://dequeuniversity.com/rules/axe/4.10/button-name?application=playwright" target="_blank" title="Learn more">[?]</a></p>
+          </div>
+          <div class="issue issue-serious">
+            <span class="impact-label">SERIOUS</span>
+            <p>Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds <a href="https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=playwright" target="_blank" title="Learn more">[?]</a></p>
+          </div>
+          <div class="issue issue-moderate">
+            <span class="impact-label">MODERATE</span>
+            <p>Ensure the order of headings is semantically correct <a href="https://dequeuniversity.com/rules/axe/4.10/heading-order?application=playwright" target="_blank" title="Learn more">[?]</a></p>
+          </div>
+          <div class="issue issue-moderate">
+            <span class="impact-label">MODERATE</span>
+            <p>Ensure the document has a main landmark <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=playwright" target="_blank" title="Learn more">[?]</a></p>
+          </div>
+          <div class="issue issue-moderate">
+            <span class="impact-label">MODERATE</span>
+            <p>Ensure landmarks are unique <a href="https://dequeuniversity.com/rules/axe/4.10/landmark-unique?application=playwright" target="_blank" title="Learn more">[?]</a></p>
+          </div>
+          <div class="issue issue-serious">
+            <span class="impact-label">SERIOUS</span>
+            <p>Ensure links are distinguished from surrounding text in a way that does not rely on color <a href="https://dequeuniversity.com/rules/axe/4.10/link-in-text-block?application=playwright" target="_blank" title="Learn more">[?]</a></p>
+          </div>
+          <div class="issue issue-moderate">
+            <span class="impact-label">MODERATE</span>
+            <p>Ensure all page content is contained by landmarks <a href="https://dequeuniversity.com/rules/axe/4.10/region?application=playwright" target="_blank" title="Learn more">[?]</a></p>
+          </div></td>
+      <td class="security-cell"><div class="https-status https-secure">🛡️ Secure (HTTPS)</div><div class="headers-list"><div class="header-item compliant" title="Helps prevent XSS attacks by defining allowed content sources.">
+              <span>✅ Content-Security-Policy</span>
+            </div><div class="header-item compliant" title="Enforces secure (HTTPS) connections to the server.">
+              <span>✅ Strict-Transport-Security</span>
+            </div><div class="header-item compliant" title="Protects against Clickjacking attacks.">
+              <span>✅ X-Frame-Options</span>
+            </div><div class="header-item compliant" title="Prevents browsers from MIME-sniffing a response away from the declared content-type.">
+              <span>✅ X-Content-Type-Options</span>
+            </div><div class="header-item compliant" title="Controls how much referrer information is sent with requests.">
+              <span>✅ Referrer-Policy</span>
+            </div></div></td>
+      <td>0.20 s <span class="rating">🟢 Fast</span></td>
+      <td>0.65 s <span class="rating">🟢 Fast</span></td>
+      <td>0.65 s <span class="rating">🟢 Fast</span></td>
+      <td class="wrap">🤖 Exploring: https://www.openstreetmap.org/copyright<br>🖱️ Scrolled down the page<br>📜 Scrolled to bottom</td>
+      <td>0</td>
+      <td><div class="seo-cell">
+      <div class="seo-item"><strong>Title Length:</strong> 37 chars</div>
+      <div class="seo-item"><strong>Meta Desc:</strong> ✅ Found</div>
+      <div class="seo-item"><strong>H1 Tags:</strong> ⚠️ 4</div>
+    <div class="seo-section"><strong>Broken Links Found:</strong><ul><li><span class="status-code">403</span> https://www.openstreetmap.org/edit</li><li><span class="status-code">403</span> https://www.openstreetmap.org/edit?editor=id</li><li><span class="status-code">502</span> https://www.vorarlberg.at/vorarlberg/bauen_wohnen/bauen/vermessung_geoinformation/weitereinformationen/services/wmsdienste.htm</li></ul></div><div class="seo-section-ok">✅ No major content issues</div></div></td>
+      <td><div class="net-cell">
+    <div class="net-summary-item"><strong>Page Weight:</strong> 981 KB</div>
+    <div class="net-summary-item"><strong>Requests:</strong> 10</div>
+    <div class="net-summary-item"><strong>Unused CSS:</strong> 94%</div>
+  <div class="net-section"><strong>Heaviest Resources:</strong><ul><li><strong>471 KB</strong> - <span class="net-url">https://www.openstreetmap.org/assets/application-03635ea4df142db8927ad16215c127bf06c48cb7c274bb97ed33b728af9e765c.js</span></li><li><strong>401 KB</strong> - <span class="net-url">blob:https://www.openstreetmap.org/d3443bff-bd63-41c4-8485-61499e43fceb</span></li><li><strong>35 KB</strong> - <span class="net-url">https://www.openstreetmap.org/assets/turbo-d85ef71ce6bcbe2f31479d6a403c500384b45d54b2a8a6802ba67843a1bf5ade.js</span></li><li><strong>30 KB</strong> - <span class="net-url">https://www.openstreetmap.org/assets/screen-auto-ltr-5fd465e080a7e4cc60d3286fcb8275a1fd3dff5a3bacbf48dba27c88ec8912cd.css</span></li><li><strong>19 KB</strong> - <span class="net-url">https://matomo.openstreetmap.org/matomo.js</span></li></ul></div></div></td>
+    </tr></tbody>
           </table>
         </main>
 
