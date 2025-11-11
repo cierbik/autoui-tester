@@ -1,11 +1,3 @@
-````markdown
-# AutoUI Tester 🤖🧪
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/Language-TypeScript-blue.svg)](https://www.typescriptlang.org/)
-[![Playwright](https://img.shields.io/badge/Framework-Playwright-green.svg)](https://playwright.dev/)
-[![Version](https://img.shields.io/badge/Version-1.0.0-orange.svg)](package.json)
-[![CI Status](https://github.com/your-username/autoui-tester/actions/workflows/ui-audit.yml/badge.svg)](https://github.com/your-username/autoui-tester/actions)
 
 **AutoUI Tester** is an advanced and modular framework based on Playwright, designed for automated website auditing. The tool independently explores an entire website, collects key metrics, captures screenshots, and generates a clean, interactive HTML report—all without needing to write test scripts.
 
